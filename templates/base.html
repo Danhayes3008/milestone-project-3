@@ -24,19 +24,26 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="">home</a>
+            <a class="nav-link js-scroll-trigger" href="{{url_for('home')}}">home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="">Recipes</a>
+            <a class="nav-link js-scroll-trigger" href="{{url_for('recipes')}}">Recipes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="">Login</a>
+            <a class="nav-link js-scroll-trigger" href="{{url_for('login')}}">Login</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
     </header>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+    
+    <!-- Custom JavaScript for this theme -->
+  <script src="js/scrolling-nav.js"></script>
+    
 </body>
 
 </html>
