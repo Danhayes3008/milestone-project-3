@@ -29,6 +29,22 @@ def login():
 @app.route('/users')
 def users():
     return render_template('userpage.html')
+    
+@app.route('/register', methods=['POST', 'GET'])
+def register():
+    if request.method == 'POST':
+        users = mongo.db.users
+        existing_user = users.find_one({'name': request.form['username']})
+        
+        if existing_user is None:
+            hashpass = bcrypt.hashpw(request.form['password'].encode('utf-8'), bcrypt.gensalt())
+            users.insert({'name' : request.form['username'], 'password' : hashpass})
+            session['username'] = request.form['username']
+            return redirect(url_for('userpage.html'))
+            
+        return 'That username already exists!'
+    
+    return render_template('register.html')
 
 if __name__ == '__main__':
     app.secret_key = 'mysecret'
