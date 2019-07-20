@@ -2,7 +2,6 @@ import os
 from flask import Flask, render_template, redirect, request, url_for, session
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
-from bson.objectid import ObjectId
 import bcrypt
 
 app = Flask(__name__)
@@ -23,7 +22,13 @@ def recipes():
     
 @app.route('/login')
 def login():
+    if 'username' in session:
+        return 'you are logged in as ' + session['username']
     return render_template('Login.html')
+    
+@app.route('/users')
+def users():
+    return render_template('userpage.html')
 
 if __name__ == '__main__':
     app.secret_key = 'mysecret'
