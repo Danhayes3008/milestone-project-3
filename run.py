@@ -1,11 +1,14 @@
 import os
 from flask import Flask, render_template, redirect, request, url_for, session
-from flask.ext.pymongo import PyMongo
+from flask_pymongo import PyMongo
+from bson.objectid import ObjectId
+from bson.objectid import ObjectId
 import bcrypt
 
 app = Flask(__name__)
 
-app.config['MONGO_DBNAME'] = 'Bakery_Wikipedia'
+app.config["MONGO_DBNAME"] = 'Bakery_Wikipedia'
+app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
 
 mongo = PyMongo(app)
 
