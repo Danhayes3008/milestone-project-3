@@ -5,6 +5,7 @@ import bcrypt
 
 
 app = Flask(__name__)
+username = session['name']
 
 
 app.config["MONGO_DBNAME"] = 'Bakery_Wikipedia'
@@ -33,6 +34,22 @@ def recipes():
 def login():
     return render_template('Login.html')
     
+
+@app.route('/find_user', methods=['POST'])
+def find_user():
+    if request.method == 'POST':
+        users = mongo.db.users
+        session = users.find({'name': request.form['name']})
+        
+        if session is None:
+            return 'No user exists with this name!'
+            
+        if request.form['pass'] == 'password' and request.form['name'] == 'users':
+            session['logged_in'] = True
+            return session['name']
+    
+    return render_template('userpage.html', users=mongo.db.users.find())
+    
     
     
 @app.route('/users')
@@ -53,6 +70,8 @@ def insert_user():
     if request.method == 'POST':
         users = mongo.db.users
         existing_user = users.find({'name': request.form['name']})
+        
+       
         
         if existing_user is None:
             tasks = mongo.db.users
