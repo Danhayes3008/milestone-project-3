@@ -1,5 +1,6 @@
 {% extends 'base.html'%}
 {% block content %}
-<h2>User</h2>
-
+<h1>Hello User</h1>
+{% if session %} {{ session['name'] }} {% else %} Hello Annon {% endif %}
+<button><a href="{{url_for('logout')}}">Logout</a></button>
 {% endblock %}
