@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 
 app.config["MONGO_DBNAME"] = 'Bakery_Wikipedia'
-app.config["MONGO_URI"] = 'mongodb+srv://Argo:LetsL3arn@myfistdb-aslxy.mongodb.net/Bakery_Wikipedia?retryWrites=true&w=majority'
+app.config["MONGO_URI"] = os.getenv("MONGO_URI")
 
 mongo = PyMongo(app)
 
