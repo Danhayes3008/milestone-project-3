@@ -25,7 +25,8 @@ def recipes():
     
     return render_template('recipes.html',
     categories=mongo.db.categories.find(),
-    subcategory=mongo.db.subcategory.find())
+    subcategory=mongo.db.subcategory.find(),
+    recipes=mongo.db.recipes.find())
     
 
     
