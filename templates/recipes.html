@@ -1,19 +1,26 @@
-{% extends 'base.html'%}
-{% block content %}
+{% extends 'base.html'%} {% block content %}
 <h2>Recipes</h2>
-<div>
-    <h3>Categories:</h3>
-    {% for cat in categories %}
-    {{cat.category_name}}
-    <input type="checkbox">
-    <br />
-    {% endfor %}
-    <br />
-    <h3>Categories:</h3>
-    {% for sub in subcategory %}
-    {{sub.subcategory_name}}
-    <input type="checkbox">
-    <br />
-    {% endfor %}
+<div class="row">
+    <div class="col s6">
+        <h3>Categories:</h3>
+        {% for cat in categories %} {{cat.category_name}}
+        <input type="checkbox">
+        <br /> {% endfor %}
+        <br />
+        <h3>Categories:</h3>
+        {% for sub in subcategory %} {{sub.subcategory_name}}
+        <input type="checkbox">
+        <br /> {% endfor %}
+    </div>
+    <div class="col s6">
+        {% for recipe in recipes %}
+        <h3>Recipes:</h3>
+        <ul>
+            <li>
+                <h5>{{recipe.name}}</h5>
+            </li>
+        </ul>
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}
