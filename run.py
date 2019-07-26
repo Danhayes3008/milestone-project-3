@@ -65,7 +65,8 @@ def logout():
 @app.route('/users')
 def users():
     
-    return render_template('userpage.html', users=mongo.db.users.find())
+    return render_template('userpage.html', users=mongo.db.users.find(),
+    author=mongo.db.author.find())
     
     
 @app.route('/register')
@@ -91,6 +92,12 @@ def insert_user():
         return redirect(url_for('register'))
 	
     return render_template('userpage.html')
+    
+    
+@app.route('/recipe_name/<name_id>')
+def recipe_name(name_id):
+    the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(name_id)})
+    return render_template('userpage.html', task=the_recipe)
 
 if __name__ == '__main__':
     app.secret_key = 'Hello'
