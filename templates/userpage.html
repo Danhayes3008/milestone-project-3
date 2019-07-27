@@ -3,16 +3,18 @@
 {% if session %}
 <h4>{{ session['name'] }}'s Recipes</h4>
 <ul>
+    <li>
+        <a href="{{url_for('add_recipe')}}">Add recipe</a>
+    </li>
+</ul>
+<ul>
     {% for auth in author %}
     <li>
-        <div class="col s3">
-            <i class="material-icons">expand_more</i>
-            <a href="" class="waves-effect waves-light btn btn_small blue">Edit</a>
-        </div>
-        <div class="task_header col s9">
-            <strong>{{auth.name}}</strong>
+        <div class="task_header col s5">
+            <strong>{{session['name']}}</strong>
             <a href="{{ url_for('recipe_name',  name_id=name_id) }}">{{auth.recipe}}</a>
-        </div>
+           <a href="" class="waves-effect waves-light btn btn_small green">Edit</a>
+           <a href="" class="waves-effect waves-light btn btn_small red">Delete</a>
         </div>
     </li>
     {% endfor %}
