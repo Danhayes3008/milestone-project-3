@@ -98,6 +98,19 @@ def insert_user():
 def recipe_name(name_id):
     the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(name_id)})
     return render_template('userpage.html', task=the_recipe)
+    
+@app.route('/add_recipe')
+def add_recipe():
+    return render_template('addrecipe.html',
+    categories=mongo.db.categories.find(),
+    subcategory=mongo.db.subcategory.find())
+    
+    
+@app.route('/insert_recipe', methods=['POST'])
+def insert_recipe():
+    tasks = mongo.db.recipes
+    tasks.insert_one(request.form.to_dict())
+    return redirect(url_for('get_recipes'))
 
 if __name__ == '__main__':
     app.secret_key = 'Hello'
