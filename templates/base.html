@@ -20,7 +20,7 @@
 <body id="page-top">
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-      <h4>Bakery Wiki</h4>
+      <div>Bakery</div>
       <div class="nav-wrapper">
         <!--<a href="" class="brand-logo">Task Manager</a>-->
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -29,7 +29,7 @@
           <li><a class="nav-link js-scroll-trigger" href="{{url_for('recipes')}}">Recipes</a></li>
           {% if session %}
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="{{url_for('users')}}">Welcome {{ session['name'] }}</a>
+            <a class="nav-link js-scroll-trigger" href="{{url_for('users')}}">{{ session['name'] }}</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="{{url_for('logout')}}">Logout</a>
@@ -40,12 +40,11 @@
           </li>
           {% endif %}
         </ul>
+    
         <ul class="side-nav" id="mobile-demo">
-          <li><a class="nav-link js-scroll-trigger" href="{{url_for('index')}}">home</a></li>
-          <li><a class="nav-link js-scroll-trigger" href="{{url_for('recipes')}}">Recipes</a></li>
           {% if session %}
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="{{url_for('users')}}">Welcome {{ session['name'] }}</a>
+            <a class="nav-link js-scroll-trigger" href="{{url_for('users')}}">{{ session['name'] }}</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="{{url_for('logout')}}">Logout</a>
@@ -55,46 +54,12 @@
             <a class="nav-link js-scroll-trigger" href="{{url_for('login')}}">Login</a>
           </li>
           {% endif %}
+          <li><a class="nav-link js-scroll-trigger" href="{{url_for('index')}}">home</a></li>
+          <li><a class="nav-link js-scroll-trigger" href="{{url_for('recipes')}}">Recipes</a></li>
         </ul>
       </div>
     </nav>
-
-    <!--<ul class="sidenav" id="mobile-demo">-->
-    <!--  <li><a href="sass.html">Sass</a></li>-->
-    <!--  <li><a class="nav-link js-scroll-trigger" href="{{url_for('index')}}">home</a></li>-->
-    <!--  <li><a class="nav-link js-scroll-trigger" href="{{url_for('recipes')}}">Recipes</a></li>-->
-    <!--  <li><a href="mobile.html">Mobile</a></li>-->
-    <!--</ul>-->
-    <!--  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">-->
-    <!--    <div class="container">-->
-    <!--      <a class="navbar-brand js-scroll-trigger" href="#page-top">Bakery Project</a>-->
-    <!--      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">-->
-    <!--      <span class="navbar-toggler-icon"></span>-->
-    <!--    </button>-->
-    <!--      <div class="collapse navbar-collapse" id="navbarResponsive">-->
-    <!--        <ul class="navbar-nav ml-auto">-->
-    <!--          <li class="nav-item">-->
-    <!--            <a class="nav-link js-scroll-trigger" href="{{url_for('index')}}">home</a>-->
-    <!--          </li>-->
-    <!--          <li class="nav-item">-->
-    <!--            <a class="nav-link js-scroll-trigger" href="{{url_for('recipes')}}">Recipes</a>-->
-    <!--          </li>-->
-    <!--          {% if session %}-->
-    <!--          <li class="nav-item">-->
-    <!--            <a class="nav-link js-scroll-trigger" href="{{url_for('users')}}">Welcome {{ session['name'] }}</a>-->
-    <!--          </li>-->
-    <!--          <li class="nav-item">-->
-    <!--            <a class="nav-link js-scroll-trigger" href="{{url_for('logout')}}">Logout</a>-->
-    <!--          </li>-->
-    <!--          {% else %}-->
-    <!--          <li class="nav-item">-->
-    <!--            <a class="nav-link js-scroll-trigger" href="{{url_for('login')}}">Login</a>-->
-    <!--          </li>-->
-    <!--          {% endif %}-->
-    <!--        </ul>-->
-    <!--      </div>-->
-    <!--    </div>-->
-    <!--  </nav>-->
+    
   </header>
   <div class="container">
     {% block content %}{% endblock %}
