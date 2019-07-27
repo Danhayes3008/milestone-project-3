@@ -4,19 +4,20 @@
 <h4>{{ session['name'] }}'s Recipes</h4>
 <ul>
     <li>
-        <a href="{{url_for('add_recipe')}}">Add recipe</a>
+        <a href="{{url_for('add_recipe')}}" class="waves-effect waves-light btn btn_small green">Add recipe</a>
     </li>
 </ul>
-<ul>
-    {% for auth in author %}
+<ul>{% if session %}
+    
     <li>
         <div class="task_header col s5">
-            <strong>{{session['name']}}</strong>
-            <a href="{{ url_for('recipe_name',  name_id=name_id) }}">{{auth.recipe}}</a>
+            <strong>{{session.author}}</strong>
+            <a href="{{ url_for('recipe_name',  name_id=name_id) }}">{{session['name']}}</a>
            <a href="" class="waves-effect waves-light btn btn_small green">Edit</a>
            <a href="" class="waves-effect waves-light btn btn_small red">Delete</a>
         </div>
     </li>
-    {% endfor %}
+    {% else %}
+   {% endif %}
 </ul>
 {% endif %} {% endblock %}
