@@ -66,7 +66,7 @@ def logout():
 def users():
     
     return render_template('userpage.html', users=mongo.db.users.find(),
-    author=mongo.db.author.find())
+    author=mongo.db.recipes.find())
     
     
 @app.route('/register')
