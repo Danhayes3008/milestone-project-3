@@ -72,6 +72,10 @@
       $('select').material_select();
       $(".button-collapse").sideNav();
     });
+    
+    document.getElementById("matfix").addEventListener("click", function(e) {
+            e.stopPropagation();
+        });
   </script>
   <script type="text/javascript">
         var counter = 0;
@@ -80,37 +84,37 @@
         function addRecipe(recName) {
             if (counter == 0) {
                 var newdiv = document.createElement('div');
-                newdiv.innerHTML = "Ingredients " + (counter + 1) + "<br><div class='row'><div class='input-field col s12'><i class='material-icons prefix'>subject</i><textarea name='ingredient' id='ingredient' class='materialize-textarea'></textarea><label for='icon_telephone'>Ingredients</label><div id='dynamicInput'></div></div></div>"
+                newdiv.innerHTML = "<div class='row'><div class='input-field col s12'><i class='material-icons prefix'>subject</i><input name='ingredient' id='ingredient'><label for='icon_telephone'>Ingredient 1</label><div id='dynamicInput'></div></div></div>"
                 document.getElementById(recName).appendChild(newdiv);
                 counter++;
             }
             else if (counter == 1) {
                 var newdiv = document.createElement('div');
-                newdiv.innerHTML = "Ingredients " + (counter + 1) + "<br><div class='row'><div class='input-field col s12'><i class='material-icons prefix'>subject</i><textarea name='ingredient1' id='ingredient1' class='materialize-textarea'></textarea><label for='icon_telephone'>Ingredients</label><div id='dynamicInput'></div></div></div>"
+                newdiv.innerHTML = "<div class='row'><div class='input-field col s12'><i class='material-icons prefix'>subject</i><input name='ingredient' id='ingredient'><label for='icon_telephone'>Ingredient 3</label><div id='dynamicInput'></div></div></div>"
                 document.getElementById(recName).appendChild(newdiv);
                 counter++;
             }
             else if (counter == 2) {
                 var newdiv = document.createElement('div');
-                newdiv.innerHTML = "Ingredients " + (counter + 1) + "<br><div class='row'><div class='input-field col s12'><i class='material-icons prefix'>subject</i><textarea name='ingredient2' id='ingredient2' class='materialize-textarea'></textarea><label for='icon_telephone'>Ingredients</label><div id='dynamicInput'></div></div></div>"
+                newdiv.innerHTML = "<div class='row'><div class='input-field col s12'><i class='material-icons prefix'>subject</i><input name='ingredient' id='ingredient'><label for='icon_telephone'>Ingredient 4</label><div id='dynamicInput'></div></div></div>"
                 document.getElementById(recName).appendChild(newdiv);
                 counter++;
             }
             else if (counter == 3) {
                 var newdiv = document.createElement('div');
-                newdiv.innerHTML = "Ingredients " + (counter + 1) + "<br><div class='row'><div class='input-field col s12'><i class='material-icons prefix'>subject</i><textarea name='ingredient3' id='ingredient3' class='materialize-textarea'></textarea><label for='icon_telephone'>Ingredients</label><div id='dynamicInput'></div></div></div>"
+                newdiv.innerHTML = "<div class='row'><div class='input-field col s12'><i class='material-icons prefix'>subject</i><input name='ingredient' id='ingredient'><label for='icon_telephone'>Ingredient 5</label><div id='dynamicInput'></div></div></div>"
                 document.getElementById(recName).appendChild(newdiv);
                 counter++;
             }
             else if (counter == 4) {
                 var newdiv = document.createElement('div');
-                newdiv.innerHTML = "Ingredients " + (counter + 1) + "<br><div class='row'><div class='input-field col s12'><i class='material-icons prefix'>subject</i><textarea name='ingredient4' id='ingredient4' class='materialize-textarea'></textarea><label for='icon_telephone'>Ingredients</label><div id='dynamicInput'></div></div></div>"
+                newdiv.innerHTML = "<div class='row'><div class='input-field col s12'><i class='material-icons prefix'>subject</i><input name='ingredient' id='ingredient'><label for='icon_telephone'>Ingredient 6</label><div id='dynamicInput'></div></div></div>"
                 document.getElementById(recName).appendChild(newdiv);
                 counter++;
             }
             else if (counter == 5) {
                 var newdiv = document.createElement('div');
-                newdiv.innerHTML = "Ingredients " + (counter + 1) + "<br><div class='row'><div class='input-field col s12'><i class='material-icons prefix'>subject</i><textarea name='ingredient5' id='ingredient5' class='materialize-textarea'></textarea><label for='icon_telephone'>Ingredients</label><div id='dynamicInput'></div></div></div>"
+                newdiv.innerHTML = "<div class='row'><div class='input-field col s12'><i class='material-icons prefix'>subject</i><input name='ingredient' id='ingredient'><label for='icon_telephone'>Ingredient 7</label><div id='dynamicInput'></div></div></div>"
                 document.getElementById(recName).appendChild(newdiv);
                 counter++;
             }
