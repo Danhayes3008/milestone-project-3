@@ -66,7 +66,7 @@ def logout():
 def users():
     
     return render_template('userpage.html', users=mongo.db.users.find(),
-    author=mongo.db.recipes.find())
+    recipes=mongo.db.recipes.find())
     
     
 @app.route('/register')
@@ -93,11 +93,11 @@ def insert_user():
 	
     return render_template('userpage.html')
     
+
     
-@app.route('/recipe_name/<name_id>')
-def recipe_name(name_id):
-    the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(name_id)})
-    return render_template('userpage.html', task=the_recipe)
+@app.route('/recipe_name')
+def recipe_name():
+    return render_template('userpage.html', rec=mongo.db.recipes.find())
     
 @app.route('/add_recipe')
 def add_recipe():
