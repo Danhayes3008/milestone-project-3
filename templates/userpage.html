@@ -1,23 +1,26 @@
 {% extends 'base.html'%} {% block content %}
 <h1>Hello User</h1>
-{% if session %}
-<h4>{{ session['name'] }}'s Recipes</h4>
-<ul>
-    <li>
-        <a href="{{url_for('add_recipe')}}" class="waves-effect waves-light btn btn_small green">Add recipe</a>
-    </li>
-</ul>
-<ul>{% if session %}
-    
-    <li>
-        <div class="task_header col s5">
-            <strong>{{session.author}}</strong>
-            <a href="{{ url_for('recipe_name',  name_id=name_id) }}">{{session['name']}}</a>
-           <a href="" class="waves-effect waves-light btn btn_small green">Edit</a>
-           <a href="" class="waves-effect waves-light btn btn_small red">Delete</a>
-        </div>
-    </li>
-    {% else %}
-   {% endif %}
-</ul>
+<div>
+    {% if session %}
+    <h4>{{ session['name'] }}'s Recipes</h4>
+    <ul>
+        <li>
+            <a href="{{url_for('add_recipe')}}" class="waves-effect waves-light btn btn_small green">Add recipe</a>
+        </li>
+    </ul>
+    <ul>
+        {% for rec in recipes%}
+        {% if session['name'] == rec.author %}
+        <li>
+            <div class="task_header col s5">
+                <strong>{{ session['name'] }}</strong>
+                <a href="{{ url_for('recipe_name')}}">{{rec.name}}</a>
+                <a href="" class="waves-effect waves-light btn btn_small green">Edit</a>
+                <a href="" class="waves-effect waves-light btn btn_small red">Delete</a>
+            </div>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</div>
 {% endif %} {% endblock %}
