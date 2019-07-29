@@ -111,6 +111,11 @@ def insert_recipe():
     tasks = mongo.db.recipes
     tasks.insert_one(request.form.to_dict())
     return redirect(url_for('get_recipes'))
+    
+    
+@app.route('/admin')
+def admin():
+    return render_template('admin.html')
 
 if __name__ == '__main__':
     app.secret_key = 'Hello'
