@@ -19,11 +19,13 @@
     <div class="col-md-8">
         <h3>Recipes waiting for approval</h3><br /> 
         {% for recipe in recipes %}
-        <div class="col-md-12">
+        <div action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST" class="col-md-12">
             <ul>
                 <li>
-                    <strong><a href="#">{{recipe.name}}</a></strong>
-                    <a href="#" class="waves-effect waves-light btn btn_small">Approve</a><br />
+                    <strong><a href="#" id="name">{{recipe.name}}</a></strong>
+                    <button type="submit" name="action"> Approve
+                    <i class="material-icons right">playlist_add</i></button>
+                    <a href="#" class="waves-effect waves-light btn btn_small">Reject</a><br />
                 </li><br />
             </ul>
         </div> 
