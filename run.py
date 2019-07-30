@@ -115,7 +115,13 @@ def insert_recipe():
     
 @app.route('/admin')
 def admin():
-    return render_template('admin.html')
+    return render_template('admin.html', users=mongo.db.users.find(), 
+    recipe=mongo.db.recipes.find())
+    
+@app.route('/delete_user/<user_id>')
+def delete_user(user_id):
+    mongo.db.users.remove({'_id': ObjectId(user_id)})
+    return redirect(url_for('admin'))
 
 if __name__ == '__main__':
     app.secret_key = 'Hello'
