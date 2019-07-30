@@ -21,7 +21,7 @@ def index():
     
 @app.route('/recipes')
 def recipes():
-    
+
     return render_template('recipes.html',
     categories=mongo.db.categories.find(),
     subcategory=mongo.db.subcategory.find(),
