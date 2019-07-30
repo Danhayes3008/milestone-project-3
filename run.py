@@ -122,6 +122,15 @@ def admin():
 def delete_user(user_id):
     mongo.db.users.remove({'_id': ObjectId(user_id)})
     return redirect(url_for('admin'))
+    
+@app.route('/update_recipe/<recipe_id>', methods=["post"])
+def update_recipe(recipe_id):
+    recipe= mongo.db.recipes
+    recipe.update( {'_id': ObjectId(recipe_id)},
+    {
+        'approval':request.form.get('task_name')
+    })
+    return redirect(url_for('admin'))
 
 if __name__ == '__main__':
     app.secret_key = 'Hello'
