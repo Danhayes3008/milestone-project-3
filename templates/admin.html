@@ -1,5 +1,35 @@
 {% extends 'base.html'%} {% block content %}
+<h3>
+    {{ session['name'] }}</h3>
+<div class="row">
+    <div class="col-md-4">
+        <h3>Users</h3><br /> 
+        {% for user in users %}
+        <div class="col-md-12">
+            <ul>
+                <li>
+                    <strong>{{user.name}}</strong>
+                    <a href="{{url_for('delete_user', user_id=user._id)}}" class="waves-effect waves-light btn btn_small">Delete</a><br />
+                </li><br />
+            </ul>
+        </div> 
+        {% endfor %}
+    </div>
 
-<h3>{{ session['name'] }}</h3>
+    <div class="col-md-8">
+        <h3>Recipes waiting for approval</h3><br /> 
+        {% for recipe in recipes %}
+        <div class="col-md-12">
+            <ul>
+                <li>
+                    <strong><a href="#">{{recipe.name}}</a></strong>
+                    <a href="#" class="waves-effect waves-light btn btn_small">Approve</a><br />
+                </li><br />
+            </ul>
+        </div> 
+        {% endfor %}
+    </div>
+</div>
+
 
 {% endblock %}
