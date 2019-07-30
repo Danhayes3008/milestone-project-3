@@ -2,8 +2,10 @@
 <div class="jumbotron">
     <h2>Register</h2>
     <form action="{{url_for('insert_user')}}" method="POST">
-        <input type="text" name="name" id="name">
-        <input type="text" name="password" id="password">
+        <label>Username</label>
+        <input type="text" name="name" id="name" placeholder="Username">
+        <label>Password</label>
+        <input type="text" name="password" id="password" placeholder="Password">
         <button type="submit">submit</button>
     </form>
     {% with messages = get_flashed_messages() %} {% if messages %}
@@ -13,6 +15,7 @@
         {% endfor %}
     </ul>
     {% endif %} {% endwith %}
+    Warning password's can not be reset if forgotten.
 </div>
 
 {% endblock %}
