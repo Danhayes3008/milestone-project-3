@@ -3,16 +3,12 @@
 <div class="row">
     <div class="col s6">
         <h3>Categories:</h3>
-        <input type="checkbox" name="categories" value="all" checked> All Categories<br>
-        {% for cat in categories %} {{cat.category_name}}
+        <input type="checkbox" name="categories" value="all" checked> All Categories<br> {% for cat in categories %} {{cat.category_name}}
         <input type="checkbox"><br /> {% endfor %}
         <h3>Sub-categories:</h3>
-        <input type="checkbox" name="subcategory" value="all" checked> All Sub-Categories<br>
-        {% for sub in subcategory %} {{sub.subcategory_name}}
+        <input type="checkbox" name="subcategory" value="all" checked> All Sub-Categories<br> {% for sub in subcategory %} {{sub.subcategory_name}}
         <input type="checkbox"><br /> {% endfor %}
     </div>
-</div>
-<div class="row">
     <div class="col s3">
         <h3>Recipes:</h3>
         {% for recipe in recipes %}
@@ -26,6 +22,5 @@
         </blockquote>
         {% endfor %}
     </div>
-</div>
 </div>
 {% endblock %}
