@@ -110,7 +110,7 @@ def add_recipe():
 def insert_recipe():
     tasks = mongo.db.recipes
     tasks.insert_one(request.form.to_dict())
-    return redirect(url_for('get_recipes'))
+    return redirect(url_for('recipes'))
     
     
 @app.route('/admin')
