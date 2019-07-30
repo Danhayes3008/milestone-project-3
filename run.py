@@ -116,7 +116,7 @@ def insert_recipe():
 @app.route('/admin')
 def admin():
     return render_template('admin.html', users=mongo.db.users.find(), 
-    recipe=mongo.db.recipes.find())
+    recipes=mongo.db.recipes.find())
     
 @app.route('/delete_user/<user_id>')
 def delete_user(user_id):
