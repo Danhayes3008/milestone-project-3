@@ -138,6 +138,14 @@ def recipespage():
     return render_template('recipes_name.html', recipes=mongo.db.recipes.find())
 
 
+@app.route('/get_recipes/{recipe_name}')
+def get_recipes(recipe_name):
+    recipe = {}
+    recipes_id = mongo.db.recipes.find()
+    for obj in recipes_id["url"] == recipe_name:
+                recipe = obj
+    return render_template("recipes_name.html", page_title="{{recipes_name}}",recipe=recipe, recipes=mongo.db.recipes.find())
+
 if __name__ == '__main__':
     app.secret_key = 'Hello'
     app.run(host=os.environ.get('IP'),
