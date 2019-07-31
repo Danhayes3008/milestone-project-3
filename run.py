@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, url_for, request, session, redirect, flash
+from flask import Flask, render_template, url_for, request, session, redirect, flash, send_from_directory
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 import bcrypt
@@ -131,6 +131,12 @@ def update_recipe(recipe_id):
         'approval':request.form.get('task_name')
     })
     return redirect(url_for('admin'))
+
+
+@app.route('/recipespage')
+def recipespage():
+    return render_template('recipes_name.html', recipes=mongo.db.recipes.find())
+
 
 if __name__ == '__main__':
     app.secret_key = 'Hello'
