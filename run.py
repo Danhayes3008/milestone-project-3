@@ -59,19 +59,20 @@ def logout():
     """Logs the user out and redirects to home"""
     session.clear()  # Kill session
     return redirect(url_for('index'))
+
     
-    
-    
+@app.route('/register')
+def register():
+    return render_template('register.html')
+
+
 @app.route('/users')
 def users():
     
     return render_template('userpage.html', users=mongo.db.users.find(),
     recipes=mongo.db.recipes.find())
     
-    
-@app.route('/register')
-def register():
-    return render_template('register.html')
+
 
 
 @app.route('/insert_user', methods=['GET', 'POST'])
@@ -133,18 +134,12 @@ def update_recipe(recipe_id):
     return redirect(url_for('admin'))
 
 
-@app.route('/recipespage')
-def recipespage():
-    return render_template('recipes_name.html', recipes=mongo.db.recipes.find())
+@app.route('/recipespage/<recipe_id>', methods=['GET', 'POST'])
+def recipespage(recipe_id):
+    recipes = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template('recipes_name.html', recipes=recipes)
 
 
-@app.route('/get_recipes/{recipe_name}')
-def get_recipes(recipe_name):
-    recipe = {}
-    recipes_id = mongo.db.recipes.find()
-    for obj in recipes_id["url"] == recipe_name:
-                recipe = obj
-    return render_template("recipes_name.html", page_title="{{recipes_name}}",recipe=recipe, recipes=mongo.db.recipes.find())
 
 if __name__ == '__main__':
     app.secret_key = 'Hello'
