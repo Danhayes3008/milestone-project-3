@@ -19,7 +19,7 @@
     <blockquote>
         <ul>
             <li>
-                <h5><a name="recipe" href="{{ url_for('get_recipes')}}">{{recipe.name}}</a></h5>
+                <h5><a href="{{ url_for('recipespage', recipe_id=recipe._id) }}">{{recipe.name}}</a></h5>
                 {{recipe.description}}
             </li>
         </ul>
