@@ -1,16 +1,17 @@
 {% extends 'base.html'%} {% block content %}
 <h2>Recipes</h2>
-<form>
+<form method="post">
     <div class="row">
         <div class="col s9">
             <h3>Categories:</h3>
             {% for cat in categories %}
+            <div id="filters">
             <input id="{{cat.category_name}}" type="checkbox" value="{{cat.category_name}}" name="{cat.category_name}}">
-            <label class="custom-control-label" for="{{cat.category_name}}">{{cat.category_name}}</label><br /> {% endfor %}
+            <label class="custom-control-label" for="{{cat.category_name}}">{{cat.category_name}}</label><br /> </div>{% endfor %}
             <h3>Sub-categories:</h3>
             {% for sub in subcategory %}
-            <input id="{{sub.subcategory_name}}" type="checkbox" name="{{sub.subcategory_name}}" value="{{sub.subcategory_name}}">
-            <label for="{{sub.subcategory_name}}">{{sub.subcategory_name}}</label><br /> {% endfor %}
+            <input id="_id{{sub.subcategory_name}}" type="checkbox" name="{{sub.subcategory_name}}" value="{{sub.subcategory_name}}">
+            <label for="_id{{sub.subcategory_name}}">{{sub.subcategory_name}}</label><br /> {% endfor %}
         </div>
 </form>
 <div class="col s3">
@@ -19,14 +20,17 @@
     <blockquote>
         <ul>
             <li>
-                <h5><a href="{{ url_for('recipespage', recipe_id=recipe._id) }}">{{recipe.name}}</a></h5>
-                {{recipe.description}}
+                <h5><a id="recipe" href="{{ url_for('recipespage', recipe_id=recipe._id) }}">{{recipe.name}}</a></h5>
+                <p>{{recipe.description}}</p>
+                <p>{{recipe.image_url}}</p>
             </li>
         </ul>
     </blockquote>
     {% endfor %}
 </div>
 </div>
+
+
 
 
 {% endblock %}
