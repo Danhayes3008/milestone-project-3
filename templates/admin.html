@@ -15,10 +15,10 @@
         </div> 
         {% endfor %}
     </div>
-
     <div class="col-md-8">
         <h3>Recipes waiting for approval</h3><br /> 
         {% for recipe in recipes %}
+        {% if (recipe.approval=="no") %}
         <div action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST" class="col-md-12">
             <ul>
                 <li>
@@ -28,7 +28,9 @@
                     <a href="#" class="waves-effect waves-light btn btn_small">Reject</a><br />
                 </li><br />
             </ul>
-        </div> 
+        </div>
+        {% else %}
+        {% endif %}
         {% endfor %}
     </div>
 </div>
