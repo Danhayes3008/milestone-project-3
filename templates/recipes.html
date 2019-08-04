@@ -17,15 +17,18 @@
 <div class="col s3">
     <h3>Recipes:</h3>
     {% for recipe in recipes %}
+    {% if (recipe.approval=="yes") %}
     <blockquote>
         <ul>
             <li>
                 <h5><a id="recipe" href="{{ url_for('recipespage', recipe_id=recipe._id) }}">{{recipe.name}}</a></h5>
                 <p>{{recipe.description}}</p>
-                <p>{{recipe.image_url}}</p>
             </li>
         </ul>
     </blockquote>
+    {% else %}
+    
+    {% endif %}
     {% endfor %}
 </div>
 </div>
