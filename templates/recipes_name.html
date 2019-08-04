@@ -1,11 +1,16 @@
 {% extends 'base.html'%} {% block content %}
-<h3>Recipes name</h3>
-<h3>{{ recipes.name }}</h3>
 <div class="row">
-    
-    <img style="width:350px; height:300px;" src="{{recipes.image_url}}"></img>
+    <h1>{{ recipes.name }}</h1>
+</div>
+<hr />
+<div class="row">
+    <div class="col s8">
+    <img style="width:450px; height:300px;" src="{{recipes.image_url}}"></img>
+    </div>
+    <div class="col s2">
     <ul>
-        <li>Category: {{ recipes.category_name }}</li>
+        <!--<li><h3>{{ recipes.name }}</h3></li>-->
+        <li><strong>Category: </strong>{{ recipes.category_name }}</li>
         <li>Sub-Category: {{ recipes.subcategory_name }}</li>
         <li>description: {{ recipes.description }}</li>
     </ul>
@@ -20,9 +25,10 @@
         <li>{{ recipes.ingredient5 }}</li>
         <li>{{ recipes.ingredient6 }}</li>
     </ul>
+    </div>
 </div>
+<hr />
 <div class="row">
-
     <h4>Instructions:</h4>
     <ul>
         <li>{{ recipes.instruction }}</li><br />
