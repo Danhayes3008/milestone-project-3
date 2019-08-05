@@ -124,13 +124,15 @@ def delete_user(user_id):
     mongo.db.users.remove({'_id': ObjectId(user_id)})
     return redirect(url_for('admin'))
     
-@app.route('/update_recipe/<recipe_id>', methods=["post"])
+@app.route('/delete_recipe/<recipe_id>')
+def delete_recipe(recipe_id):
+    mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
+    return redirect(url_for('admin'))
+    
+@app.route('/update_recipe/<recipe_id>', methods=["POST"])
 def update_recipe(recipe_id):
-    recipe= mongo.db.recipes
-    recipe.update( {'_id': ObjectId(recipe_id)},
-    {
-        'approval':request.form.get('task_name')
-    })
+    recipes = mongo.db.recipes
+    recipes.update_many({"_id": ObjectId(recipe_id)}, {"$set": {"approval": "yes"}})
     return redirect(url_for('admin'))
 
 
