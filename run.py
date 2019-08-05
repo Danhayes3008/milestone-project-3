@@ -110,7 +110,17 @@ def add_recipe():
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
     tasks = mongo.db.recipes
-    tasks.insert_one(request.form.to_dict())
+    tasks.insert_one({
+        'category_name': request.form['category_name'],
+        'subcategory_name': request.form['subcategory_name'],
+        'name': request.form['name'],
+        'ingredient': request.form['ingredient'],
+        'instruction': request.form['instruction'],
+        'description': request.form['description'],
+        'image_url': request.form['image_url'],
+        'author': session['name'].title(), #See author now can be added
+		'approval': 'no', # And approval 
+    })
     return redirect(url_for('recipes'))
     
     
