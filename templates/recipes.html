@@ -8,10 +8,6 @@
             <div id="filters">
             <input id="{{cat.category_name}}" type="checkbox" value="{{cat.category_name}}" name="{cat.category_name}}">
             <label class="custom-control-label" for="{{cat.category_name}}">{{cat.category_name}}</label><br /> </div>{% endfor %}
-            <h3>Sub-categories:</h3>
-            {% for sub in subcategory %}
-            <input id="_id{{sub.subcategory_name}}" type="checkbox" name="{{sub.subcategory_name}}" value="{{sub.subcategory_name}}">
-            <label for="_id{{sub.subcategory_name}}">{{sub.subcategory_name}}</label><br /> {% endfor %}
         </div>
 </form>
 <div class="col s3">
