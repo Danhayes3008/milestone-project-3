@@ -27,7 +27,19 @@ def recipes():
     subcategory=mongo.db.subcategory.find(),
     recipes=mongo.db.recipes.find())
     
-
+@app.route('/recipespage/<recipe_id>', methods=['GET', 'POST'])
+def recipespage(recipe_id):
+    """Route to show single recipe view page"""
+    recipes = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)}) #Here you are only finding one!
+    all_recipes = mongo.db.recipes.find().limit(4) #Pass them all down to the view and iterate over this and not just 1! hahahahaha
+    return render_template('recipes_name.html', recipes=recipes, all_recipes=all_recipes)
+	
+	
+@app.route('/suggested_recipespage/<recipe_id>', methods=['GET', 'POST'])
+def suggested_recipespage(recipes_id):
+    """Route to take the user to the suggested recipe chosen"""
+    recipes = mongo.db.recipes.find({"_id": ObjectId(recipes_id)})
+    return render_template('recipes_name.html', recipes=recipes)
     
 @app.route('/login')
 def login():
@@ -145,11 +157,6 @@ def update_recipe(recipe_id):
     recipes.update_many({"_id": ObjectId(recipe_id)}, {"$set": {"approval": "yes"}})
     return redirect(url_for('admin'))
 
-
-@app.route('/recipespage/<recipe_id>', methods=['GET', 'POST'])
-def recipespage(recipe_id):
-    recipes = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    return render_template('recipes_name.html', recipes=recipes)
 
 
 
