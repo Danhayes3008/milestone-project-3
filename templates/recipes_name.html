@@ -45,34 +45,13 @@
     <h3>You may also like:</h3>
 </div>
 <div class="row">
-    <div class="gallery">
-  <a target="_blank" href="img_5terre.jpg">
-    <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
+    {% for recipe in all_recipes %}
+    <div class="col s3">
+        <img style="width:150px; height:150px;" src="{{recipe.image_url}}"></img>
+        <h5><a id="recipes" href="{{ url_for('suggested_recipespage', recipe_id=recipe._id) }}">{{ recipe.name }}</a></h5>
+    </div>
+    {% endfor %}
 </div>
 
-<div class="gallery">
-  <a target="_blank" href="img_forest.jpg">
-    <img src="img_forest.jpg" alt="Forest" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="img_lights.jpg">
-    <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="img_mountains.jpg">
-    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-</div>
-
-
+    
 {% endblock %}
