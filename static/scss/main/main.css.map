@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA,UAAU;EACN,KAAK,EAAE,GAAG;;AAEd,UAAU;EACN,SAAS,EAAE,CAAC",
+"mappings": "AAAA,UAAU;EACN,KAAK,EAAE,GAAG",
 "sources": ["../components/general/general.scss"],
 "names": [],
 "file": "main.css"
