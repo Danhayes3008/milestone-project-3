@@ -1,4 +1,10 @@
 .jumbotron {
-  width: 25%; }
+  width: 40%; }
+
+.margin1 {
+  padding-left: 20%; }
+
+form {
+  margin-left: 10%; }
 
 /*# sourceMappingURL=main.css.map */
