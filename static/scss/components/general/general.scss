@@ -1,7 +1,7 @@
-// body{
-//     background: url('../../images/bakery.jpg') no-repeat center;
-//     background-size: cover;
-// }
+body{
+    background-color: #FFEEE3 !important;
+
+}
 
 .jumbotron{
     width: 45%;
@@ -13,23 +13,28 @@
 }
 
 .background1 {
-
-
     @include desktop {
-        background: url('https://live.staticflickr.com/2008/2226095398_e9d7f5d970_b.jpg') no-repeat center;
+        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeQn8R6KAsUD23P2bHR5RdKYoeGCqYznAzZBFPt5KlD00pgZLq') no-repeat center;
         background-size: cover;
         background-size: 100%;
-        height: 100%;
+        height: 200px;
         position: relative;
+        padding-top: 110px;
+    }
+}
+
+.background2{
+    @include desktop{
+        background: url('https://image.shutterstock.com/image-photo/brown-scratched-wooden-cutting-board-260nw-582026461.jpg') center;
+        background-size: 100%;
     }
 }
 
 .index-text {
   text-align: center;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 40%;
+  left: 40%;
   color: white;
 }
 
@@ -54,10 +59,18 @@ form{
     margin-top: 2rem;
 }
 
-.container{
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 150px;
+.container {
+    margin: 0;
+    
+}
+
+.container1{
+    margin: 0;
+    
+    @include desktop{
+        max-width: 100% !important;
+        margin-top: 64px !important;
+    }
 }
 
 footer{
@@ -69,4 +82,20 @@ footer{
 
 .padding-l1{
     padding-left: 40px;
+    
+    @include desktop{
+        padding-left: 20%;
+        margin-top: 15%;
+        height: 300px;
+    }
+}
+
+.p1{
+    @include desktop {
+        padding-top: 10%;
+        font-weight: bold;
+        width: 75%;
+        font-size: 16px;
+        word-wrap: break-word;
+    }
 }

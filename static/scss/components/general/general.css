@@ -1,49 +1,76 @@
-body {
-  background: url(bakery.jpg);
-  background-size: 100px 80px;
-  background-repeat: no-repeat; }
+/*
+Error: Undefined mixin 'desktop'.
+        on line 16 of static/scss/components/general/general.scss, in `desktop'
+        from line 16 of static/scss/components/general/general.scss
 
-.jumbotron {
-  width: 45%;
-  margin-left: 25%; }
+11: .input1{
+12:     width: 75%;
+13: }
+14: 
+15: .background1 {
+16:     @include desktop {
+17:         background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeQn8R6KAsUD23P2bHR5RdKYoeGCqYznAzZBFPt5KlD00pgZLq') no-repeat center;
+18:         background-size: cover;
+19:         background-size: 100%;
+20:         height: 200px;
+21:         position: relative;
 
-.input1 {
-  width: 75%; }
-
-.background1 {
-  background: url(bakery.jpg);
-  background-size: 100px 80px;
-  background-repeat: no-repeat; }
-
-.padding1 {
-  padding-left: 25%; }
-
-.button1 {
-  width: 50%; }
-
-.margin1 {
-  padding-left: 20%; }
-
-form {
-  margin-left: 5%;
-  width: 100%; }
-
-header {
-  padding: 100px 0 100px; }
-
-.jumbo1 {
-  margin-top: 2rem; }
-
-.container {
-  margin-bottom: 150px; }
-
-footer {
-  height: 100px; }
-
-.padding-r1 {
-  padding-right: 20px; }
-
-.padding-l1 {
-  padding-left: 40px; }
-
-/*# sourceMappingURL=general.css.map */
+Backtrace:
+static/scss/components/general/general.scss:16:in `desktop'
+static/scss/components/general/general.scss:16
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
+/usr/lib/ruby/vendor_ruby/sass/stack.rb:98:in `block in with_mixin'
+/usr/lib/ruby/vendor_ruby/sass/stack.rb:115:in `with_frame'
+/usr/lib/ruby/vendor_ruby/sass/stack.rb:98:in `with_mixin'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:349:in `visit_mixin'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/base.rb:36:in `visit'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:160:in `block in visit'
+/usr/lib/ruby/vendor_ruby/sass/stack.rb:79:in `block in with_base'
+/usr/lib/ruby/vendor_ruby/sass/stack.rb:115:in `with_frame'
+/usr/lib/ruby/vendor_ruby/sass/stack.rb:79:in `with_base'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:160:in `visit'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:433:in `map'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:181:in `with_environment'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:431:in `visit_rule'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/base.rb:36:in `visit'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:160:in `block in visit'
+/usr/lib/ruby/vendor_ruby/sass/stack.rb:79:in `block in with_base'
+/usr/lib/ruby/vendor_ruby/sass/stack.rb:115:in `with_frame'
+/usr/lib/ruby/vendor_ruby/sass/stack.rb:79:in `with_base'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:160:in `visit'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/base.rb:52:in `map'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/base.rb:52:in `visit_children'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:181:in `with_environment'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:168:in `visit_children'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/base.rb:36:in `block in visit'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:188:in `visit_root'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/base.rb:36:in `visit'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:159:in `visit'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:8:in `visit'
+/usr/lib/ruby/vendor_ruby/sass/tree/root_node.rb:36:in `css_tree'
+/usr/lib/ruby/vendor_ruby/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:381:in `_render_with_sourcemap'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:298:in `render_with_sourcemap'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `each'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:473:in `on_file_changed'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:331:in `block in watch'
+/usr/lib/ruby/vendor_ruby/listen/event/config.rb:23:in `call'
+/usr/lib/ruby/vendor_ruby/listen/event/processor.rb:115:in `_process_changes'
+/usr/lib/ruby/vendor_ruby/listen/event/processor.rb:19:in `block in loop_for'
+/usr/lib/ruby/vendor_ruby/listen/event/processor.rb:15:in `loop'
+/usr/lib/ruby/vendor_ruby/listen/event/processor.rb:15:in `loop_for'
+/usr/lib/ruby/vendor_ruby/listen/event/loop.rb:84:in `_wait_for_changes'
+/usr/lib/ruby/vendor_ruby/listen/event/loop.rb:42:in `block in setup'
+/usr/lib/ruby/vendor_ruby/listen/internals/thread_pool.rb:6:in `block in add'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'desktop'.\A         on line 16 of static/scss/components/general/general.scss, in `desktop'\A         from line 16 of static/scss/components/general/general.scss\A \A 11: .input1{\A 12:     width: 75%;\A 13: }\A 14: \A 15: .background1 {\A 16:     @include desktop {\A 17:         background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeQn8R6KAsUD23P2bHR5RdKYoeGCqYznAzZBFPt5KlD00pgZLq') no-repeat center;\A 18:         background-size: cover;\A 19:         background-size: 100%;\A 20:         height: 200px;\A 21:         position: relative;"; }
