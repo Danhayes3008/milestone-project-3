@@ -1,17 +1,53 @@
 {% extends 'base.html'%} {% block content %}
-<div class="container container1 background1">
-    <div class="row">
-        <!--<img src="{{url_for('static', filename='images/bakery.jpg' )}}"></img>-->
-        <h2 class="index-text">Welcome to Happy Baker's</h2>
-    </div>
-</div>
 <div class="container">
-    <div class="row padding-l1 background2">
-        <p class="p1">here at Happy Baker's We aim to provide the world with all recipes either Profesional,
-        or Homemade for all to experiance. As a open site we hope many baking hobbiest's would join us,
-        to share with the World our unique recipes and design's so we can help expand all our fellow members
-        cullenary knowlage and expertise</p>
+    <div class="row padding-l1">
+        <h2 class="">Welcome to Happy Baker's</h2>
     </div>
 </div>
+
+<div class="container">
+    <div class="row">
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides ">
+                <div class="numbertext">1 / 3</div>
+                <img src="../static/images/bakery.jpg" style="width:400px; height:250px">
+            </div>
+
+            <div class="mySlides ">
+                <div class="numbertext">2 / 3</div>
+                <img src="../static/images/front_page2.jpg" style="width:400px; height:250px">
+            </div>
+
+            <div class="mySlides ">
+                <div class="numbertext">3 / 3</div>
+                <img src="../static/images/front_page1.jpg" style="width:400px; height:250px">
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <p class="p1">here at Happy Baker's We aim to provide the world with all recipes either Profesional, or Homemade for all to experiance.
+        As a open site we hope many baking hobbiest's would join us, to share with the World our unique recipes and design's so we can help expand
+        all our fellow members cullenary knowlage and expertise</p>
+    </div>
+</div>
+
 
 {% endblock %}
