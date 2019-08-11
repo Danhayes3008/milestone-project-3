@@ -43,9 +43,6 @@ form {
 .container {
   margin: 0;
   margin-bottom: 100px !important; }
-  @media (min-width: 1200px) {
-    .container {
-      margin-bottom: 1000px !important; } }
 
 .container1 {
   margin: 0; }
@@ -79,5 +76,9 @@ footer {
 
 .mrg-btm1 {
   margin-bottom: 20%; }
+
+@media (min-width: 1200px) {
+  .input {
+    background-color: white !important; } }
 
 /*# sourceMappingURL=main.css.map */
