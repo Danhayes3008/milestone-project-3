@@ -6,7 +6,7 @@
             <div class="matfix row">
                 <div class="matfix row">
                     <div class="input-field col s12">
-                        <i class="material-icons prefix">poll</i>
+                        <i class="material-icons prefix">filter_list</i>
                         <select id="category" name="category_name">
                   <option value="" disabled selected>Choose Category</option>
                   {% for cat in categories %}
@@ -16,7 +16,7 @@
                         <label>Recipe Category</label>
                     </div>
                     <div class="matfix input-field col s12">
-                        <i class="material-icons prefix">poll</i>
+                        <i class="material-icons prefix">filter_list</i>
                         <select id="subcategory" name="subcategory_name">
                   <option value="" disabled selected>Choose SubCategory</option>
                   {% for sub in subcategory  %}
@@ -27,9 +27,9 @@
                     </div>
                 </div>
                 <div class="matfix input-field col s12">
-                    <i class="material-icons prefix">assignment</i>
-                    <input id="name" name="name" type="text">
-                    <label for="icon_prefix">Recipe Name</label>
+                    <i class="material-icons prefix">library_add</i>
+                    <input class="input" id="name" name="name" type="text" placeholder="Recipe Name">
+                    <!--<label for="icon_prefix">Recipe Name</label>-->
                 </div>
             </div>
             <div class="row">
@@ -37,14 +37,14 @@
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="material-icons prefix">subject</i>
-                    <input id="ingredient" name="ingredient" type="text">
-                    <label for="icon_telephone">Ingredient 1</label>
+                    <i class="material-icons prefix">library_add</i>
+                    <input id="ingredient" name="ingredient" type="text" placeholder="Ingredient 1">
+                    <!--<label for="icon_telephone">Ingredient 1</label>-->
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="material-icons prefix">subject</i>
+                    <i class="material-icons prefix">library_add</i>
                     <input id="ingredient1" name="ingredient1" type="text">
                     <label for="icon_telephone">Ingredient 2</label>
                 </div>
@@ -55,14 +55,14 @@
             <div id="dynamicInput"></div>
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="material-icons prefix">subject</i>
+                    <i class="material-icons prefix">library_add</i>
                     <input name="instruction" id="instruction" type="text">
                     <label for="icon_telephone">Instruction</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="material-icons prefix">subject</i>
+                    <i class="material-icons prefix">library_add</i>
                     <input name="instruction1" id="instruction1" type="text"></textarea>
                     <label for="icon_telephone">Instruction1</label>
                 </div>
@@ -73,7 +73,7 @@
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="material-icons prefix">subject</i>
+                    <i class="material-icons prefix">library_add</i>
                     <input name="description" id="description" type="text"></textarea>
                     <label for="icon_telephone">Description</label>
                 </div>
@@ -83,56 +83,56 @@
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="material-icons prefix">subject</i>
+                    <i class="material-icons prefix">library_add</i>
                     <input name="kcal" id="kcal" type="text"></textarea>
                     <label for="icon_telephone">Kcal</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="material-icons prefix">subject</i>
+                    <i class="material-icons prefix">library_add</i>
                     <input name="fat" id="fat" type="text"></textarea>
                     <label for="icon_telephone">Fat</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="material-icons prefix">subject</i>
+                    <i class="material-icons prefix">library_add</i>
                     <input name="saturates" id="saturates" type="text"></textarea>
                     <label for="icon_telephone">Saturates</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="material-icons prefix">subject</i>
+                    <i class="material-icons prefix">library_add</i>
                     <input name="carbs" id="carbs" type="text"></textarea>
                     <label for="icon_telephone">Carbs</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="material-icons prefix">subject</i>
+                    <i class="material-icons prefix">library_add</i>
                     <input name="sugars" id="sugars" type="text"></textarea>
                     <label for="icon_telephone">Sugars</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="material-icons prefix">subject</i>
+                    <i class="material-icons prefix">library_add</i>
                     <input name="fibre" id="fibre" type="text"></textarea>
                     <label for="icon_telephone">fibre</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="material-icons prefix">subject</i>
+                    <i class="material-icons prefix">library_add</i>
                     <input name="protein" id="protein" type="text"></textarea>
                     <label for="icon_telephone">Protein</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="material-icons prefix">subject</i>
+                    <i class="material-icons prefix">library_add</i>
                     <input name="salt" id="salt" type="text"></textarea>
                     <label for="icon_telephone">Salt</label>
                 </div>
@@ -142,7 +142,7 @@
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="material-icons prefix">subject</i>
+                    <i class="material-icons prefix">library_add</i>
                     <input name="image_url" id="image_url" type="text"></textarea>
                     <label for="icon_telephone">Recipe Image</label>
                     <p>Please only upload images that do not violate any copyrights</p>
