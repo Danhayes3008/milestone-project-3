@@ -2,7 +2,7 @@
 <div class="container padding-l1">
     <h3>Add Recipe</h3>
     <div class="row">
-        <form action="{{ url_for('insert_recipe') }}" method="POST" class="col s12 mrg-btm1">
+        <form action="{{ url_for('insert_recipe') }}" method="POST" class="col s12">
             <div class="matfix row">
                 <div class="matfix row">
                     <div class="input-field col s12">
@@ -28,8 +28,8 @@
                 </div>
                 <div class="matfix input-field col s12">
                     <i class="material-icons prefix">library_add</i>
-                    <input class="input" id="name" name="name" type="text" placeholder="Recipe Name">
-                    <!--<label for="icon_prefix">Recipe Name</label>-->
+                    <input id="name" name="name" type="text">
+                    <label for="icon_prefix">Recipe Name</label>
                 </div>
             </div>
             <div class="row">
@@ -38,8 +38,8 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">library_add</i>
-                    <input id="ingredient" name="ingredient" type="text" placeholder="Ingredient 1">
-                    <!--<label for="icon_telephone">Ingredient 1</label>-->
+                    <input id="ingredient" name="ingredient" type="text">
+                    <label for="icon_telephone">Ingredient 1</label>
                 </div>
             </div>
             <div class="row">
@@ -142,13 +142,13 @@
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="material-icons prefix">library_add</i>
+                    <i class="material-icons prefix">wallpaper</i>
                     <input name="image_url" id="image_url" type="text"></textarea>
                     <label for="icon_telephone">Recipe Image</label>
                     <p>Please only upload images that do not violate any copyrights</p>
                 </div>
             </div>
-            <div class="row ">
+            <div class="row mrg-btm1">
                 <button type="button" class="btn waves-effect waves-light" value="Add Ingredient" onClick="addRecipe('dynamicInput');">Add Ingredient
             <i class="material-icons right">add</i>
         </button>
