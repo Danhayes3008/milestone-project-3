@@ -55,6 +55,11 @@ form{
 
 .container {
     margin: 0;
+    margin-bottom: 100px !important;
+    
+    @include desktop{
+        margin-bottom: 1000px !important;
+    }
     
 }
 
@@ -81,6 +86,7 @@ footer{
         padding-left: 20%;
         margin-top: 15%;
         height: 300px;
+        padding-bottom: 10%;
     }
 }
 
@@ -91,5 +97,10 @@ footer{
         width: 75%;
         font-size: 16px;
         word-wrap: break-word;
+        
     }
+}
+
+.mrg-btm1{
+    margin-bottom: 20%;
 }
