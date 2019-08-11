@@ -58,7 +58,7 @@ form{
     margin-bottom: 100px !important;
     
     @include desktop{
-        margin-bottom: 1000px !important;
+        // margin-bottom: 1000px !important;
     }
     
 }
@@ -103,4 +103,12 @@ footer{
 
 .mrg-btm1{
     margin-bottom: 20%;
+}
+
+.input{
+    
+    @include desktop{
+        background-color: white !important;
+    }
+    
 }
