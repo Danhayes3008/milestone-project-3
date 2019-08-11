@@ -3,9 +3,9 @@
     <h3>Add Recipe</h3>
     <div class="row">
         <form action="{{ url_for('insert_recipe') }}" method="POST" class="col s12">
-            <div class="matfix row">
-                <div class="matfix row">
-                    <div class="input-field col s12">
+            <div class="row">
+                <div class="row">
+                    <div class="matfix input-field col s12">
                         <i class="material-icons prefix">filter_list</i>
                         <select id="category" name="category_name">
                   <option value="" disabled selected>Choose Category</option>
@@ -15,7 +15,7 @@
                 </select>
                         <label>Recipe Category</label>
                     </div>
-                    <div class="matfix input-field col s12">
+                    <div class="input-field col s12">
                         <i class="material-icons prefix">filter_list</i>
                         <select id="subcategory" name="subcategory_name">
                   <option value="" disabled selected>Choose SubCategory</option>
@@ -26,7 +26,7 @@
                         <label>Recipe Sub-Category</label>
                     </div>
                 </div>
-                <div class="matfix input-field col s12">
+                <div class="input-field col s12">
                     <i class="material-icons prefix">library_add</i>
                     <input id="name" name="name" type="text">
                     <label for="icon_prefix">Recipe Name</label>
@@ -47,12 +47,15 @@
                     <i class="material-icons prefix">library_add</i>
                     <input id="ingredient1" name="ingredient1" type="text">
                     <label for="icon_telephone">Ingredient 2</label>
+                    <div id="dynamicInput"></div>
                 </div>
             </div>
+            <button type="button" class="btn waves-effect waves-light" value="Add Ingredient" onClick="addRecipe('dynamicInput');">Add Ingredient
+                        <i class="material-icons right">add</i>
+                    </button>
             <div class="row">
                 <h4>Cooking Instructions:</h4>
             </div>
-            <div id="dynamicInput"></div>
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">library_add</i>
@@ -65,9 +68,12 @@
                     <i class="material-icons prefix">library_add</i>
                     <input name="instruction1" id="instruction1" type="text"></textarea>
                     <label for="icon_telephone">Instruction1</label>
+                    <div id="dynamicInput"></div>
                 </div>
             </div>
-            <div id="dynamicInput"></div>
+            <button type="button" class="btn waves-effect waves-light" value="Add Instruction" onClick="addInstruction('dynamicInput');">Add Instruction
+                        <i class="material-icons right">add</i>
+                    </button>
             <div class="row">
                 <h4>Description:</h4>
             </div>
@@ -149,12 +155,6 @@
                 </div>
             </div>
             <div class="row mrg-btm1">
-                <button type="button" class="btn waves-effect waves-light" value="Add Ingredient" onClick="addRecipe('dynamicInput');">Add Ingredient
-            <i class="material-icons right">add</i>
-        </button>
-                <button type="button" class="btn waves-effect waves-light" value="Add Instruction" onClick="addInstruction('dynamicInput');">Add Instruction
-            <i class="material-icons right">add</i>
-        </button>
                 <button class="btn waves-effect waves-light" type="submit">Add Recipe
             <i class="material-icons right">playlist_add</i>
         </button>
