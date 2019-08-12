@@ -5,7 +5,7 @@
         {% if session %}
         <h4>{{ session['name'] }}'s Recipes</h4>
         <ul>
-            {% if session['name'] == 'admin' %}
+            {% if session['name'] == 'Admin' %}
             <li>
                 <a href="{{url_for('add_recipe')}}" class="waves-effect waves-light btn btn_small green">Add recipe</a>
                 <a href="{{url_for('admin')}}" class="waves-effect waves-light btn btn_small green">admin functions</a>
