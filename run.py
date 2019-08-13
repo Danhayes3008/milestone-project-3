@@ -123,45 +123,51 @@ def add_recipe():
     
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
-    tasks = mongo.db.recipes
-    tasks.insert_one({
-        'category_name': request.form['category_name'],
-        'subcategory_name': request.form['subcategory_name'],
-        'name': request.form['name'],
-        'ingredient': request.form.get('ingredient', ""),
-        'ingredient1': request.form.get('ingredient1', ""),
-        'ingredient2': request.form.get('ingredient2', ""),
-        'ingredient3': request.form.get('ingredient3', ""),
-        'ingredient4': request.form.get('ingredient4', ""),
-        'ingredient5': request.form.get('ingredient5', ""),
-        'ingredient6': request.form.get('ingredient6', ""),
-        'ingredient7': request.form.get('ingredient7', ""),
-        'ingredient8': request.form.get('ingredient8', ""),
-        'ingredient9': request.form.get('ingredient9', ""),
-        'ingredient10': request.form.get('ingredient10', ""),
-        'ingredient11': request.form.get('ingredient11', ""),
-        'instruction': request.form.get('instruction', ""),
-        'instruction1': request.form.get('instruction1', ""),
-        'instruction2': request.form.get('instruction2', ""),
-        'instruction3': request.form.get('instruction3', ""),
-        'instruction4': request.form.get('instruction4', ""),
-        'instruction5': request.form.get('instruction5', ""),
-        'instruction6': request.form.get('instruction6', ""),
-        'instruction7': request.form.get('instruction7', ""),
-        'description': request.form['description'],
-        'kcal' : request.form['kcal'],
-        'fat': request.form['fat'],
-        'saturates': request.form['saturates'],
-        'carbs': request.form['carbs'],
-        'sugars': request.form['sugars'],
-        'fibre': request.form['fibre'],
-        'protein': request.form['protein'],
-        'salt': request.form['salt'],
-        'image_url': request.form['image_url'],
-        'author': session['name'].title(), #See author now can be added
-		'approval': 'no', # And approval 
-    })
-    return redirect(url_for('recipes'))
+    if request.method == 'POST':
+        tasks = mongo.db.recipes
+        existing_recipe = tasks.find_one({'name' : request.form['name']})
+    
+    if existing_recipe is None:
+        tasks.insert_one({
+            'category_name': request.form['category_name'],
+            'subcategory_name': request.form['subcategory_name'],
+            'name': request.form['name'],
+            'ingredient': request.form.get('ingredient', ""),
+            'ingredient1': request.form.get('ingredient1', ""),
+            'ingredient2': request.form.get('ingredient2', ""),
+            'ingredient3': request.form.get('ingredient3', ""),
+            'ingredient4': request.form.get('ingredient4', ""),
+            'ingredient5': request.form.get('ingredient5', ""),
+            'ingredient6': request.form.get('ingredient6', ""),
+            'ingredient7': request.form.get('ingredient7', ""),
+            'ingredient8': request.form.get('ingredient8', ""),
+            'ingredient9': request.form.get('ingredient9', ""),
+            'ingredient10': request.form.get('ingredient10', ""),
+            'ingredient11': request.form.get('ingredient11', ""),
+            'instruction': request.form.get('instruction', ""),
+            'instruction1': request.form.get('instruction1', ""),
+            'instruction2': request.form.get('instruction2', ""),
+            'instruction3': request.form.get('instruction3', ""),
+            'instruction4': request.form.get('instruction4', ""),
+            'instruction5': request.form.get('instruction5', ""),
+            'instruction6': request.form.get('instruction6', ""),
+            'instruction7': request.form.get('instruction7', ""),
+            'description': request.form['description'],
+            'kcal' : request.form['kcal'],
+            'fat': request.form['fat'],
+            'saturates': request.form['saturates'],
+            'carbs': request.form['carbs'],
+            'sugars': request.form['sugars'],
+            'fibre': request.form['fibre'],
+            'protein': request.form['protein'],
+            'salt': request.form['salt'],
+            'image_url': request.form['image_url'],
+            'author': session['name'].title(), #See author now can be added
+    		'approval': 'no', # And approval 
+        })
+        return redirect(url_for('recipes'))
+    flash('Sorry recipe already exists!')
+    return redirect(url_for('add_recipe'))
     
     
 @app.route('/admin')
