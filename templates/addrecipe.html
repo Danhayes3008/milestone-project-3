@@ -4,8 +4,8 @@
     <div class="row">
         <form action="{{ url_for('insert_recipe') }}" method="POST" class="col s12">
             <div class="row">
-                <div class="row">
-                    <div class="matfix input-field col s12">
+                <div class="matfix row">
+                    <div class="input-field col s12">
                         <i class="material-icons prefix">filter_list</i>
                         <select id="category" name="category_name">
                   <option value="" disabled selected>Choose Category</option>
@@ -69,7 +69,7 @@
                 <div class="input-field col s12">
                     <i class="material-icons prefix">library_add</i>
                     <input name="instruction1" id="instruction1" type="text">
-                    <label for="icon_telephone">Instruction</label>
+                    <label for="icon_telephone">Instruction1</label>
                     <div id="DynamicInput"></div>
                 </div>
             </div>
