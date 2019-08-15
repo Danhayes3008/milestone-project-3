@@ -1,28 +1,30 @@
 {% extends 'base.html'%} {% block content %}
 <div class="container padding-l1">
-    <div class="jumbotron jumbo1">
-        <h2 class="text-center">Register</h2>
-        <div class="row margin1">
-            <form class="input1" action="{{url_for('insert_user')}}" method="POST">
-                <div class="row">
-                    <label>Username</label>
-                    <input class="input1" type="text" name="name" id="name" placeholder="Username">
-                </div>
-                <div class="row">
-                    <label>Password</label>
-                    <input class="input1" type="text" name="password" id="password" placeholder="Password">
-                </div>
-                <div class="row padding1">
-                    <button type="submit" class="btn btn-primary button1">submit</button>
-                </div>
-            </form>
-            {% with messages = get_flashed_messages() %} {% if messages %}
-            <ul class=flashes>
-                {% for message in messages %}
-                <li>{{ message }}</li>
-                {% endfor %}
-            </ul>
-            {% endif %} {% endwith %} Warning password's can not be reset if forgotten.
+    <div class="row">
+        <div class="jumbotron jumbo1">
+            <h2 class="text-center">Register</h2>
+            <div class="row margin1">
+                <form class="input1" action="{{url_for('insert_user')}}" method="POST">
+                    <div class="row">
+                        <label>Username</label>
+                        <input class="input1" type="text" name="name" id="name" placeholder="Username">
+                    </div>
+                    <div class="row">
+                        <label>Password</label>
+                        <input class="input1" type="text" name="password" id="password" placeholder="Password">
+                    </div>
+                    <div class="row padding1">
+                        <button type="submit" class="btn btn-primary button1">submit</button>
+                    </div>
+                </form>
+                {% with messages = get_flashed_messages() %} {% if messages %}
+                <ul class=flashes>
+                    {% for message in messages %}
+                    <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %} {% endwith %} Warning password's can not be reset if forgotten.
+            </div>
         </div>
     </div>
 </div>

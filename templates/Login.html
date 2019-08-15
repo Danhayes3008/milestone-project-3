@@ -1,33 +1,35 @@
 {% extends 'base.html'%} {% block content %}
 <div class="container padding-l1">
-    <div class="jumbotron jumbo1">
-        <h2 class="text-center">Login</h2>
-        <div class="row margin1">
-            <form class="input1" method=POST action="{{ url_for('user_login') }}">
-                <div class="row">
-                    <label>Username</label>
-                    <input class="input1" type="text" name="name" placeholder="Username">
-                </div>
-                <div class="row">
-                    <label>Password</label>
-                    <input class="input1" type="password" name="pass" placeholder="Password">
-                </div>
-                <div class="row padding1">
-                    <button type="submit" class="btn btn-primary button1">Log In</button>
-                </div>
+    <div class="row">
+        <div class="jumbotron jumbo1">
+            <h2 class="text-center">Login</h2>
+            <div class="row margin1">
+                <form class="input1" method=POST action="{{ url_for('user_login') }}">
+                    <div class="row">
+                        <label>Username</label>
+                        <input class="input1" type="text" name="name" placeholder="Username">
+                    </div>
+                    <div class="row">
+                        <label>Password</label>
+                        <input class="input1" type="password" name="pass" placeholder="Password">
+                    </div>
+                    <div class="row padding1">
+                        <button type="submit" class="btn btn-primary button1">Log In</button>
+                    </div>
 
-            </form>
-            <br>
-            <div>
-                <a href="{{ url_for('register') }}">Click here</a> to create you're free account.
+                </form>
+                <br>
+                <div>
+                    <a href="{{ url_for('register') }}">Click here</a> to create you're free account.
+                </div>
+                {% with messages = get_flashed_messages() %} {% if messages %}
+                <ul class=flashes>
+                    {% for message in messages %}
+                    <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %} {% endwith %}
             </div>
-            {% with messages = get_flashed_messages() %} {% if messages %}
-            <ul class=flashes>
-                {% for message in messages %}
-                <li>{{ message }}</li>
-                {% endfor %}
-            </ul>
-            {% endif %} {% endwith %}
         </div>
     </div>
 </div>
