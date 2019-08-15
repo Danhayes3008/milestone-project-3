@@ -15,7 +15,7 @@
                     <div class="input-field col s12">
                         <i class="material-icons prefix">filter_list</i>
                         <select id="category" name="category_name">
-                  <option value="" disabled selected>Choose Category</option>
+                  <option value="" disabled selected>Category</option>
                   {% for cat in categories %}
                       <option value="{{cat.category_name}}">{{cat.category_name}}</option>
                   {% endfor %}
@@ -25,7 +25,7 @@
                     <div class="input-field col s12">
                         <i class="material-icons prefix">filter_list</i>
                         <select id="subcategory" name="subcategory_name">
-                  <option value="" disabled selected>Choose SubCategory</option>
+                  <option value="" disabled selected>SubCategory</option>
                   {% for sub in subcategory  %}
                       <option value="{{sub.subcategory_name}}">{{sub.subcategory_name}}</option>
                   {% endfor %}
