@@ -8,6 +8,16 @@
     width: 75%;
 }
 
+.card{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+
+.padding-l2{
+    padding-left: 6%;
+}
+
 .background1 {
     @include desktop {
         background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeQn8R6KAsUD23P2bHR5RdKYoeGCqYznAzZBFPt5KlD00pgZLq') no-repeat center;
@@ -108,7 +118,6 @@ footer{
     @include desktop{
         padding-left: 20%;
         margin-top: 15%;
-        
         padding-bottom: 10%;
     }
 }
