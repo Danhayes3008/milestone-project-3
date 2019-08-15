@@ -29,15 +29,54 @@ def recipes():
     subcategory=mongo.db.subcategory.find(),
     recipes=mongo.db.recipes.find())
     
+
+
+@app.route('/breads')
+def breads():
+    return render_template('bread.html', recipes=mongo.db.recipes.find())
     
+@app.route('/GlutenFree')
+def GlutenFree():
+    return render_template('Gluten-Free.html')
+    
+@app.route('/cakes')
+def cakes():
+    return render_template('cakes.html')
+    
+@app.route('/Tarts')
+def Tarts():
+    return render_template('Tarts.html')
+    
+@app.route('/Pies')
+def Pies():
+    return render_template('Pies.html')
+    
+@app.route('/Biscuits')
+def Biscuits():
+    return render_template('Biscuits.html')
+    
+@app.route('/Deserts')
+def Deserts():
+    return render_template('Deserts.html')
+    
+@app.route('/Pastry')
+def Pastry():
+    return render_template('Pastry.html')
+    
+@app.route('/QuickBreads')
+def QuickBreads():
+    return render_template('QuickBreads.html')
+    
+@app.route('/ReducedFat')
+def ReducedFat():
+    return render_template('ReducedFat.html')
+
 @app.route('/recipespage/<recipe_id>', methods=['GET', 'POST'])
 def recipespage(recipe_id):
     """Route to show single recipe view page"""
     recipes = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)}) #Here you are only finding one!
     all_recipes = mongo.db.recipes.find().limit(4)#Pass them all down to the view and iterate over this and not just 1! hahahahaha
     return render_template('recipes_name.html', recipes=recipes, all_recipes=all_recipes)
-    
-	
 	
 @app.route('/suggested_recipespage/<recipe_id>', methods=['GET', 'POST'])
 def suggested_recipespage(recipes_id):
@@ -213,6 +252,13 @@ def update_recipe(recipe_id):
     recipes = mongo.db.recipes
     recipes.update_many({"_id": ObjectId(recipe_id)}, {"$set": {"approval": "yes"}})
     return redirect(url_for('admin'))
+
+
+@app.route('/pagination1')
+def pagination1():
+    recipes = mongo.db.recipes
+    recipes.find().skip(5).limit(5)
+    return render_template('pagination1.html')
 
 
 if __name__ == '__main__':
