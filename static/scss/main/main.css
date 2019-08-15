@@ -10,6 +10,9 @@
   height: 200px;
   margin: 10px; }
 
+.icons {
+  display: inline; }
+
 .padding-l2 {
   padding-left: 6%; }
 
@@ -94,12 +97,19 @@ footer {
       padding-bottom: 10%; } }
 
 @media (min-width: 1200px) {
+  .padding-l3 {
+    padding-left: 20%;
+    padding-bottom: 1.6%; } }
+
+@media (min-width: 1200px) {
   .p1 {
     padding-top: 10%;
     font-weight: bold;
     width: 75%;
     font-size: 16px;
-    word-wrap: break-word; } }
+    word-wrap: break-word;
+    padding-left: 20%;
+    margin-left: 3%; } }
 
 .mrg-btm1 {
   margin-bottom: 20%; }
