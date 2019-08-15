@@ -37,39 +37,39 @@ def breads():
     
 @app.route('/GlutenFree')
 def GlutenFree():
-    return render_template('Gluten-Free.html')
+    return render_template('Gluten-Free.html', recipes=mongo.db.recipes.find())
     
 @app.route('/cakes')
 def cakes():
-    return render_template('cakes.html')
+    return render_template('cakes.html', recipes=mongo.db.recipes.find())
     
 @app.route('/Tarts')
 def Tarts():
-    return render_template('Tarts.html')
+    return render_template('Tarts.html', recipes=mongo.db.recipes.find())
     
 @app.route('/Pies')
 def Pies():
-    return render_template('Pies.html')
+    return render_template('Pies.html', recipes=mongo.db.recipes.find())
     
 @app.route('/Biscuits')
 def Biscuits():
-    return render_template('Biscuits.html')
+    return render_template('Biscuits.html', recipes=mongo.db.recipes.find())
     
 @app.route('/Deserts')
 def Deserts():
-    return render_template('Deserts.html')
+    return render_template('Deserts.html', recipes=mongo.db.recipes.find())
     
 @app.route('/Pastry')
 def Pastry():
-    return render_template('Pastry.html')
+    return render_template('Pastry.html', recipes=mongo.db.recipes.find())
     
 @app.route('/QuickBreads')
 def QuickBreads():
-    return render_template('QuickBreads.html')
+    return render_template('QuickBreads.html', recipes=mongo.db.recipes.find())
     
 @app.route('/ReducedFat')
 def ReducedFat():
-    return render_template('ReducedFat.html')
+    return render_template('ReducedFat.html', recipes=mongo.db.recipes.find())
 
 @app.route('/recipespage/<recipe_id>', methods=['GET', 'POST'])
 def recipespage(recipe_id):
