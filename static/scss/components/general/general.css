@@ -1,23 +1,23 @@
 /*
 Error: Undefined mixin 'desktop'.
-        on line 22 of static/scss/components/general/general.scss, in `desktop'
-        from line 22 of static/scss/components/general/general.scss
+        on line 37 of static/scss/components/general/general.scss, in `desktop'
+        from line 37 of static/scss/components/general/general.scss
 
-17: .padding-l2{
-18:     padding-left: 6%;
-19: }
-20: 
-21: .background1 {
-22:     @include desktop {
-23:         background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeQn8R6KAsUD23P2bHR5RdKYoeGCqYznAzZBFPt5KlD00pgZLq') no-repeat center;
-24:         background-size: cover;
-25:         background-size: 100%;
-26:         height: 200px;
-27:         position: relative;
+32: .padding-l2{
+33:     padding-left: 6%;
+34: }
+35: 
+36: .background1 {
+37:     @include desktop {
+38:         background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeQn8R6KAsUD23P2bHR5RdKYoeGCqYznAzZBFPt5KlD00pgZLq') no-repeat center;
+39:         background-size: cover;
+40:         background-size: 100%;
+41:         height: 200px;
+42:         position: relative;
 
 Backtrace:
-static/scss/components/general/general.scss:22:in `desktop'
-static/scss/components/general/general.scss:22
+static/scss/components/general/general.scss:37:in `desktop'
+static/scss/components/general/general.scss:37
 /usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
 /usr/lib/ruby/vendor_ruby/sass/stack.rb:98:in `block in with_mixin'
 /usr/lib/ruby/vendor_ruby/sass/stack.rb:115:in `with_frame'
@@ -73,4 +73,4 @@ static/scss/components/general/general.scss:22
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'desktop'.\A         on line 22 of static/scss/components/general/general.scss, in `desktop'\A         from line 22 of static/scss/components/general/general.scss\A \A 17: .padding-l2{\A 18:     padding-left: 6%;\A 19: }\A 20: \A 21: .background1 {\A 22:     @include desktop {\A 23:         background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeQn8R6KAsUD23P2bHR5RdKYoeGCqYznAzZBFPt5KlD00pgZLq') no-repeat center;\A 24:         background-size: cover;\A 25:         background-size: 100%;\A 26:         height: 200px;\A 27:         position: relative;"; }
+  content: "Error: Undefined mixin 'desktop'.\A         on line 37 of static/scss/components/general/general.scss, in `desktop'\A         from line 37 of static/scss/components/general/general.scss\A \A 32: .padding-l2{\A 33:     padding-left: 6%;\A 34: }\A 35: \A 36: .background1 {\A 37:     @include desktop {\A 38:         background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeQn8R6KAsUD23P2bHR5RdKYoeGCqYznAzZBFPt5KlD00pgZLq') no-repeat center;\A 39:         background-size: cover;\A 40:         background-size: 100%;\A 41:         height: 200px;\A 42:         position: relative;"; }
