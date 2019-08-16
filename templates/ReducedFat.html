@@ -1,0 +1,22 @@
+{% extends 'base.html'%} {% block content %}
+<div class="container padding-l1">
+    <div class="">
+        <h3>Reduced Fat<h3>
+        {% for recipe in recipes %} {% if (recipe.category_name=="Reduced-fat") %} {% if (recipe.approval=="yes") %}
+        <div class="row">
+            <img class="" style="width:150px; height:150px;" src="{{recipe.image_url}}"></img>
+            <ul class="col s1">
+                <li>
+                    <h5><a id="recipe" href="{{ url_for('recipespage', recipe_id=recipe._id) }}">{{recipe.name}}</a></h5>
+                    <p>subcategory: {{recipe.subcategory_name}}</p>
+                    <p>Description: {{recipe.description}}</p>
+                </li>
+            </ul>
+        </div>
+        {% else %}
+        
+        {% endif %} {% else %}
+        {% endif %} {% endfor %}
+    </div>
+</div>
+{% endblock %}
