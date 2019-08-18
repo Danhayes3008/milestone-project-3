@@ -5,6 +5,10 @@ html, body {
 .jumbotron {
   width: 45%;
   margin-left: 25%; }
+  @media (max-width: 730px) {
+    .jumbotron {
+      width: 75% !important;
+      margin-left: 12% !important; } }
 
 .input1 {
   width: 75%; }
@@ -71,6 +75,9 @@ html, body {
 
 .button1 {
   width: 50%; }
+  @media (max-width: 730px) {
+    .button1 {
+      margin-left: 20%; } }
 
 .pagination {
   display: inline-block; }
