@@ -1,23 +1,23 @@
 /*
 Error: Undefined mixin 'mobile'.
-        on line 19 of static/scss/components/general/general.scss, in `mobile'
-        from line 19 of static/scss/components/general/general.scss
+        on line 9 of static/scss/components/general/general.scss, in `mobile'
+        from line 9 of static/scss/components/general/general.scss
 
-14: .card{
-15:     width: 200px;
-16:     height: 200px;
-17:     margin: 10px;
-18:     
-19:     @include mobile{
-20:         margin-left: 20%;
-21:     }
-22: }
-23: 
-24: .icons{
+4: }
+5: .jumbotron{
+6:     width: 45%;
+7:     margin-left: 25%;
+8:     
+9:     @include mobile{
+10:         width: 75% !important;
+11:         margin-left: 12% !important;
+12:     }
+13: }
+14: 
 
 Backtrace:
-static/scss/components/general/general.scss:19:in `mobile'
-static/scss/components/general/general.scss:19
+static/scss/components/general/general.scss:9:in `mobile'
+static/scss/components/general/general.scss:9
 /usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
 /usr/lib/ruby/vendor_ruby/sass/stack.rb:98:in `block in with_mixin'
 /usr/lib/ruby/vendor_ruby/sass/stack.rb:115:in `with_frame'
@@ -73,4 +73,4 @@ static/scss/components/general/general.scss:19
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'mobile'.\A         on line 19 of static/scss/components/general/general.scss, in `mobile'\A         from line 19 of static/scss/components/general/general.scss\A \A 14: .card{\A 15:     width: 200px;\A 16:     height: 200px;\A 17:     margin: 10px;\A 18:     \A 19:     @include mobile{\A 20:         margin-left: 20%;\A 21:     }\A 22: }\A 23: \A 24: .icons{"; }
+  content: "Error: Undefined mixin 'mobile'.\A         on line 9 of static/scss/components/general/general.scss, in `mobile'\A         from line 9 of static/scss/components/general/general.scss\A \A 4: }\A 5: .jumbotron{\A 6:     width: 45%;\A 7:     margin-left: 25%;\A 8:     \A 9:     @include mobile{\A 10:         width: 75% !important;\A 11:         margin-left: 12% !important;\A 12:     }\A 13: }\A 14: "; }
