@@ -1,4 +1,7 @@
-
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 .jumbotron{
     width: 45%;
     margin-left: 25%;
@@ -148,6 +151,11 @@ form{
     @include desktop{
         margin-bottom: 30px !important;
     }
+    
+    @include mobile{
+        width: 50%;
+        height: 50%;
+    }
 }
 
 footer{
@@ -189,6 +197,11 @@ footer{
         margin-left: 3%;
         
     }
+    
+    @include mobile{
+        width: 90%;
+        padding-left: 10%;
+    }
 }
 
 .mrg-btm1{
@@ -201,4 +214,12 @@ footer{
         background-color: white !important;
     }
     
+}
+
+img{
+    
+    @include mobile{
+        width: 300px;
+        height: 250px;
+    }
 }
