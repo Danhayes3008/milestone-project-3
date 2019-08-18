@@ -17,11 +17,11 @@
             {% endif %}
         </ul>
         <ul>
-            {% for rec in recipes%} {% if session['name'] == rec.author %}
+            {% for recipe in recipes%} {% if session['name'] == recipe.author %}
             <li>
                 <div class="task_header col s5">
                     <strong>{{ session['name'] }}</strong>
-                    <a href="{{ url_for('recipe_name')}}">{{rec.name}}</a>
+                    <a href="{{ url_for('recipespage', recipe_id=recipe._id) }}">{{recipe.name}}</a>
                 </div>
             </li>
             {% endif %} {% endfor %}
