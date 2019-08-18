@@ -1,6 +1,9 @@
 {% extends 'base.html'%} {% block content %}
 <div class="container padding-l1">
     <div class="">
+        <div>
+            <h5><a href="{{ url_for('recipes') }}">Return</a></h5>
+        </div>
         <h3>Biscuits:</h3>
         {% for recipe in recipes %} {% if (recipe.category_name=="Biscuits") %} {% if (recipe.approval=="yes") %}
         <div class="row">

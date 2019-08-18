@@ -1,7 +1,10 @@
 {% extends 'base.html'%} {% block content %}
 <div class="container padding-l1">
     <div class="">
-        <h3>Cakes<h3>
+        <h3>Cakes</h3>
+        <div>
+            <h5><a href="{{ url_for('recipes') }}">Return</a></h5>
+        </div>
         {% for recipe in recipes %} {% if (recipe.category_name=="Cakes") %} {% if (recipe.approval=="yes") %}
         <div class="row">
             <img class="" style="width:150px; height:150px;" src="{{recipe.image_url}}"></img>
@@ -13,10 +16,7 @@
                 </li>
             </ul>
         </div>
-        {% else %}
-        
-        {% endif %} {% else %}
-        {% endif %} {% endfor %}
+        {% else %} {% endif %} {% else %} {% endif %} {% endfor %}
     </div>
 </div>
 {% endblock %}
