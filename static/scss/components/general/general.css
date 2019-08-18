@@ -1,23 +1,23 @@
 /*
-Error: Undefined mixin 'desktop'.
-        on line 37 of static/scss/components/general/general.scss, in `desktop'
-        from line 37 of static/scss/components/general/general.scss
+Error: Undefined mixin 'mobile'.
+        on line 22 of static/scss/components/general/general.scss, in `mobile'
+        from line 22 of static/scss/components/general/general.scss
 
-32: .padding-l2{
-33:     padding-left: 6%;
-34: }
-35: 
-36: .background1 {
-37:     @include desktop {
-38:         background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeQn8R6KAsUD23P2bHR5RdKYoeGCqYznAzZBFPt5KlD00pgZLq') no-repeat center;
-39:         background-size: cover;
-40:         background-size: 100%;
-41:         height: 200px;
-42:         position: relative;
+17: .icons{
+18:     display: inline;
+19:     padding-left: 5%;
+20:     width: 50%;
+21:     
+22:     @include mobile{
+23:         display: inline;
+24:         padding-left: 5%;
+25:         width: 10%;
+26:     }
+27: }
 
 Backtrace:
-static/scss/components/general/general.scss:37:in `desktop'
-static/scss/components/general/general.scss:37
+static/scss/components/general/general.scss:22:in `mobile'
+static/scss/components/general/general.scss:22
 /usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
 /usr/lib/ruby/vendor_ruby/sass/stack.rb:98:in `block in with_mixin'
 /usr/lib/ruby/vendor_ruby/sass/stack.rb:115:in `with_frame'
@@ -55,22 +55,13 @@ static/scss/components/general/general.scss:37
 /usr/lib/ruby/vendor_ruby/sass/tree/root_node.rb:29:in `render_with_sourcemap'
 /usr/lib/ruby/vendor_ruby/sass/engine.rb:381:in `_render_with_sourcemap'
 /usr/lib/ruby/vendor_ruby/sass/engine.rb:298:in `render_with_sourcemap'
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `each'
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:473:in `on_file_changed'
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:331:in `block in watch'
-/usr/lib/ruby/vendor_ruby/listen/event/config.rb:23:in `call'
-/usr/lib/ruby/vendor_ruby/listen/event/processor.rb:115:in `_process_changes'
-/usr/lib/ruby/vendor_ruby/listen/event/processor.rb:19:in `block in loop_for'
-/usr/lib/ruby/vendor_ruby/listen/event/processor.rb:15:in `loop'
-/usr/lib/ruby/vendor_ruby/listen/event/processor.rb:15:in `loop_for'
-/usr/lib/ruby/vendor_ruby/listen/event/loop.rb:84:in `_wait_for_changes'
-/usr/lib/ruby/vendor_ruby/listen/event/loop.rb:42:in `block in setup'
-/usr/lib/ruby/vendor_ruby/listen/internals/thread_pool.rb:6:in `block in add'
+/usr/lib/ruby/vendor_ruby/sass/exec/sass_scss.rb:387:in `run'
+/usr/lib/ruby/vendor_ruby/sass/exec/sass_scss.rb:63:in `process_result'
+/usr/lib/ruby/vendor_ruby/sass/exec/base.rb:52:in `parse'
+/usr/lib/ruby/vendor_ruby/sass/exec/base.rb:19:in `parse!'
+/usr/bin/sass:8:in `<main>'
 */
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'desktop'.\A         on line 37 of static/scss/components/general/general.scss, in `desktop'\A         from line 37 of static/scss/components/general/general.scss\A \A 32: .padding-l2{\A 33:     padding-left: 6%;\A 34: }\A 35: \A 36: .background1 {\A 37:     @include desktop {\A 38:         background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeQn8R6KAsUD23P2bHR5RdKYoeGCqYznAzZBFPt5KlD00pgZLq') no-repeat center;\A 39:         background-size: cover;\A 40:         background-size: 100%;\A 41:         height: 200px;\A 42:         position: relative;"; }
+  content: "Error: Undefined mixin 'mobile'.\A         on line 22 of static/scss/components/general/general.scss, in `mobile'\A         from line 22 of static/scss/components/general/general.scss\A \A 17: .icons{\A 18:     display: inline;\A 19:     padding-left: 5%;\A 20:     width: 50%;\A 21:     \A 22:     @include mobile{\A 23:         display: inline;\A 24:         padding-left: 5%;\A 25:         width: 10%;\A 26:     }\A 27: }"; }

@@ -18,15 +18,30 @@
     display: inline;
     padding-left: 5%;
     width: 50%;
+    
+    @include mobile{
+        display: inline;
+        padding-left: 5%;
+        width: 10%;
+    }
 }
 
 .copyright{
     padding-left: 5%;
+    
+    @include mobile{
+        padding-left: 20%;
+    }
 }
 
 .ul{
     margin-left: 25%;
     width: 15%;
+    
+    @include mobile{
+        width: 100%;
+        margin-left: 0%;
+    }
 }
 
 .padding-l2{
@@ -59,6 +74,10 @@
 
 .padding1{
     padding-left: 18%;
+    
+    @include mobile{
+        padding-left: 0%;
+    }
     
 }
 
@@ -109,6 +128,10 @@ form{
         // margin-bottom: 1000px !important;
     }
     
+    @include mobile{
+        margin-bottom: 10px !important;
+    }
+    
 }
 
 .container1{
@@ -139,6 +162,11 @@ footer{
     
     @include desktop{
         padding-left: 20%;
+        margin-top: 5%;
+    }
+    
+    @include mobile{
+        padding-left: 0%;
         margin-top: 5%;
     }
 }
