@@ -15,6 +15,10 @@ html, body {
     width: 200px;
     height: 200px;
     margin: 10px;
+    
+    @include mobile{
+        margin-left: 20%;
+    }
 }
 
 .icons{
@@ -203,6 +207,13 @@ footer{
         padding-left: 10%;
     }
 }
+
+.p2{
+    @include mobile{
+        padding-top: 5%;
+    }
+}
+
 
 .mrg-btm1{
     margin-bottom: 20%;
