@@ -78,11 +78,6 @@ def recipespage(recipe_id):
     all_recipes = mongo.db.recipes.find().limit(4)#Pass them all down to the view and iterate over this and not just 1! hahahahaha
     return render_template('recipes_name.html', recipes=recipes, all_recipes=all_recipes)
 	
-@app.route('/suggested_recipespage/<recipe_id>', methods=['GET', 'POST'])
-def suggested_recipespage(recipes_id):
-    """Route to take the user to the suggested recipe chosen"""
-    recipes = mongo.db.recipes.find({"_id": ObjectId(recipes_id)})
-    return render_template('recipes_name.html', recipes=recipes)
     
     
 @app.route('/login')
