@@ -13,6 +13,9 @@ html, body {
   width: 200px;
   height: 200px;
   margin: 10px; }
+  @media (max-width: 730px) {
+    .card {
+      margin-left: 20%; } }
 
 .icons {
   display: inline;
@@ -154,7 +157,12 @@ footer {
     margin-left: 3%; } }
 @media (max-width: 730px) {
   .p1 {
-    width: 90%; } }
+    width: 90%;
+    padding-left: 10%; } }
+
+@media (max-width: 730px) {
+  .p2 {
+    padding-top: 5%; } }
 
 .mrg-btm1 {
   margin-bottom: 20%; }
