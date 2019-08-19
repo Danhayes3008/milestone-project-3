@@ -30,6 +30,10 @@ html, body {
       display: inline;
       padding-left: 5%;
       width: 10%; } }
+  @media (min-width: 731px) and (max-width: 991px) {
+    .icons {
+      display: inline;
+      width: 20%; } }
 
 .copyright {
   padding-left: 5%; }
@@ -44,6 +48,10 @@ html, body {
     .ul {
       width: 100%;
       margin-left: 0%; } }
+  @media (min-width: 731px) and (max-width: 991px) {
+    .ul {
+      width: 50%;
+      margin-left: 0px; } }
 
 @media (max-width: 730px) {
   .ul1 {
@@ -122,6 +130,9 @@ form {
   @media (max-width: 730px) {
     .container {
       margin-bottom: 10px !important; } }
+  @media (min-width: 731px) and (max-width: 991px) {
+    .container {
+      margin-bottom: 80px !important; } }
 
 .container1 {
   margin: 0; }
@@ -130,13 +141,21 @@ form {
       max-width: 100% !important;
       margin-top: 64px !important; } }
 
-@media (min-width: 1200px) {
-  .container2 {
-    margin-bottom: 30px !important; } }
 @media (max-width: 730px) {
   .container2 {
     width: 50%;
     height: 50%; } }
+@media (min-width: 731px) and (max-width: 991px) {
+  .container2 {
+    width: 50%;
+    height: 50%; } }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container2 {
+    width: 50%;
+    height: 50%; } }
+@media (min-width: 1200px) {
+  .container2 {
+    margin-bottom: 30px !important; } }
 
 footer {
   height: 100px; }
@@ -146,13 +165,16 @@ footer {
 
 .padding-l1 {
   padding-left: 40px; }
-  @media (min-width: 1200px) {
-    .padding-l1 {
-      padding-left: 20%;
-      margin-top: 5%; } }
   @media (max-width: 730px) {
     .padding-l1 {
       padding-left: 0%;
+      margin-top: 5%; } }
+  @media (min-width: 731px) and (max-width: 991px) {
+    .padding-l1 {
+      margin-top: 5%; } }
+  @media (min-width: 1200px) {
+    .padding-l1 {
+      padding-left: 20%;
       margin-top: 5%; } }
 
 @media (min-width: 1200px) {
@@ -160,6 +182,15 @@ footer {
     padding-left: 20%;
     padding-bottom: 1.6%; } }
 
+@media (max-width: 730px) {
+  .p1 {
+    width: 90%;
+    padding-left: 10%; } }
+@media (min-width: 731px) and (max-width: 991px) {
+  .p1 {
+    width: 90%;
+    padding-left: 10%;
+    font-size: 20px; } }
 @media (min-width: 1200px) {
   .p1 {
     padding-top: 10%;
@@ -169,10 +200,6 @@ footer {
     word-wrap: break-word;
     padding-left: 20%;
     margin-left: 3%; } }
-@media (max-width: 730px) {
-  .p1 {
-    width: 90%;
-    padding-left: 10%; } }
 
 @media (max-width: 730px) {
   .p2 {
@@ -189,6 +216,10 @@ footer {
   img {
     width: 300px;
     height: 250px; } }
+@media (min-width: 731px) and (max-width: 991px) {
+  img {
+    width: 400px;
+    height: 350px; } }
 
 @media (max-width: 730px) {
   .row {
