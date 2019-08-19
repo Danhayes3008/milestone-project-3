@@ -1,9 +1,8 @@
 {% extends 'base.html'%} {% block content %}
 <div class="container padding-l1">
-    <h1>Hello User</h1>
     <div>
         {% if session %}
-        <h4>{{ session['name'] }}'s Recipes</h4>
+       
         <ul>
             {% if session['name'] == 'Admin' %}
             <li>
@@ -16,12 +15,12 @@
             </li>
             {% endif %}
         </ul>
+         <h4>{{ session['name'] }}'s Recipes:</h4>
         <ul>
             {% for recipe in recipes%} {% if session['name'] == recipe.author %}
             <li>
                 <div class="task_header col s5">
-                    <strong>{{ session['name'] }}</strong>
-                    <a href="{{ url_for('recipespage', recipe_id=recipe._id) }}">{{recipe.name}}</a>
+                    <a href="{{ url_for('recipespage', recipe_id=recipe._id) }}">{{recipe.name}},</a>
                 </div>
             </li>
             {% endif %} {% endfor %}
