@@ -10,6 +10,12 @@ html, body {
         width: 75% !important;
         margin-left: 12% !important;
     }
+    
+    @include tab{
+        width: 65%;
+        margin-left: 15%;
+        padding: 7rem 2rem !important;
+    }
 }
 
 .input1{
@@ -154,6 +160,11 @@ form{
 
 .jumbo1{
     margin-top: 2rem;
+    
+    @include tab{
+       margin-top: 6rem;
+       margin-bottom: 6rem !important;
+    }
 }
 
 .container {
@@ -283,6 +294,10 @@ p{
     @include mobile{
         padding-top: 5%;
     }
+    
+    @include tab{
+        padding-top: 5%;
+    }
 }
 
 
@@ -314,5 +329,9 @@ img{
 .row{
     @include mobile{
         margin-bottom: 0px !important;
+    }
+    
+    @include tab{
+        margin-top: 0px !important;
     }
 }

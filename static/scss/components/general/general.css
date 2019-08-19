@@ -12,8 +12,8 @@ Error: Undefined mixin 'mobile'.
 10:         width: 75% !important;
 11:         margin-left: 12% !important;
 12:     }
-13: }
-14: 
+13:     
+14:     @include tab{
 
 Backtrace:
 static/scss/components/general/general.scss:9:in `mobile'
@@ -73,4 +73,4 @@ static/scss/components/general/general.scss:9
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'mobile'.\A         on line 9 of static/scss/components/general/general.scss, in `mobile'\A         from line 9 of static/scss/components/general/general.scss\A \A 4: }\A 5: .jumbotron{\A 6:     width: 45%;\A 7:     margin-left: 25%;\A 8:     \A 9:     @include mobile{\A 10:         width: 75% !important;\A 11:         margin-left: 12% !important;\A 12:     }\A 13: }\A 14: "; }
+  content: "Error: Undefined mixin 'mobile'.\A         on line 9 of static/scss/components/general/general.scss, in `mobile'\A         from line 9 of static/scss/components/general/general.scss\A \A 4: }\A 5: .jumbotron{\A 6:     width: 45%;\A 7:     margin-left: 25%;\A 8:     \A 9:     @include mobile{\A 10:         width: 75% !important;\A 11:         margin-left: 12% !important;\A 12:     }\A 13:     \A 14:     @include tab{"; }
