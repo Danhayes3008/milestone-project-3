@@ -9,7 +9,7 @@ section {
   padding: 150px 0;
 }
 
-* {box-sizing:border-box}
+/** {box-sizing:border-box}*/
 
 /* Slideshow container */
 .slideshow-container {
