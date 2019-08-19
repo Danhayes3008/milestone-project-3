@@ -36,6 +36,11 @@ html, body {
         padding-left: 5%;
         width: 10%;
     }
+    
+    @include tab{
+        display: inline;
+        width: 20%;
+    }
 }
 
 .copyright{
@@ -53,6 +58,11 @@ html, body {
     @include mobile{
         width: 100%;
         margin-left: 0%;
+    }
+    
+    @include tab{
+        width: 50%;
+        margin-left: 0px;
     }
 }
 
@@ -150,13 +160,19 @@ form{
     margin: 0;
     margin-bottom: 110px !important;
     
+    @include mobile{
+        margin-bottom: 10px !important;
+    }
+    
+    @include tab{
+        margin-bottom: 80px !important;
+    }
+    
     @include desktop{
         // margin-bottom: 1000px !important;
     }
     
-    @include mobile{
-        margin-bottom: 10px !important;
-    }
+    
     
 }
 
@@ -171,14 +187,26 @@ form{
 
 .container2{
     
-    @include desktop{
-        margin-bottom: 30px !important;
-    }
-    
     @include mobile{
         width: 50%;
         height: 50%;
     }
+    
+    @include tab{
+        width: 50%;
+        height: 50%;
+    }
+    
+    @include computer{
+        width: 50%;
+        height: 50%;
+    }
+    
+    @include desktop{
+        margin-bottom: 30px !important;
+    }
+    
+    
 }
 
 footer{
@@ -191,15 +219,21 @@ footer{
 .padding-l1{
     padding-left: 40px;
     
+    @include mobile{
+        padding-left: 0%;
+        margin-top: 5%;
+    }
+    
+    @include tab{
+        margin-top: 5%;
+    }
+    
     @include desktop{
         padding-left: 20%;
         margin-top: 5%;
     }
     
-    @include mobile{
-        padding-left: 0%;
-        margin-top: 5%;
-    }
+    
 }
 
 .padding-l3{
@@ -210,6 +244,17 @@ footer{
 }
 
 .p1{
+    
+    @include mobile{
+        width: 90%;
+        padding-left: 10%;
+    }
+    
+    @include tab{
+        width: 90%;
+        padding-left: 10%;
+        font-size: 20px;
+    }
     @include desktop {
         padding-top: 10%;
         font-weight: bold;
@@ -221,10 +266,7 @@ footer{
         
     }
     
-    @include mobile{
-        width: 90%;
-        padding-left: 10%;
-    }
+    
 }
 
 .p2{
@@ -251,6 +293,11 @@ img{
     @include mobile{
         width: 300px;
         height: 250px;
+    }
+    
+    @include tab{
+        width: 400px;
+        height: 350px;
     }
 }
 
