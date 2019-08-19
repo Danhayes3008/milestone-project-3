@@ -56,6 +56,16 @@ html, body {
     }
 }
 
+.ul1{
+    @include mobile{
+        margin-top: 1rem !important;
+    }
+}
+
+.ul2{
+    list-style-type: square;
+}
+
 .padding-l2{
     padding-left: 6%;
 }
@@ -241,5 +251,11 @@ img{
     @include mobile{
         width: 300px;
         height: 250px;
+    }
+}
+
+.row{
+    @include mobile{
+        margin-bottom: 0px !important;
     }
 }
