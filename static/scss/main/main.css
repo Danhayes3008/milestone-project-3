@@ -9,6 +9,11 @@ html, body {
     .jumbotron {
       width: 75% !important;
       margin-left: 12% !important; } }
+  @media (min-width: 731px) and (max-width: 991px) {
+    .jumbotron {
+      width: 65%;
+      margin-left: 15%;
+      padding: 7rem 2rem !important; } }
 
 .input1 {
   width: 75%; }
@@ -123,6 +128,10 @@ form {
 
 .jumbo1 {
   margin-top: 2rem; }
+  @media (min-width: 731px) and (max-width: 991px) {
+    .jumbo1 {
+      margin-top: 6rem;
+      margin-bottom: 6rem !important; } }
 
 .container {
   margin: 0;
@@ -211,6 +220,9 @@ footer {
 @media (max-width: 730px) {
   .p2 {
     padding-top: 5%; } }
+@media (min-width: 731px) and (max-width: 991px) {
+  .p2 {
+    padding-top: 5%; } }
 
 .mrg-btm1 {
   margin-bottom: 20%; }
@@ -231,5 +243,8 @@ footer {
 @media (max-width: 730px) {
   .row {
     margin-bottom: 0px !important; } }
+@media (min-width: 731px) and (max-width: 991px) {
+  .row {
+    margin-top: 0px !important; } }
 
 /*# sourceMappingURL=main.css.map */
