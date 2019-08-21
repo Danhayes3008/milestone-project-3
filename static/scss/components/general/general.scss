@@ -177,6 +177,7 @@ form{
     
     @include tab{
         margin-bottom: 80px !important;
+        margin-top: 5%;
     }
     
     @include desktop{
@@ -224,8 +225,15 @@ li{
     font-size: 20px;
 }
 
+.footer {
+    @include tab {
+        margin-bottom: 27% !important;
+    }
+}
+
 footer{
     height: 100px;
+
 }
 .padding-r1{
     padding-right: 20px;
@@ -321,7 +329,7 @@ img{
     }
     
     @include tab{
-        width: 300px;
+        width: 400px;
         height: 200px;
     }
 }
