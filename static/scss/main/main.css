@@ -141,7 +141,8 @@ form {
       margin-bottom: 10px !important; } }
   @media (min-width: 731px) and (max-width: 991px) {
     .container {
-      margin-bottom: 80px !important; } }
+      margin-bottom: 80px !important;
+      margin-top: 5%; } }
 
 .container1 {
   margin: 0; }
@@ -168,6 +169,10 @@ form {
 
 li {
   font-size: 20px; }
+
+@media (min-width: 731px) and (max-width: 991px) {
+  .footer {
+    margin-bottom: 27% !important; } }
 
 footer {
   height: 100px; }
@@ -237,7 +242,7 @@ footer {
     height: 250px; } }
 @media (min-width: 731px) and (max-width: 991px) {
   img {
-    width: 300px;
+    width: 400px;
     height: 200px; } }
 
 @media (max-width: 730px) {
