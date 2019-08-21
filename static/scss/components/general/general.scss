@@ -329,6 +329,13 @@ img{
     }
     
     @include tab{
+        width: 300px;
+        height: 200px;
+    }
+}
+
+.img1{
+    @include tab{
         width: 400px;
         height: 200px;
     }
