@@ -91,6 +91,12 @@ html, body {
         overflow: auto;
     }
     
+    @include computer{
+        display: block;
+        height: 470px;
+        overflow: auto;
+    }
+    
 }
 
 .padding-l2{
@@ -262,6 +268,10 @@ footer{
         margin-top: 5%;
     }
     
+    @include computer{
+        margin-top: 5%;
+    }
+    
     @include desktop{
         padding-left: 20%;
         margin-top: 5%;
@@ -359,5 +369,9 @@ img{
     
     @include tab{
         margin-top: 0px !important;
+    }
+    
+    @include computer{
+        margin-bottom: 0px !important;
     }
 }
