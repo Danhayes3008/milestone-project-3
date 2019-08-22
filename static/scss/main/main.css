@@ -65,6 +65,12 @@ html, body {
 .ul2 {
   list-style-type: square; }
 
+@media (min-width: 731px) and (max-width: 991px) {
+  .scroll {
+    display: block;
+    height: 740px;
+    overflow: auto; } }
+
 .padding-l2 {
   padding-left: 6%; }
 
