@@ -82,6 +82,17 @@ html, body {
     list-style-type: square;
 }
 
+
+
+.scroll{
+    @include tab{
+        display: block;
+        height: 740px;
+        overflow: auto;
+    }
+    
+}
+
 .padding-l2{
     padding-left: 6%;
 }
