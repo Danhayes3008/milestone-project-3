@@ -70,6 +70,11 @@ html, body {
         width: 50%;
         margin-left: 0px;
     }
+    
+    @include computer{
+        width: 75%;
+        margin-left: 0px;
+    }
 }
 
 .ul1{
@@ -93,7 +98,7 @@ html, body {
     
     @include computer{
         display: block;
-        height: 470px;
+        height: 450px;
         overflow: auto;
     }
     
