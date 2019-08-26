@@ -7,6 +7,8 @@
         {% endfor %}
     </ul>
     {% endif %} {% endwith %}
+    <p class="text-center">All recipes will need approving by admin before they become visible on the site. This is to prevent
+    inapropriate content being added as this site can be accessed by children.</p>
     <h3>Add Recipe</h3>
     <div class="row">
         <form action="{{ url_for('insert_recipe') }}" method="POST" class="col s12">
