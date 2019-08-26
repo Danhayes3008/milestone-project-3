@@ -212,7 +212,9 @@ form {
 @media (max-width: 730px) {
   .container2 {
     width: 50%;
-    height: 50%; } }
+    height: 50%;
+    padding-left: 45px !important;
+    padding-right: 0px !important; } }
 @media (min-width: 731px) and (max-width: 991px) {
   .container2 {
     width: 50%;
@@ -304,6 +306,10 @@ footer {
 
 .mrg1 {
   margin: 10px; }
+
+@media (max-width: 730px) {
+  .mrg2 {
+    margin-left: 10%; } }
 
 @media (min-width: 1200px) {
   .input {
