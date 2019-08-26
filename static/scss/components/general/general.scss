@@ -17,6 +17,13 @@ html, body {
     }
 }
 
+.width2{
+    @include mobile{
+        width: 77% !important;
+        
+    }
+}
+
 .background-color{
     background-color: white !important;
     padding: 1%;
@@ -436,7 +443,6 @@ p{
     
     @include mobile{
         width: 90%;
-        padding-left: 10%;
     }
     @include tab{
         width: 90%;
