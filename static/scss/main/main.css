@@ -39,6 +39,11 @@ html, body {
     .icons {
       display: inline;
       width: 20%; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .icons {
+      display: inline;
+      padding-left: 1%;
+      width: 30%; } }
 
 .copyright {
   padding-left: 5%; }
@@ -59,7 +64,7 @@ html, body {
       margin-left: 0px; } }
   @media (min-width: 992px) and (max-width: 1199px) {
     .ul {
-      width: 75%;
+      width: 50%;
       margin-left: 0px; } }
 
 @media (max-width: 730px) {
@@ -148,16 +153,16 @@ form {
       margin-top: 6rem;
       margin-bottom: 6rem !important; } }
 
-.container {
-  margin: 0;
-  margin-bottom: 110px !important; }
-  @media (max-width: 730px) {
-    .container {
-      margin-bottom: 10px !important; } }
-  @media (min-width: 731px) and (max-width: 991px) {
-    .container {
-      margin-bottom: 80px !important;
-      margin-top: 5%; } }
+@media (max-width: 730px) {
+  .container {
+    margin-bottom: 10px !important; } }
+@media (min-width: 731px) and (max-width: 991px) {
+  .container {
+    margin-bottom: 80px !important;
+    margin-top: 5%; } }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    margin-bottom: 80px !important; } }
 
 .container1 {
   margin: 0; }
@@ -188,6 +193,9 @@ li {
 @media (min-width: 731px) and (max-width: 991px) {
   .footer {
     margin-bottom: 27% !important; } }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .footer {
+    margin-bottom: 80px !important; } }
 
 footer {
   height: 100px; }
@@ -264,6 +272,10 @@ footer {
     height: 200px; } }
 
 @media (min-width: 731px) and (max-width: 991px) {
+  .img1 {
+    width: 400px;
+    height: 200px; } }
+@media (min-width: 992px) and (max-width: 1199px) {
   .img1 {
     width: 400px;
     height: 200px; } }
