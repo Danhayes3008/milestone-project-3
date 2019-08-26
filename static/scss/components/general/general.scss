@@ -31,6 +31,10 @@ html, body {
 }
 
 .admin1{
+    
+    @include tab{
+        margin-left: 1% !important;
+    }
     @include computer{
         margin-left: 1% !important;
     }
