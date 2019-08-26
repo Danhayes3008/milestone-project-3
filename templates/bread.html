@@ -6,7 +6,7 @@
         </div>
         <h3>Breads:</h3>
         {% for recipe in recipes %} {% if (recipe.category_name=="Bread") %} {% if (recipe.approval=="yes") %}
-        <div class="row margin">
+        <div class="row background-color margin">
             <img class="" style="width:150px; height:150px;" src="{{recipe.image_url}}"></img>
             <ul class="col s1">
                 <li>

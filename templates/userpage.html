@@ -16,7 +16,7 @@
             {% endif %}
         </ul>
          <h4>{{ session['name'] }}'s Recipes:</h4>
-        <ul class="scroll">
+        <ul class="background-color scroll">
             {% for recipe in recipes%} {% if session['name'] == recipe.author %}
             <li>
                 <div class="task_header col s5">
