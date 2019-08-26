@@ -1,23 +1,23 @@
 /*
 Error: Undefined mixin 'mobile'.
-        on line 10 of static/scss/components/general/general.scss, in `mobile'
-        from line 10 of static/scss/components/general/general.scss
+        on line 16 of static/scss/components/general/general.scss, in `mobile'
+        from line 16 of static/scss/components/general/general.scss
 
-5: }
-6: .jumbotron{
-7:     width: 45%;
-8:     margin-left: 25%;
-9:     
-10:     @include mobile{
-11:         width: 75% !important;
-12:         margin-left: 12% !important;
-13:     }
-14:     
-15:     @include tab{
+11: }
+12: .jumbotron{
+13:     width: 45%;
+14:     margin-left: 25%;
+15:     
+16:     @include mobile{
+17:         width: 75% !important;
+18:         margin-left: 12% !important;
+19:     }
+20:     
+21:     @include tab{
 
 Backtrace:
-static/scss/components/general/general.scss:10:in `mobile'
-static/scss/components/general/general.scss:10
+static/scss/components/general/general.scss:16:in `mobile'
+static/scss/components/general/general.scss:16
 /usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
 /usr/lib/ruby/vendor_ruby/sass/stack.rb:98:in `block in with_mixin'
 /usr/lib/ruby/vendor_ruby/sass/stack.rb:115:in `with_frame'
@@ -73,4 +73,4 @@ static/scss/components/general/general.scss:10
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'mobile'.\A         on line 10 of static/scss/components/general/general.scss, in `mobile'\A         from line 10 of static/scss/components/general/general.scss\A \A 5: }\A 6: .jumbotron{\A 7:     width: 45%;\A 8:     margin-left: 25%;\A 9:     \A 10:     @include mobile{\A 11:         width: 75% !important;\A 12:         margin-left: 12% !important;\A 13:     }\A 14:     \A 15:     @include tab{"; }
+  content: "Error: Undefined mixin 'mobile'.\A         on line 16 of static/scss/components/general/general.scss, in `mobile'\A         from line 16 of static/scss/components/general/general.scss\A \A 11: }\A 12: .jumbotron{\A 13:     width: 45%;\A 14:     margin-left: 25%;\A 15:     \A 16:     @include mobile{\A 17:         width: 75% !important;\A 18:         margin-left: 12% !important;\A 19:     }\A 20:     \A 21:     @include tab{"; }
