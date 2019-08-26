@@ -3,10 +3,23 @@ html, body {
   background-color: #fffdd0 !important;
   overflow-x: hidden; }
 
+@media (max-width: 730px) {
+  .li {
+    font-size: 15px; } }
+
+@media (max-width: 730px) {
+  .width1 {
+    width: 75% !important;
+    margin-left: 10%; } }
+
 .background-color {
   background-color: white !important;
   padding: 1%;
   border: 1px solid black; }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .admin1 {
+    margin-left: 1% !important; } }
 
 .jumbotron {
   width: 45%;
