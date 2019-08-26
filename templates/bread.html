@@ -6,13 +6,13 @@
     <div class="scroll">
         <h3>Breads:</h3>
         {% for recipe in recipes %} {% if (recipe.category_name=="Bread") %} {% if (recipe.approval=="yes") %}
-        <div class="row background-color margin">
-            <img class="" style="width:150px; height:150px;" src="{{recipe.image_url}}"></img>
-            <ul class="col s1">
+        <div class="row width1 mrg1 background-color margin">
+            <img class="" src="{{recipe.image_url}}"></img>
+            <ul class="col-sm-12">
                 <li>
-                    <h5><a id="recipe" href="{{ url_for('recipespage', recipe_id=recipe._id) }}">{{recipe.name}}</a></h5>
-                    <p><strong>subcategory</strong>: {{recipe.subcategory_name}}</p>
-                    <p><strong>Description</strong>: {{recipe.description}}</p>
+                    <h5 class="text-center"><a id="recipe" href="{{ url_for('recipespage', recipe_id=recipe._id) }}">{{recipe.name}}</a></h5>
+                    <p class="text-center"><strong>subcategory</strong>: {{recipe.subcategory_name}}</p>
+                    <p class="text-center"><strong>Description</strong>: {{recipe.description}}</p>
                 </li>
             </ul>
         </div>

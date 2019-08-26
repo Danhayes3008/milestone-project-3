@@ -10,7 +10,7 @@ html, body {
 @media (max-width: 730px) {
   .width1 {
     width: 75% !important;
-    margin-left: 10%; } }
+    margin-left: 10% !important; } }
 
 .background-color {
   background-color: white !important;
@@ -38,6 +38,10 @@ html, body {
   .margin {
     margin-top: 1%;
     margin-bottom: 1%; } }
+
+@media (max-width: 730px) {
+  .margin2 {
+    width: 80%; } }
 
 .input1 {
   width: 75%; }
@@ -222,7 +226,7 @@ form {
     margin-bottom: 30px !important; } }
 
 li {
-  font-size: 20px; }
+  font-size: 15px; }
 
 @media (min-width: 731px) and (max-width: 991px) {
   .footer {
@@ -298,8 +302,8 @@ footer {
     .p2 {
       padding-top: 5%; } }
 
-.mrg-btm1 {
-  margin-bottom: 20%; }
+.mrg1 {
+  margin: 10px; }
 
 @media (min-width: 1200px) {
   .input {
@@ -334,9 +338,31 @@ footer {
       padding-top: 5%; } }
 
 @media (max-width: 730px) {
+  .p5 {
+    width: 90%; } }
+@media (min-width: 731px) and (max-width: 991px) {
+  .p5 {
+    width: 90%;
+    padding-left: 10%;
+    font-size: 20px; } }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .p5 {
+    width: 50%;
+    margin-left: 25%; } }
+@media (min-width: 1200px) {
+  .p5 {
+    padding-top: 10%;
+    font-weight: bold;
+    width: 75%;
+    font-size: 16px;
+    word-wrap: break-word;
+    padding-left: 20%;
+    margin-left: 3%; } }
+
+@media (max-width: 730px) {
   img {
-    width: 300px;
-    height: 250px; } }
+    width: 240px;
+    height: 150px; } }
 @media (min-width: 731px) and (max-width: 991px) {
   img {
     width: 300px;

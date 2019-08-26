@@ -13,7 +13,7 @@ html, body {
 .width1{
     @include mobile{
         width: 75% !important;
-        margin-left: 10%;
+        margin-left: 10% !important;
     }
 }
 
@@ -49,6 +49,12 @@ html, body {
     @include computer{
         margin-top: 1%;
         margin-bottom: 1%;
+    }
+}
+
+.margin2{
+    @include mobile{
+        width: 80%;
     }
 }
 
@@ -301,7 +307,7 @@ form{
 }
 
 li{
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .footer {
@@ -406,8 +412,8 @@ p{
 }
 
 
-.mrg-btm1{
-    margin-bottom: 20%;
+.mrg1{
+    margin: 10px;
 }
 
 .input{
@@ -453,11 +459,39 @@ p{
     }
 }
 
+.p5{
+     @include mobile{
+        width: 90%;
+    }
+    
+    @include tab{
+        width: 90%;
+        padding-left: 10%;
+        font-size: 20px;
+    }
+    
+    @include computer{
+        width: 50%;
+        margin-left: 25%;
+    }
+    @include desktop {
+        padding-top: 10%;
+        font-weight: bold;
+        width: 75%;
+        font-size: 16px;
+        word-wrap: break-word;
+        padding-left: 20%;
+        margin-left: 3%;
+        
+    }
+    
+}
+
 img{
     
     @include mobile{
-        width: 300px;
-        height: 250px;
+        width: 240px;
+        height: 150px;
     }
     
     @include tab{
