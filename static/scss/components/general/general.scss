@@ -4,11 +4,31 @@ html, body {
     overflow-x: hidden;
 }
 
+.li{
+    @include mobile{
+        font-size: 15px;
+    }
+}
+
+.width1{
+    @include mobile{
+        width: 75% !important;
+        margin-left: 10%;
+    }
+}
+
 .background-color{
     background-color: white !important;
     padding: 1%;
     border: 1px solid black;
 }
+
+.admin1{
+    @include computer{
+        margin-left: 1% !important;
+    }
+}
+
 .jumbotron{
     width: 45%;
     margin-left: 25%;
