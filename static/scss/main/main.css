@@ -21,6 +21,9 @@ html, body {
   padding: 1%;
   border: 1px solid black; }
 
+@media (min-width: 731px) and (max-width: 991px) {
+  .admin1 {
+    margin-left: 1% !important; } }
 @media (min-width: 992px) and (max-width: 1199px) {
   .admin1 {
     margin-left: 1% !important; } }
@@ -114,7 +117,7 @@ html, body {
 @media (min-width: 992px) and (max-width: 1199px) {
   .scroll {
     display: block;
-    height: 450px;
+    height: 470px;
     overflow: auto; } }
 
 .padding-l2 {
