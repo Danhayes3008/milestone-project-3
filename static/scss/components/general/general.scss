@@ -47,6 +47,12 @@ html, body {
         display: inline;
         width: 20%;
     }
+    
+    @include computer{
+        display: inline;
+        padding-left: 1%;
+        width: 30%;
+    }
 }
 
 .copyright{
@@ -72,7 +78,7 @@ html, body {
     }
     
     @include computer{
-        width: 75%;
+        width: 50%;
         margin-left: 0px;
     }
 }
@@ -190,8 +196,8 @@ form{
 }
 
 .container {
-    margin: 0;
-    margin-bottom: 110px !important;
+    // margin: 0;
+    // margin-bottom: 110px !important;
     
     @include mobile{
         margin-bottom: 10px !important;
@@ -202,8 +208,12 @@ form{
         margin-top: 5%;
     }
     
+    @include computer{
+        margin-bottom: 80px !important;
+    }
+    
     @include desktop{
-        // margin-bottom: 1000px !important;
+        // margin-bottom: 80px !important;
     }
     
     
@@ -250,6 +260,10 @@ li{
 .footer {
     @include tab {
         margin-bottom: 27% !important;
+    }
+    
+    @include computer{
+        margin-bottom: 80px !important;
     }
 }
 
@@ -362,6 +376,11 @@ img{
 
 .img1{
     @include tab{
+        width: 400px;
+        height: 200px;
+    }
+    
+    @include computer{
         width: 400px;
         height: 200px;
     }
