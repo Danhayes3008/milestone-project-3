@@ -287,6 +287,8 @@ form{
     @include mobile{
         width: 50%;
         height: 50%;
+        padding-left: 45px !important;
+        padding-right: 0px !important;
     }
     
     @include tab{
@@ -414,6 +416,12 @@ p{
 
 .mrg1{
     margin: 10px;
+}
+
+.mrg2{
+    @include mobile{
+        margin-left: 10%;
+    }
 }
 
 .input{
