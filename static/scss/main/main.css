@@ -12,6 +12,10 @@ html, body {
     width: 75% !important;
     margin-left: 10% !important; } }
 
+@media (max-width: 730px) {
+  .width2 {
+    width: 77% !important; } }
+
 .background-color {
   background-color: white !important;
   padding: 1%;
@@ -317,8 +321,7 @@ footer {
 
 @media (max-width: 730px) {
   .p3 {
-    width: 90%;
-    padding-left: 10%; } }
+    width: 90%; } }
 @media (min-width: 731px) and (max-width: 991px) {
   .p3 {
     width: 90%;
