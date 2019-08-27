@@ -118,6 +118,11 @@ html, body {
   .ul3 {
     width: 90%; } }
 
+@media (max-width: 730px) {
+  .scroll {
+    display: block;
+    height: 360px;
+    overflow: auto; } }
 @media (min-width: 731px) and (max-width: 991px) {
   .scroll {
     display: block;
@@ -279,7 +284,7 @@ footer {
   @media (min-width: 1200px) {
     .padding-l1 {
       padding-left: 20%;
-      margin-top: 10%;
+      margin-top: 5%;
       margin-bottom: 5%; } }
 
 @media (min-width: 1200px) {
@@ -347,12 +352,8 @@ footer {
     font-size: 20px; } }
 @media (min-width: 1200px) {
   .p3 {
-    padding-top: 10%;
-    font-weight: bold;
-    width: 75%;
     font-size: 16px;
     word-wrap: break-word;
-    padding-left: 20%;
     margin-left: 3%; } }
 
 .p4 {
@@ -363,6 +364,9 @@ footer {
   @media (min-width: 731px) and (max-width: 991px) {
     .p4 {
       padding-top: 5%; } }
+  @media (min-width: 1200px) {
+    .p4 {
+      padding-top: 0%; } }
 
 @media (max-width: 730px) {
   .p5 {
