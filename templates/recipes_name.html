@@ -8,7 +8,7 @@
         <div class="">
             <img src="{{recipes.image_url}}"></img>
         </div>
-        <div class="col-sm-12 col-md-6">
+        <div class="col-sm-12 col-md-6 col-lg-6">
             <ul class="ul1">
                 <li><strong>Author: </strong>{{ recipes.author }}</li>
                 <li><strong>Category: </strong>{{ recipes.category_name }}</li>
@@ -16,7 +16,7 @@
                 <li><strong>description: </strong>{{ recipes.description }}</li>
             </ul>
         </div>
-        <div class="col-sm-12 p4">
+        <div class="col-sm-12 col-lg-12 p4">
             <h4>Ingredients:</h4>
             <ul>
                 <li>{{ recipes.ingredient }}</li>
@@ -52,7 +52,7 @@
         <div class="row col-md-4">
             <h4>Nutritional Value:</h4>
         </div>
-        <div class="row col-md-9 padding-l1">
+        <div class="row col-md-9">
             <card class="padding-r1">
                 <p>kcal</p>
                 <p class="text-center">{{recipes.kcal}}</p>
@@ -91,7 +91,7 @@
     <div class="row background-color p3">
         <h4>Instructions:</h4>
         <ul>
-            <li class="text-center">{{ recipes.instruction }}</li><br />
+            <li class="text-center"><p>{{ recipes.instruction }}</p></li><br />
             <li class="text-center">{{ recipes.instruction1 }}</li><br />
             <li class="text-center">{{ recipes.instruction2 }}</li><br />
             <li class="text-center">{{ recipes.instruction3 }}</li><br />
