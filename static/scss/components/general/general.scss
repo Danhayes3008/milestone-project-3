@@ -1,6 +1,6 @@
 html, body {
     max-width: 100%;
-    background-color: #fffdd0 !important;
+    background-color: #f1f1f1 !important;
     overflow-x: hidden;
 }
 
@@ -14,6 +14,12 @@ html, body {
     @include mobile{
         width: 75% !important;
         margin-left: 10% !important;
+    }
+    
+    @include desktop{
+        width: 90% !important;
+        margin-left: 5% !important;
+        margin-bottom: 84px;
     }
 }
 
@@ -144,6 +150,12 @@ html, body {
     list-style-type: square;
 }
 
+.ul3{
+    @include desktop{
+        width: 90%;
+    }
+}
+
 
 
 .scroll{
@@ -156,6 +168,12 @@ html, body {
     @include computer{
         display: block;
         height: 470px;
+        overflow: auto;
+    }
+    
+    @include desktop{
+        display: block;
+        height: 530px;
         overflow: auto;
     }
     
@@ -313,7 +331,7 @@ form{
     }
     
     @include desktop{
-        margin-bottom: 30px !important;
+        margin-bottom: 70px !important;
     }
     
     
@@ -342,7 +360,7 @@ footer{
 }
 
 .padding-l1{
-    padding-left: 40px;
+    padd141ing-left: 40px;
     
     @include mobile{
         padding-left: 0%;
@@ -359,7 +377,8 @@ footer{
     
     @include desktop{
         padding-left: 20%;
-        margin-top: 5%;
+        margin-top: 10%;
+        margin-bottom: 5%;
     }
     
     
@@ -379,6 +398,10 @@ p{
     
     @include computer{
         font-size: 15px;
+    }
+    
+    @include desktop{
+        width: 100%;
     }
 }
 
@@ -400,12 +423,9 @@ p{
         padding-left: 25%;
     }
     @include desktop {
-        padding-top: 10%;
         font-weight: bold;
-        width: 75%;
         font-size: 16px;
         word-wrap: break-word;
-        padding-left: 20%;
         margin-left: 3%;
         
     }
@@ -493,16 +513,18 @@ p{
         margin-left: 25%;
     }
     @include desktop {
-        padding-top: 10%;
         font-weight: bold;
-        width: 75%;
         font-size: 16px;
         word-wrap: break-word;
-        padding-left: 20%;
-        margin-left: 3%;
         
     }
     
+}
+
+.card1{
+    @include desktop{
+        margin-bottom: 4%;
+    }
 }
 
 img{
@@ -521,6 +543,11 @@ img{
         width: 400px;
         height: 200px;
     }
+    
+    @include desktop{
+        width: 200px;
+        height: 150px;
+    }
 }
 
 .img1{
@@ -532,6 +559,11 @@ img{
     @include computer{
         width: 400px;
         height: 200px;
+    }
+    
+    @include desktop{
+        width: 500px;
+        height: 300px;
     }
 }
 
