@@ -2,7 +2,7 @@
 <div class="container padding-l1">
     <h3>{{ session['name'] }}</h3>
     <div class="row">
-        <div class="scroll width1 background-color col-md-4 mrg-btm1">
+        <div class="scroll width1 mg-1 background-color col-md-4 mrg-btm1">
             <h3>Users:</h3><br /> {% for user in users %}
             <div class="col-md-12">
                 <ul>
@@ -14,7 +14,7 @@
             </div>
             {% endfor %}
         </div>
-        <div class="scroll admin1 width1 background-color col-md-7 col-lg-6 mrg-btm1">
+        <div class="scroll mg-1 admin1 width1 background-color col-md-7 col-lg-6 mrg-btm1">
             <h3>Recipes waiting for approval:</h3><br /> {% for recipe in recipes %} {% if (recipe.approval=="no") %}
             <form action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST" class="col-md-12">
                 <ul>
