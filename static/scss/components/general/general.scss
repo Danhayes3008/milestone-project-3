@@ -17,8 +17,7 @@ html, body {
     }
     
     @include tab{
-        width: 90% !important;
-        margin-left: 5% !important;
+        width: 100% !important;
     }
     
     @include computer{
@@ -29,13 +28,13 @@ html, body {
     @include desktop{
         width: 90% !important;
         margin-left: 5% !important;
-        margin-bottom: 84px;
+        margin-bottom: 125px !important;
     }
 }
 
 .width2{
     @include mobile{
-        width: 77% !important;
+        width: 90% !important;
         
     }
 }
@@ -81,7 +80,7 @@ html, body {
 
 .margin2{
     @include mobile{
-        width: 80%;
+        width: 90%;
     }
 }
 
@@ -172,7 +171,7 @@ html, body {
     
     @include mobile{
         display: block;
-        height: 360px;
+        height: 430px;
         overflow:auto;
     }
     
@@ -229,6 +228,10 @@ html, body {
     
     @include mobile{
         padding-left: 0%;
+    }
+    
+    @include tab{
+        padding-left: 25%;
     }
     
     @include computer{
@@ -354,6 +357,30 @@ form{
     
 }
 
+.container3{
+    @include mobile{
+        width: 50%;
+        height: 50%;
+        padding-left: 45px !important;
+        padding-right: 0px !important;
+    }
+    
+    @include tab{
+        width: 50%;
+        height: 50%;
+    }
+    
+    @include computer{
+        width: 50%;
+        height: 50%;
+    }
+    
+    @include desktop{
+        margin-bottom: 100px !important;
+        margin-top: 65px !important;
+    }
+}
+
 li{
     font-size: 15px;
 }
@@ -431,7 +458,6 @@ p{
     
     @include tab{
         width: 90%;
-        padding-left: 10%;
         font-size: 20px;
     }
     
@@ -460,7 +486,10 @@ p{
 
 
 .mrg1{
-    margin: 10px;
+    
+    @include tab{
+        margin-left: 0px !important;
+    }
 }
 
 .mrg2{
@@ -516,7 +545,6 @@ p{
     
     @include tab{
         width: 90%;
-        padding-left: 10%;
         font-size: 20px;
     }
     
@@ -539,6 +567,22 @@ p{
     }
 }
 
+.mg-l{
+    @include mobile{
+        margin-left: 15px;
+    }
+}
+
+.mg-1{
+    @include mobile{
+        margin: 10px;
+    }
+    
+    @include computer {
+        margin: 10px;
+    }
+}
+
 img{
     
     @include mobile{
@@ -552,7 +596,7 @@ img{
     }
     
     @include computer{
-        width: 200px;
+        width: 250px;
         height: 150px;
     }
     
