@@ -1,6 +1,7 @@
+<!--this page is a template that adds the navbar and footer to all pages-->
 <!DOCTYPE html>
 <html>
-
+<!-- The head part of this page contains all the links that are used on all pages-->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,17 +19,17 @@
   <!-- Custom styles for this template -->
   <link href="{{url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 </head>
-
+<!--The body contains the navbar and all the scripts that are used in my site.-->
 <body id="page-top">
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark " id="mainNav">
       <div>Happy Baker's</div>
       <div>
-        <!--<a href="" class="brand-logo">Task Manager</a>-->
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a class="nav-link js-scroll-trigger" href="{{url_for('index')}}">home</a></li>
           <li><a class="nav-link js-scroll-trigger" href="{{url_for('recipes')}}">Recipes</a></li>
+          <!--This if statement is used to display what user is logged into the site. If there is a user logged in it displays there name in the nav bar which also becomes the link to the userpage.-->
           {% if session %}
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="{{url_for('users')}}">{{ session['name'] }}</a>
@@ -354,7 +355,7 @@
     
 
 </body>
-
+<!--This footer is a simple one. Containing only three links which allow the user to view my linkedin, twitter and github pages.-->
 <footer class="py-4 bg-dark text-white-50 ">
   <div class="row">
     <div class="copyright text-left">
