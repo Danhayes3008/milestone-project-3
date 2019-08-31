@@ -11,6 +11,10 @@ html, body {
   .width1 {
     width: 75% !important;
     margin-left: 10% !important; } }
+@media (min-width: 731px) and (max-width: 991px) {
+  .width1 {
+    width: 90% !important;
+    margin-left: 5% !important; } }
 @media (min-width: 992px) and (max-width: 1199px) {
   .width1 {
     width: 90% !important;
@@ -347,8 +351,6 @@ footer {
     width: 90%; } }
 @media (min-width: 731px) and (max-width: 991px) {
   .p3 {
-    width: 90%;
-    padding-left: 10%;
     font-size: 20px; } }
 @media (min-width: 1200px) {
   .p3 {
