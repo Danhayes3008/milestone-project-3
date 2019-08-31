@@ -16,6 +16,11 @@ html, body {
         margin-left: 10% !important;
     }
     
+    @include tab{
+        width: 90% !important;
+        margin-left: 5% !important;
+    }
+    
     @include computer{
         width: 90% !important;
         margin-left: 5% !important;
@@ -478,8 +483,6 @@ p{
         width: 90%;
     }
     @include tab{
-        width: 90%;
-        padding-left: 10%;
         font-size: 20px;
     }
     @include desktop {
