@@ -1,3 +1,5 @@
+# 
+
 import os
 from flask import Flask, render_template, url_for, request, session, redirect, flash, send_from_directory
 from flask_pymongo import PyMongo
@@ -160,7 +162,7 @@ def insert_recipe():
     if request.method == 'POST':
         tasks = mongo.db.recipes
         existing_recipe = tasks.find_one({'name' : request.form['name']})
-    
+    # this section is the manual dictionary for the add recipe form. I have added parts to each line so that if something is not entered into the form it adds the next one in the form.get
     if existing_recipe is None:
         tasks.insert_one({
             'category_name': request.form['category_name'],
@@ -206,16 +208,16 @@ def insert_recipe():
             'instruction12': request.form.get('instruction12', ""),
             'instruction13': request.form.get('instruction13', ""),
             'instruction14': request.form.get('instruction14', ""),
-            'description': request.form['description'],
-            'kcal' : request.form['kcal'],
-            'fat': request.form['fat'],
-            'saturates': request.form['saturates'],
-            'carbs': request.form['carbs'],
-            'sugars': request.form['sugars'],
-            'fibre': request.form['fibre'],
-            'protein': request.form['protein'],
-            'salt': request.form['salt'],
-            'image_url': request.form['image_url'],
+            'description': request.form['description', 'unknown'],
+            'kcal' : request.form['kcal', 'unknown'],
+            'fat': request.form['fat', 'unknown'],
+            'saturates': request.form['saturates', 'unknown'],
+            'carbs': request.form['carbs', 'unknown'],
+            'sugars': request.form['sugars', 'unknown'],
+            'fibre': request.form['fibre', 'unknown'],
+            'protein': request.form['protein', 'unknown'],
+            'salt': request.form['salt', 'unknown'],
+            'image_url': request.form['image_url', " "],
             'author': session['name'].title(), #See author now can be added
     		'approval': 'no', # And approval 
         })
