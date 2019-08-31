@@ -26,10 +26,13 @@ def index():
 # This is the route that diplays the recipes page and checks the database for the collections below    
 @app.route('/recipes')
 def recipes():
-    return render_template('recipes.html',
-    categories=mongo.db.categories.find(),
-    subcategory=mongo.db.subcategory.find(),
-    recipes=mongo.db.recipes.find())
+    categories = mongo.db.categories
+    categories.find()
+    subcategory = mongo.db.subcategory
+    subcategory.find()
+    recipes = mongo.db.recipes
+    recipes.find()
+    return render_template('recipes.html', categories=categories, subcategory=subcategory, recipes=recipes)
     
 
 # Below are the routes that display the category pages
