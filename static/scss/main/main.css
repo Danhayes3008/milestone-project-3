@@ -28,6 +28,11 @@ html, body {
   .width2 {
     width: 90% !important; } }
 
+@media (min-width: 1200px) {
+  .width3 {
+    width: 90% !important;
+    margin-left: 5% !important; } }
+
 .background-color {
   background-color: white !important;
   padding: 1%;
@@ -143,7 +148,7 @@ html, body {
 @media (min-width: 1200px) {
   .scroll {
     display: block;
-    height: 530px;
+    height: 623px;
     overflow: auto; } }
 
 .padding-l2 {
@@ -226,6 +231,10 @@ form {
     .jumbo1 {
       margin-top: 6rem;
       margin-bottom: 6rem !important; } }
+  @media (min-width: 1200px) {
+    .jumbo1 {
+      margin-top: 3rem;
+      margin-bottom: 5rem !important; } }
 
 @media (max-width: 730px) {
   .container {
