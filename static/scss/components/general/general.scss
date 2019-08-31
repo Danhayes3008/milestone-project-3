@@ -39,6 +39,14 @@ html, body {
     }
 }
 
+.width3{
+    @include desktop{
+        width: 90% !important;
+        margin-left: 5% !important;
+        
+    }
+}
+
 .background-color{
     background-color: white !important;
     padding: 1%;
@@ -189,7 +197,7 @@ html, body {
     
     @include desktop{
         display: block;
-        height: 530px;
+        height: 623px;
         overflow: auto;
     }
     
@@ -294,6 +302,11 @@ form{
     @include tab{
        margin-top: 6rem;
        margin-bottom: 6rem !important;
+    }
+    
+    @include desktop{
+        margin-top: 3rem;
+        margin-bottom: 5rem !important;
     }
 }
 
