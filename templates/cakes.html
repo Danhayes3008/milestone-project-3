@@ -1,18 +1,20 @@
 {% extends 'base.html'%} {% block content %}
 <div class="container padding-l1">
-    <div class="">
+    <div>
         <h3>Cakes</h3>
         <div>
             <h5><a href="{{ url_for('recipes') }}">Return</a></h5>
         </div>
+    </div>
+    <div class="scroll">
         {% for recipe in recipes %} {% if (recipe.category_name=="Cakes") %} {% if (recipe.approval=="yes") %}
-        <div class="row">
-            <img class="" style="width:150px; height:150px;" src="{{recipe.image_url}}"></img>
-            <ul class="col s1">
+        <div class="row width3 mrg1 background-color margin">
+            <img src="{{recipe.image_url}}"></img>
+            <ul class="ul3 col-sm-12 col-md-6 col-lg-9">
                 <li>
-                    <h5><a id="recipe" href="{{ url_for('recipespage', recipe_id=recipe._id) }}">{{recipe.name}}</a></h5>
-                    <p>subcategory: {{recipe.subcategory_name}}</p>
-                    <p>Description: {{recipe.description}}</p>
+                    <h5 class="text-center"><a id="recipe" href="{{ url_for('recipespage', recipe_id=recipe._id) }}">{{recipe.name}}</a></h5>
+                    <p class="text-center"><strong>subcategory</strong>: {{recipe.subcategory_name}}</p>
+                    <p class="text-center"><strong>Description</strong>: {{recipe.description}}</p>
                 </li>
             </ul>
         </div>
