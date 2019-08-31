@@ -1,4 +1,4 @@
-# 
+# this is the backbone of my site. In it are all the routes that control the content in my site aswell as directs the user from page to page.
 
 import os
 from flask import Flask, render_template, url_for, request, session, redirect, flash, send_from_directory
@@ -10,20 +10,20 @@ import bcrypt
 
 app = Flask(__name__)
 
-
+# This part controls were the data is being called from
 app.config["MONGO_DBNAME"] = 'Bakery_Wikipedia'
 app.config["MONGO_URI"] = os.getenv("MONGO_URI")
 
 
 mongo = PyMongo(app)
 
-
+# This is the route that diplays the homepage
 @app.route('/')
 @app.route('/index')
 def index():
     return render_template('index.html')
     
-    
+# This is the route that diplays the recipes page and checks the database for the collections below    
 @app.route('/recipes')
 def recipes():
     return render_template('recipes.html',
@@ -32,7 +32,7 @@ def recipes():
     recipes=mongo.db.recipes.find())
     
 
-
+# Below are the routes that display the category pages
 @app.route('/breads')
 def breads():
     return render_template('bread.html', recipes=mongo.db.recipes.find())
@@ -72,7 +72,9 @@ def QuickBreads():
 @app.route('/ReducedFat')
 def ReducedFat():
     return render_template('ReducedFat.html', recipes=mongo.db.recipes.find())
+    
 
+# This route selects a specific recipe from the database when the specific link for it is selected. It checks for the corrisponding object id in the collection.
 @app.route('/recipespage/<recipe_id>', methods=['GET', 'POST'])
 def recipespage(recipe_id):
     """Route to show single recipe view page"""
@@ -81,12 +83,12 @@ def recipespage(recipe_id):
     return render_template('recipes_name.html', recipes=recipes, all_recipes=all_recipes)
 	
     
-    
+# This route displays the login page 
 @app.route('/login')
 def login():
     return render_template('Login.html')
     
-    
+# This route is used to check what username and password is entered and if it is in the database, it logs the user in. If the user does not exist it informs the user. 
 @app.route('/user_login', methods=['GET', 'POST'])
 def user_login():
     """Function for handling the logging in of users"""
@@ -107,25 +109,25 @@ def user_login():
     flash('sorry something went wrong')
     return redirect(url_for('login'))
     
-    
+# This route allows the user to log out when they are done on the site, if they do not log out they remain logged in until they next visit. 
 @app.route('/logout')
 def logout():
     """Logs the user out and redirects to home"""
     session.clear()  # Kill session
     return redirect(url_for('index'))
 
-    
+# This route displays the register page   
 @app.route('/register')
 def register():
     return render_template('register.html')
 
-
+# This route displays the userpage as well as checks the users and recipes collections
 @app.route('/users')
 def users():
     return render_template('userpage.html', users=mongo.db.users.find(),
     recipes=mongo.db.recipes.find())
     
-
+# This route adds the new user to my users collection if they dont exist. If the user does exists then they user gets told they cant use that username
 @app.route('/insert_user', methods=['GET', 'POST'])
 def insert_user():
     if request.method == 'POST':
@@ -145,24 +147,26 @@ def insert_user():
 	
     return render_template('userpage.html')
 
-    
+# This route checks the recipes collection for the userpage 
 @app.route('/recipe_name')
 def recipe_name():
     return render_template('userpage.html', rec=mongo.db.recipes.find())
-    
+
+
+# This route displays the add recipe page and checks the categories and subcategories collections 
 @app.route('/add_recipe')
 def add_recipe():
     return render_template('addrecipe.html',
     categories=mongo.db.categories.find(),
     subcategory=mongo.db.subcategory.find())
     
-    
+# This route adds the recipe to the recipes collection if the recipe name does not exist 
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
     if request.method == 'POST':
         tasks = mongo.db.recipes
         existing_recipe = tasks.find_one({'name' : request.form['name']})
-    # this section is the manual dictionary for the add recipe form. I have added parts to each line so that if something is not entered into the form it adds the next one in the form.get
+    # This section is the manual dictionary for the add recipe form. I have added parts to each line so that if something is not entered into the form it adds the next one in the form.get
     if existing_recipe is None:
         tasks.insert_one({
             'category_name': request.form['category_name'],
@@ -225,39 +229,32 @@ def insert_recipe():
     flash('Sorry recipe already exists!')
     return redirect(url_for('add_recipe'))
     
-    
+# This route displays the admin page. Only the user named Admin can see the link for this page  
 @app.route('/admin')
 def admin():
     return render_template('admin.html', users=mongo.db.users.find(), 
     recipes=mongo.db.recipes.find())
     
-    
+# This route allows the admin to delete a user if needed to
 @app.route('/delete_user/<user_id>')
 def delete_user(user_id):
     mongo.db.users.remove({'_id': ObjectId(user_id)})
     return redirect(url_for('admin'))
     
-    
+# This route allows the admin to delete a recipe if needed  
 @app.route('/delete_recipe/<recipe_id>')
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
     return redirect(url_for('admin'))
     
-    
+# This route allows the admin to set the recipe as approved so that the public can see it. This is a security precaution to prevent inapropriate content being added to the site  
 @app.route('/update_recipe/<recipe_id>', methods=["POST"])
 def update_recipe(recipe_id):
     recipes = mongo.db.recipes
     recipes.update_many({"_id": ObjectId(recipe_id)}, {"$set": {"approval": "yes"}})
     return redirect(url_for('admin'))
 
-
-@app.route('/pagination1')
-def pagination1():
-    recipes = mongo.db.recipes
-    recipes.find().skip(5).limit(5)
-    return render_template('pagination1.html')
-
-
+# This is were the secret key and info for the ip and port is stored
 if __name__ == '__main__':
     app.secret_key = 'Hello'
     app.run(host=os.environ.get('IP'),
