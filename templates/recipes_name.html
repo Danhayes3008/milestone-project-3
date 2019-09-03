@@ -1,14 +1,18 @@
+<!--This page displays each recipe if the correct link was clicked-->
 {% extends 'base.html'%} {% block content %}
 <div class="container container2 padding-l1">
     <div class="row">
+        <!--displays the recipe name-->
         <h1>{{ recipes.name }}</h1>
     </div>
     <hr />
     <div class="background-color mrg2 margin2 row">
-        <div class="">
+        <div>
+            <!--displays the recipe image-->
             <img class="mg-l" src="{{recipes.image_url}}"></img>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-6">
+            <!--displays the author name, catorgries and description-->
             <ul class="ul1">
                 <li><strong>Author: </strong>{{ recipes.author }}</li>
                 <li><strong>Category: </strong>{{ recipes.category_name }}</li>
@@ -17,6 +21,7 @@
             </ul>
         </div>
         <div class="col-sm-12 col-lg-12 p4">
+            <!--displays the ingredients. Only ingredients that are not empty will be visible-->
             <h4>Ingredients:</h4>
             <ul>
                 <li>{{ recipes.ingredient }}</li>
@@ -49,6 +54,7 @@
     </div>
     <hr />
     <div class="row width2 background-color col-sm-12">
+        <!--displays the nutritional values. If none were entered they display as unknown-->
         <div class="row col-md-4">
             <h4>Nutritional Value:</h4>
         </div>
@@ -89,6 +95,7 @@
     </div>
     <hr />
     <div class="row background-color p3">
+        <!--displays the instructions for the recipes. instructions that are empty are not visible on the site-->
         <h4>Instructions:</h4>
         <ul>
             <li class="text-center"><p>{{ recipes.instruction }}</p></li><br />
