@@ -28,7 +28,6 @@ def index():
 def recipes():
     categories = mongo.db.categories.find()
     return render_template('recipes.html', categories=categories)
-    
 
 # Below are the routes that display the category pages
 @app.route('/breads')
@@ -134,7 +133,7 @@ def register():
 def users():
     users=mongo.db.users.find()
     recipes=mongo.db.recipes.find()
-    return render_template('userpage.html', users, recipes=recipes)
+    return render_template('userpage.html', users=users, recipes=recipes)
     
 # This route adds the new user to my users collection if they dont exist. If the user does exists then they user gets told they cant use that username
 @app.route('/insert_user', methods=['GET', 'POST'])
