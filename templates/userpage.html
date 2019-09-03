@@ -1,9 +1,11 @@
+<!--This page shows the logged in user what recipes they have added to the site aswell as contains the button to add more recipes-->
 {% extends 'base.html'%} {% block content %}
 <div class="container padding-l1">
     <div class="">
+        <!--This checks for the user that is logged in-->
         {% if session %}
-       
         <ul>
+            <!--This checks to see if the user is the Admin. If it is the admin it shows the admin function link -->
             {% if session['name'] == 'Admin' %}
             <li>
                 <a href="{{url_for('add_recipe')}}" class="waves-effect waves-light btn btn_small green">Add recipe</a>
@@ -15,6 +17,7 @@
             </li>
             {% endif %}
         </ul>
+        <!--This shows what recipes were added by thre user logged in-->
          <h4>{{ session['name'] }}'s Recipes:</h4>
         <ul class="background-color scroll">
             {% for recipe in recipes%} {% if session['name'] == recipe.author %}
