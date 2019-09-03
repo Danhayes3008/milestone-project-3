@@ -132,8 +132,9 @@ def register():
 # This route displays the userpage as well as checks the users and recipes collections
 @app.route('/users')
 def users():
-    return render_template('userpage.html', users=mongo.db.users.find(),
-    recipes=mongo.db.recipes.find())
+    users=mongo.db.users.find()
+    recipes=mongo.db.recipes.find()
+    return render_template('userpage.html', users, recipes=recipes)
     
 # This route adds the new user to my users collection if they dont exist. If the user does exists then they user gets told they cant use that username
 @app.route('/insert_user', methods=['GET', 'POST'])
@@ -158,15 +159,17 @@ def insert_user():
 # This route checks the recipes collection for the userpage 
 @app.route('/recipe_name')
 def recipe_name():
-    return render_template('userpage.html', rec=mongo.db.recipes.find())
+    rec=mongo.db.recipes.find()
+    return render_template('userpage.html', rec=recipes)
 
 
 # This route displays the add recipe page and checks the categories and subcategories collections 
 @app.route('/add_recipe')
 def add_recipe():
+    categories=mongo.db.categories.find()
+    subcategory=mongo.db.subcategory.find()
     return render_template('addrecipe.html',
-    categories=mongo.db.categories.find(),
-    subcategory=mongo.db.subcategory.find())
+    categories=categories, subcategory=subcategory)
     
 # This route adds the recipe to the recipes collection if the recipe name does not exist 
 @app.route('/insert_recipe', methods=['POST'])
@@ -240,8 +243,9 @@ def insert_recipe():
 # This route displays the admin page. Only the user named Admin can see the link for this page  
 @app.route('/admin')
 def admin():
-    return render_template('admin.html', users=mongo.db.users.find(), 
-    recipes=mongo.db.recipes.find())
+    users=mongo.db.users.find()
+    recipes=mongo.db.recipes.find()
+    return render_template('admin.html', users=users, recipes=recipes)
     
 # This route allows the admin to delete a user if needed to
 @app.route('/delete_user/<user_id>')
