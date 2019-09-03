@@ -26,55 +26,60 @@ def index():
 # This is the route that diplays the recipes page and checks the database for the collections below    
 @app.route('/recipes')
 def recipes():
-    categories = mongo.db.categories
-    categories.find()
-    subcategory = mongo.db.subcategory
-    subcategory.find()
-    recipes = mongo.db.recipes
-    recipes.find()
-    return render_template('recipes.html', categories=categories, subcategory=subcategory, recipes=recipes)
+    categories = mongo.db.categories.find()
+    return render_template('recipes.html', categories=categories)
     
 
 # Below are the routes that display the category pages
 @app.route('/breads')
 def breads():
-    return render_template('bread.html', recipes=mongo.db.recipes.find())
+    recipes=mongo.db.recipes.find()
+    return render_template('bread.html', recipes=recipes)
     
 @app.route('/GlutenFree')
 def GlutenFree():
-    return render_template('Gluten-Free.html', recipes=mongo.db.recipes.find())
+    recipes=mongo.db.recipes.find()
+    return render_template('Gluten-Free.html', recipes=recipes)
     
 @app.route('/cakes')
 def cakes():
-    return render_template('cakes.html', recipes=mongo.db.recipes.find())
+    recipes=mongo.db.recipes.find()
+    return render_template('cakes.html', recipes=recipes)
     
 @app.route('/Tarts')
 def Tarts():
-    return render_template('Tarts.html', recipes=mongo.db.recipes.find())
+    recipes=mongo.db.recipes.find()
+    return render_template('Tarts.html', recipes=recipes)
     
 @app.route('/Pies')
 def Pies():
-    return render_template('Pies.html', recipes=mongo.db.recipes.find())
+    recipes=mongo.db.recipes.find()
+    return render_template('Pies.html', recipes=recipes)
     
 @app.route('/Biscuits')
 def Biscuits():
-    return render_template('Biscuits.html', recipes=mongo.db.recipes.find())
+    recipes=mongo.db.recipes.find()
+    return render_template('Biscuits.html', recipes=recipes)
     
 @app.route('/Deserts')
 def Deserts():
-    return render_template('Deserts.html', recipes=mongo.db.recipes.find())
+    recipes=mongo.db.recipes.find()
+    return render_template('Deserts.html', recipes=recipes)
     
 @app.route('/Pastry')
 def Pastry():
-    return render_template('Pastry.html', recipes=mongo.db.recipes.find())
+    recipes=mongo.db.recipes.find()
+    return render_template('Pastry.html', recipes=recipes)
     
 @app.route('/QuickBreads')
 def QuickBreads():
-    return render_template('QuickBreads.html', recipes=mongo.db.recipes.find())
+    recipes=mongo.db.recipes.find()
+    return render_template('QuickBreads.html', recipes=recipes)
     
 @app.route('/ReducedFat')
 def ReducedFat():
-    return render_template('ReducedFat.html', recipes=mongo.db.recipes.find())
+    recipes=mongo.db.recipes.find()
+    return render_template('ReducedFat.html', recipes=recipes)
     
 
 # This route selects a specific recipe from the database when the specific link for it is selected. It checks for the corrisponding object id in the collection.
