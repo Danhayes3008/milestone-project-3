@@ -7,6 +7,7 @@
         </div>
     </div>
     <div class="scroll">
+        <!--This section displays all recipes in this category  -->
         {% for recipe in recipes %} {% if (recipe.category_name=="Gluten-free") %} {% if (recipe.approval=="yes") %}
         <div class="row width3 mrg1 background-color margin">
             <img src="{{recipe.image_url}}"></img>
