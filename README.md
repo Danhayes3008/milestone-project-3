@@ -47,7 +47,7 @@ look but i needed to get this project submitted so i made changes to get it up a
 -
 
 The following link sends you to the preview of this dashboard:<strong><a href="
-https://dashboard.heroku.com/apps/my-milestone-3" target=
+https://my-milestone-3.herokuapp.com" target=
 "_blank">
 Milestone project 3</a></strong>
 
