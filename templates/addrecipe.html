@@ -10,7 +10,7 @@
     {% endif %} {% endwith %}
     <!--This part informs the user that there recipe needs approval before it is added onto the site-->
     <p class="background-color text-center">All recipes will need approving by admin before they become visible on the site. This is to prevent
-    inapropriate content being added as this site can be accessed by children.</p>
+    inapropriate content being added as this site can be accessed by children. If nutritional values not known please input 'unknown'.</p>
     <h3>Add Recipe</h3>
     <div class="background-color row">
         <form action="{{ url_for('insert_recipe') }}" method="POST" class="col s12">
