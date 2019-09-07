@@ -5,9 +5,7 @@ html, body {
 }
 
 .li{
-    @include mobile{
-        font-size: 15px;
-    }
+    font-size: 15px;
 }
 
 .width1{
@@ -28,7 +26,7 @@ html, body {
     @include desktop{
         width: 90% !important;
         margin-left: 5% !important;
-        margin-bottom: 125px !important;
+        margin-bottom: 170px !important;
     }
 }
 
@@ -44,6 +42,16 @@ html, body {
         width: 90% !important;
         margin-left: 5% !important;
         margin-bottom: 5% !important;
+    }
+    
+    @include tab{
+        width: 95% !important;
+        margin-left: 5% !important;
+    }
+    
+    @include computer{
+        width: 90% !important;
+        margin-left: 5% !important;
     }
     
     @include desktop{
@@ -307,7 +315,11 @@ form{
     
     @include tab{
        margin-top: 6rem;
-       margin-bottom: 6rem !important;
+       margin-bottom: 8rem !important;
+    }
+    
+    @include computer{
+        margin-bottom: 3rem !important;
     }
     
     @include desktop{
@@ -419,7 +431,15 @@ footer{
 
 }
 .padding-r1{
-    padding-right: 20px;
+    @include mobile{
+        padding-right: 10px;
+    }
+    @include tab{
+        padding-right: 20px;
+    }
+    @include computer{
+        padding-right: 20px;
+    }
 }
 
 .padding-l1{
@@ -476,6 +496,7 @@ p{
     @include tab{
         width: 90%;
         font-size: 20px;
+        margin-bottom: 50px !important;
     }
     
     
@@ -637,6 +658,12 @@ img{
     @include desktop{
         width: 500px;
         height: 300px;
+    }
+}
+
+.img2{
+    @include mobile{
+        margin-left: 7%;
     }
 }
 
