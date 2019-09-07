@@ -1,3 +1,26 @@
+/* The alert message box */
+.alert {
+  padding: 20px;
+  background-color: #f44336 !important;
+  /* Red */
+  color: white;
+  margin-bottom: 15px; }
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s; }
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black; }
+
 html, body {
   max-width: 100%;
   background-color: #f1f1f1 !important;
@@ -10,7 +33,7 @@ html, body {
 @media (max-width: 730px) {
   .width1 {
     width: 75% !important;
-    margin-left: 10% !important; } }
+    margin-left: 5% !important; } }
 @media (min-width: 731px) and (max-width: 991px) {
   .width1 {
     width: 100% !important; } }
@@ -28,10 +51,32 @@ html, body {
   .width2 {
     width: 90% !important; } }
 
+@media (max-width: 730px) {
+  .width3 {
+    width: 90% !important;
+    margin-left: 5% !important;
+    margin-bottom: 5% !important; } }
 @media (min-width: 1200px) {
   .width3 {
     width: 90% !important;
     margin-left: 5% !important; } }
+
+@media (max-width: 730px) {
+  .width4 {
+    width: 75% !important;
+    margin-left: 10% !important; } }
+@media (min-width: 731px) and (max-width: 991px) {
+  .width4 {
+    width: 100% !important; } }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .width4 {
+    width: 90% !important;
+    margin-left: 5% !important; } }
+@media (min-width: 1200px) {
+  .width4 {
+    width: 90% !important;
+    margin-left: 5% !important;
+    margin-bottom: 125px !important; } }
 
 .background-color {
   background-color: white !important;
@@ -195,25 +240,6 @@ html, body {
   margin-top: 2%;
   margin-bottom: 2%; }
 
-.pagination {
-  display: inline-block; }
-
-.pagination a {
-  color: black;
-  float: left;
-  padding: 8px 16px;
-  text-decoration: none;
-  transition: background-color .3s;
-  border: 1px solid #ddd; }
-
-.pagination a.active {
-  background-color: #4CAF50;
-  color: white;
-  border: 1px solid #4CAF50; }
-
-.pagination a:hover:not(.active) {
-  background-color: #ddd; }
-
 .margin1 {
   padding-left: 20%; }
   @media (min-width: 992px) and (max-width: 1199px) {
@@ -306,23 +332,20 @@ footer {
 .padding-r1 {
   padding-right: 20px; }
 
-.padding-l1 {
-  padd141ing-left: 40px; }
-  @media (max-width: 730px) {
-    .padding-l1 {
-      padding-left: 0%;
-      margin-top: 5%; } }
-  @media (min-width: 731px) and (max-width: 991px) {
-    .padding-l1 {
-      margin-top: 5%; } }
-  @media (min-width: 992px) and (max-width: 1199px) {
-    .padding-l1 {
-      margin-top: 5%; } }
-  @media (min-width: 1200px) {
-    .padding-l1 {
-      padding-left: 20%;
-      margin-top: 5%;
-      margin-bottom: 5%; } }
+@media (max-width: 730px) {
+  .padding-l1 {
+    padding-left: 0%;
+    margin-top: 5%; } }
+@media (min-width: 731px) and (max-width: 991px) {
+  .padding-l1 {
+    margin-top: 5%; } }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .padding-l1 {
+    margin-top: 5%; } }
+@media (min-width: 1200px) {
+  .padding-l1 {
+    margin-top: 5%;
+    margin-bottom: 5%; } }
 
 @media (min-width: 1200px) {
   .padding-l3 {
@@ -463,7 +486,7 @@ footer {
 
 @media (max-width: 730px) {
   .row {
-    margin-bottom: 0px !important; } }
+    margin-bottom: 5% !important; } }
 @media (min-width: 731px) and (max-width: 991px) {
   .row {
     margin-top: 0px !important; } }
