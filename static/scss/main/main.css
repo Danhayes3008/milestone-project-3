@@ -1,622 +1,77 @@
-/* The alert message box */
-.alert {
-  padding: 20px;
-  background-color: #f44336 !important;
-  /* Red */
-  color: white;
-  margin-bottom: 15px; }
-
-.alert1 {
-  padding: 20px;
-  background-color: green !important;
-  /* Red */
-  color: white;
-  margin-bottom: 15px; }
-
-/* The close button */
-.closebtn {
-  margin-left: 15px;
-  color: white;
-  font-weight: bold;
-  float: right;
-  font-size: 22px;
-  line-height: 20px;
-  cursor: pointer;
-  transition: 0.3s; }
-
-/* When moving the mouse over the close button */
-.closebtn:hover {
-  color: black; }
-
-html, body {
-  max-width: 100%;
-  background-color: #f1f1f1 !important;
-  overflow-x: hidden; }
-
-.li {
-  font-size: 15px; }
-
-@media (max-width: 730px) {
-  .width1 {
-    width: 75% !important;
-    margin-left: 5% !important; } }
-@media (min-width: 731px) and (max-width: 991px) {
-  .width1 {
-    width: 100% !important; } }
-@media (min-width: 992px) and (max-width: 1199px) {
-  .width1 {
-    width: 90% !important;
-    margin-left: 5% !important; } }
-@media (min-width: 1200px) {
-  .width1 {
-    width: 90% !important;
-    margin-left: 5% !important;
-    margin-bottom: 170px !important; } }
-
-@media (max-width: 730px) {
-  .width2 {
-    width: 90% !important; } }
-
-@media (max-width: 730px) {
-  .width3 {
-    width: 90% !important;
-    margin-left: 5% !important;
-    margin-bottom: 5% !important; } }
-@media (min-width: 731px) and (max-width: 991px) {
-  .width3 {
-    width: 95% !important;
-    margin-left: 5% !important; } }
-@media (min-width: 992px) and (max-width: 1199px) {
-  .width3 {
-    width: 90% !important;
-    margin-left: 5% !important; } }
-@media (min-width: 1200px) {
-  .width3 {
-    width: 90% !important;
-    margin-left: 5% !important; } }
-
-@media (max-width: 730px) {
-  .width4 {
-    width: 75% !important;
-    margin-left: 10% !important; } }
-@media (min-width: 731px) and (max-width: 991px) {
-  .width4 {
-    width: 100% !important; } }
-@media (min-width: 992px) and (max-width: 1199px) {
-  .width4 {
-    width: 90% !important;
-    margin-left: 5% !important; } }
-@media (min-width: 1200px) {
-  .width4 {
-    width: 90% !important;
-    margin-left: 5% !important;
-    margin-bottom: 125px !important; } }
-
-.background-color {
-  background-color: white !important;
-  padding: 1%;
-  border: 1px solid black; }
-
-@media (min-width: 731px) and (max-width: 991px) {
-  .admin1 {
-    margin-left: 1% !important; } }
-@media (min-width: 992px) and (max-width: 1199px) {
-  .admin1 {
-    margin-left: 1% !important; } }
-
-.jumbotron {
-  width: 45%;
-  margin-left: 25%; }
-  @media (max-width: 730px) {
-    .jumbotron {
-      width: 75% !important;
-      margin-left: 12% !important; } }
-  @media (min-width: 731px) and (max-width: 991px) {
-    .jumbotron {
-      width: 65%;
-      margin-left: 15%;
-      padding: 7rem 2rem !important; } }
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  .margin {
-    margin-top: 1%;
-    margin-bottom: 1%; } }
-
-@media (max-width: 730px) {
-  .margin2 {
-    width: 90%; } }
-
-.input1 {
-  width: 75%; }
-
-.card {
-  width: 200px;
-  height: 200px;
-  margin: 10px; }
-  @media (max-width: 730px) {
-    .card {
-      margin-left: 20%; } }
-
-.icons {
-  display: inline;
-  padding-left: 5%;
-  width: 50%; }
-  @media (max-width: 730px) {
-    .icons {
-      display: inline;
-      padding-left: 5%;
-      width: 10%; } }
-  @media (min-width: 731px) and (max-width: 991px) {
-    .icons {
-      display: inline;
-      width: 20%; } }
-  @media (min-width: 992px) and (max-width: 1199px) {
-    .icons {
-      display: inline;
-      padding-left: 1%;
-      width: 30%; } }
-
-.copyright {
-  padding-left: 5%; }
-  @media (max-width: 730px) {
-    .copyright {
-      padding-left: 20%; } }
-
-.ul {
-  margin-left: 25%;
-  width: 15%; }
-  @media (max-width: 730px) {
-    .ul {
-      width: 100%;
-      margin-left: 0%; } }
-  @media (min-width: 731px) and (max-width: 991px) {
-    .ul {
-      width: 50%;
-      margin-left: 0px; } }
-  @media (min-width: 992px) and (max-width: 1199px) {
-    .ul {
-      width: 50%;
-      margin-left: 0px; } }
-
-@media (max-width: 730px) {
-  .ul1 {
-    margin-top: 1rem !important; } }
-
-.ul2 {
-  list-style-type: square; }
-
-@media (min-width: 1200px) {
-  .ul3 {
-    width: 90%; } }
-
-@media (max-width: 730px) {
-  .scroll {
-    display: block;
-    height: 430px;
-    overflow: auto; } }
-@media (min-width: 731px) and (max-width: 991px) {
-  .scroll {
-    display: block;
-    height: 740px;
-    overflow: auto; } }
-@media (min-width: 992px) and (max-width: 1199px) {
-  .scroll {
-    display: block;
-    height: 470px;
-    overflow: auto; } }
-@media (min-width: 1200px) {
-  .scroll {
-    display: block;
-    height: 623px;
-    overflow: auto; } }
-
-.padding-l2 {
-  padding-left: 6%; }
-
-@media (min-width: 1200px) {
-  .background1 {
-    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeQn8R6KAsUD23P2bHR5RdKYoeGCqYznAzZBFPt5KlD00pgZLq") no-repeat center;
-    background-size: cover;
-    background-size: 100%;
-    height: 200px;
-    position: relative;
-    padding-top: 110px; } }
-
-@media (min-width: 1200px) {
-  .background2 {
-    background: url("https://image.shutterstock.com/image-photo/brown-scratched-wooden-cutting-board-260nw-582026461.jpg") center;
-    background-size: 100%; } }
-
-.index-text {
-  text-align: center;
-  position: absolute;
-  color: white; }
-
-.padding1 {
-  padding-left: 18%; }
-  @media (max-width: 730px) {
-    .padding1 {
-      padding-left: 0%; } }
-  @media (min-width: 731px) and (max-width: 991px) {
-    .padding1 {
-      padding-left: 25%; } }
-  @media (min-width: 992px) and (max-width: 1199px) {
-    .padding1 {
-      padding-left: 27%; } }
-
-.button1 {
-  width: 50%; }
-  @media (max-width: 730px) {
-    .button1 {
-      margin-left: 20%; } }
-
-.btn {
-  margin-top: 2%;
-  margin-bottom: 2%; }
-
-.margin1 {
-  padding-left: 20%; }
-  @media (min-width: 992px) and (max-width: 1199px) {
-    .margin1 {
-      padding-left: 10%; } }
-
-form {
-  margin-left: 5%;
-  width: 100%; }
-
-.jumbo1 {
-  margin-top: 2rem; }
-  @media (min-width: 731px) and (max-width: 991px) {
-    .jumbo1 {
-      margin-top: 6rem;
-      margin-bottom: 8rem !important; } }
-  @media (min-width: 992px) and (max-width: 1199px) {
-    .jumbo1 {
-      margin-bottom: 3rem !important; } }
-  @media (min-width: 1200px) {
-    .jumbo1 {
-      margin-top: 3rem;
-      margin-bottom: 5rem !important; } }
-
-@media (max-width: 730px) {
-  .container {
-    margin-bottom: 10px !important; } }
-@media (min-width: 731px) and (max-width: 991px) {
-  .container {
-    margin-bottom: 80px !important;
-    margin-top: 5%; } }
-@media (min-width: 992px) and (max-width: 1199px) {
-  .container {
-    margin-bottom: 80px !important; } }
-
-.container1 {
-  margin: 0; }
-  @media (min-width: 1200px) {
-    .container1 {
-      max-width: 100% !important;
-      margin-top: 64px !important; } }
-
-@media (max-width: 730px) {
-  .container2 {
-    width: 50%;
-    height: 50%;
-    padding-left: 45px !important;
-    padding-right: 0px !important; } }
-@media (min-width: 731px) and (max-width: 991px) {
-  .container2 {
-    width: 50%;
-    height: 50%; } }
-@media (min-width: 992px) and (max-width: 1199px) {
-  .container2 {
-    width: 50%;
-    height: 50%; } }
-@media (min-width: 1200px) {
-  .container2 {
-    margin-bottom: 70px !important; } }
-
-@media (max-width: 730px) {
-  .container3 {
-    width: 50%;
-    height: 50%;
-    padding-left: 45px !important;
-    padding-right: 0px !important; } }
-@media (min-width: 731px) and (max-width: 991px) {
-  .container3 {
-    width: 50%;
-    height: 50%; } }
-@media (min-width: 992px) and (max-width: 1199px) {
-  .container3 {
-    width: 50%;
-    height: 50%; } }
-@media (min-width: 1200px) {
-  .container3 {
-    margin-bottom: 100px !important;
-    margin-top: 65px !important; } }
-
-li {
-  font-size: 15px; }
-
-@media (min-width: 731px) and (max-width: 991px) {
-  .footer {
-    margin-bottom: 27% !important; } }
-@media (min-width: 992px) and (max-width: 1199px) {
-  .footer {
-    margin-bottom: 110px !important; } }
-
-footer {
-  height: 100px; }
-
-@media (max-width: 730px) {
-  .padding-r1 {
-    padding-right: 10px; } }
-@media (min-width: 731px) and (max-width: 991px) {
-  .padding-r1 {
-    padding-right: 20px; } }
-@media (min-width: 992px) and (max-width: 1199px) {
-  .padding-r1 {
-    padding-right: 20px; } }
-
-@media (max-width: 730px) {
-  .padding-l1 {
-    padding-left: 0%;
-    margin-top: 5%; } }
-@media (min-width: 731px) and (max-width: 991px) {
-  .padding-l1 {
-    margin-top: 5%; } }
-@media (min-width: 992px) and (max-width: 1199px) {
-  .padding-l1 {
-    margin-top: 5%; } }
-@media (min-width: 1200px) {
-  .padding-l1 {
-    margin-top: 5%;
-    margin-bottom: 5%; } }
-
-@media (min-width: 1200px) {
-  .padding-l3 {
-    padding-left: 20%;
-    padding-bottom: 1.6%; } }
-
-@media (min-width: 731px) and (max-width: 991px) {
-  p {
-    font-size: 20px; } }
-@media (min-width: 992px) and (max-width: 1199px) {
-  p {
-    font-size: 15px; } }
-@media (min-width: 1200px) {
-  p {
-    width: 100%; } }
-
-@media (max-width: 730px) {
-  .p1 {
-    width: 90%;
-    padding-left: 10%; } }
-@media (min-width: 731px) and (max-width: 991px) {
-  .p1 {
-    width: 90%;
-    font-size: 20px;
-    margin-bottom: 50px !important; } }
-@media (min-width: 1200px) {
-  .p1 {
-    font-weight: bold;
-    font-size: 16px;
-    word-wrap: break-word;
-    margin-left: 3%; } }
-
-.p2 {
-  padding-top: 5%; }
-  @media (max-width: 730px) {
-    .p2 {
-      padding-top: 5%; } }
-  @media (min-width: 731px) and (max-width: 991px) {
-    .p2 {
-      padding-top: 5%; } }
-
-@media (min-width: 731px) and (max-width: 991px) {
-  .mrg1 {
-    margin-left: 0px !important; } }
-
-@media (max-width: 730px) {
-  .mrg2 {
-    margin-left: 10%; } }
-
-@media (min-width: 1200px) {
-  .input {
-    background-color: white !important; } }
-
-@media (max-width: 730px) {
-  .p3 {
-    width: 90%; } }
-@media (min-width: 731px) and (max-width: 991px) {
-  .p3 {
-    font-size: 20px; } }
-@media (min-width: 1200px) {
-  .p3 {
-    font-size: 16px;
-    word-wrap: break-word;
-    margin-left: 3%; } }
-
-.p4 {
-  padding-top: 5%; }
-  @media (max-width: 730px) {
-    .p4 {
-      padding-top: 5%; } }
-  @media (min-width: 731px) and (max-width: 991px) {
-    .p4 {
-      padding-top: 5%; } }
-  @media (min-width: 1200px) {
-    .p4 {
-      padding-top: 0%; } }
-
-@media (max-width: 730px) {
-  .p5 {
-    width: 90%; } }
-@media (min-width: 731px) and (max-width: 991px) {
-  .p5 {
-    width: 90%;
-    font-size: 20px; } }
-@media (min-width: 992px) and (max-width: 1199px) {
-  .p5 {
-    width: 50%;
-    margin-left: 25%; } }
-@media (min-width: 1200px) {
-  .p5 {
-    font-weight: bold;
-    font-size: 16px;
-    word-wrap: break-word; } }
-
-@media (min-width: 1200px) {
-  .card1 {
-    margin-bottom: 4%; } }
-
-@media (max-width: 730px) {
-  .mg-l {
-    margin-left: 15px; } }
-
-@media (max-width: 730px) {
-  .mg-1 {
-    margin: 10px; } }
-@media (min-width: 992px) and (max-width: 1199px) {
-  .mg-1 {
-    margin: 10px; } }
-
-@media (max-width: 730px) {
-  img {
-    width: 240px;
-    height: 150px; } }
-@media (min-width: 731px) and (max-width: 991px) {
-  img {
-    width: 300px;
-    height: 200px; } }
-@media (min-width: 992px) and (max-width: 1199px) {
-  img {
-    width: 250px;
-    height: 150px; } }
-@media (min-width: 1200px) {
-  img {
-    width: 200px;
-    height: 150px; } }
-
-@media (min-width: 731px) and (max-width: 991px) {
-  .img1 {
-    width: 400px;
-    height: 200px; } }
-@media (min-width: 992px) and (max-width: 1199px) {
-  .img1 {
-    width: 300px;
-    height: 150px; } }
-@media (min-width: 1200px) {
-  .img1 {
-    width: 500px;
-    height: 300px; } }
-
-@media (max-width: 730px) {
-  .img2 {
-    margin-left: 7%; } }
-
-@media (max-width: 730px) {
-  .row {
-    margin-bottom: 5% !important; } }
-@media (min-width: 731px) and (max-width: 991px) {
-  .row {
-    margin-top: 0px !important; } }
-@media (min-width: 992px) and (max-width: 1199px) {
-  .row {
-    margin-bottom: 0px !important; } }
-
-/*!
- * Start Bootstrap - Scrolling Nav (https://startbootstrap.com/template-overviews/scrolling-nav)
- * Copyright 2013-2019 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-scrolling-nav/blob/master/LICENSE)
- */
-section {
-  padding: 150px 0; }
-
-/** {box-sizing:border-box}*/
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto; }
-  @media (max-width: 730px) {
-    .slideshow-container {
-      margin: 10px; } }
-  @media (min-width: 731px) and (max-width: 991px) {
-    .slideshow-container {
-      margin-left: 20%; } }
-
-/* Hide the images by default */
-.mySlides {
-  display: none; }
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none; }
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px; }
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.8); }
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center; }
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0; }
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease; }
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  /*animation-duration: 1.5s;*/ }
-
-@-webkit-keyframes fade {
-  from {
-    opacity: .4; }
-  to {
-    opacity: 1; } }
-@keyframes fade {
-  from {
-    opacity: .4; }
-  to {
-    opacity: 1; } }
-
-/*# sourceMappingURL=main.css.map */
+/*
+Error: Invalid CSS after "...color: #f1f1f1 ": expected "{", was "!important;"
+        on line 3 of static/scss/components/general/general.scss
+        from line 8 of static/scss/main/main.scss
+
+1: html, body {
+2:     max-width: 100%;
+3:    -moz- background-color: #f1f1f1 !important;
+4:    -webkit-  background-color: #f1f1f1 !important;
+5:    -ms- background-color: #f1f1f1 !important;
+6:     overflow-x: hidden;
+7: }
+8: 
+
+Backtrace:
+static/scss/components/general/general.scss:3
+static/scss/main/main.scss:8
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:1207:in `expected'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:1137:in `expected'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:1132:in `tok!'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:665:in `block'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:735:in `declaration_or_ruleset'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:685:in `block_child'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:677:in `block_contents'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:666:in `block'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:658:in `ruleset'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:684:in `block_child'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:674:in `block_contents'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:125:in `stylesheet'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:41:in `parse'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:406:in `_to_tree'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:312:in `to_tree'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:326:in `block in visit_import'
+/usr/lib/ruby/vendor_ruby/sass/stack.rb:88:in `block in with_import'
+/usr/lib/ruby/vendor_ruby/sass/stack.rb:115:in `with_frame'
+/usr/lib/ruby/vendor_ruby/sass/stack.rb:88:in `with_import'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:325:in `visit_import'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/base.rb:36:in `visit'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:160:in `block in visit'
+/usr/lib/ruby/vendor_ruby/sass/stack.rb:79:in `block in with_base'
+/usr/lib/ruby/vendor_ruby/sass/stack.rb:115:in `with_frame'
+/usr/lib/ruby/vendor_ruby/sass/stack.rb:79:in `with_base'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:160:in `visit'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/base.rb:52:in `map'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/base.rb:52:in `visit_children'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:181:in `with_environment'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:168:in `visit_children'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/base.rb:36:in `block in visit'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:188:in `visit_root'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/base.rb:36:in `visit'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:159:in `visit'
+/usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:8:in `visit'
+/usr/lib/ruby/vendor_ruby/sass/tree/root_node.rb:36:in `css_tree'
+/usr/lib/ruby/vendor_ruby/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:381:in `_render_with_sourcemap'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:298:in `render_with_sourcemap'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `each'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:473:in `on_file_changed'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:331:in `block in watch'
+/usr/lib/ruby/vendor_ruby/listen/event/config.rb:23:in `call'
+/usr/lib/ruby/vendor_ruby/listen/event/processor.rb:115:in `_process_changes'
+/usr/lib/ruby/vendor_ruby/listen/event/processor.rb:19:in `block in loop_for'
+/usr/lib/ruby/vendor_ruby/listen/event/processor.rb:15:in `loop'
+/usr/lib/ruby/vendor_ruby/listen/event/processor.rb:15:in `loop_for'
+/usr/lib/ruby/vendor_ruby/listen/event/loop.rb:84:in `_wait_for_changes'
+/usr/lib/ruby/vendor_ruby/listen/event/loop.rb:42:in `block in setup'
+/usr/lib/ruby/vendor_ruby/listen/internals/thread_pool.rb:6:in `block in add'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...color: #f1f1f1 \": expected \"{\", was \"!important;\"\A         on line 3 of static/scss/components/general/general.scss\A         from line 8 of static/scss/main/main.scss\A \A 1: html, body {\A 2:     max-width: 100%;\A 3:    -moz- background-color: #f1f1f1 !important;\A 4:    -webkit-  background-color: #f1f1f1 !important;\A 5:    -ms- background-color: #f1f1f1 !important;\A 6:     overflow-x: hidden;\A 7: }\A 8: "; }
