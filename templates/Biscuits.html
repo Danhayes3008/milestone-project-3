@@ -11,7 +11,7 @@
         {% for recipe in recipes %} {% if (recipe.category_name=="Biscuits") %} {% if (recipe.approval=="yes") %}
         <div class="row width3 mrg1 background-color margin">
             <img src="{{recipe.image_url}}"></img>
-            <ul class="ul3 col-sm-12 col-md-6 col-lg-9">
+            <ul class="ul3 col-sm-12 col-md-6 col-lg-8">
                 <li>
                     <h5 class="text-center"><a id="recipe" href="{{ url_for('recipespage', recipe_id=recipe._id) }}">{{recipe.name}}</a></h5>
                     <p class="text-center"><strong>subcategory</strong>: {{recipe.subcategory_name}}</p>
