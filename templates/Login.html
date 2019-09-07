@@ -1,6 +1,14 @@
 {% extends 'base.html'%} {% block content %}
 <div class="container padding-l1">
     <div class="row">
+        {% with messages = get_flashed_messages() %} {% if messages %}
+        <div class="col-lg-12 alert">
+            {% for message in messages %}
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <h3 class="text-center">{{ message }}</h3>
+            {% endfor %}
+        </div>
+        {% endif %} {% endwith %}
         <div class="jumbotron background-color jumbo1">
             <h2 class="text-center">Login</h2>
             <div class="row margin1">
@@ -22,13 +30,6 @@
                 <div>
                     <a href="{{ url_for('register') }}">Click here</a> to create you're free account.
                 </div>
-                {% with messages = get_flashed_messages() %} {% if messages %}
-                <ul class=flashes>
-                    {% for message in messages %}
-                    <li>{{ message }}</li>
-                    {% endfor %}
-                </ul>
-                {% endif %} {% endwith %}
             </div>
         </div>
     </div>
