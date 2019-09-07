@@ -379,6 +379,10 @@ footer {
     padding-left: 20%;
     padding-bottom: 1.6%; } }
 
+@media (min-width: 1200px) {
+  .padding-l4 {
+    padding-left: 30%; } }
+
 @media (min-width: 731px) and (max-width: 991px) {
   p {
     font-size: 20px; } }
