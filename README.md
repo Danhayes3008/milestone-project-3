@@ -1,4 +1,4 @@
-Project Status: <strong> In Progress</strong>
+Project Status: <strong> Complete</strong>
 
 <strong>Milestone Project 3</strong>
 -
@@ -27,6 +27,33 @@ and category selection part of looking at recipes will help people overlook the 
 I could have made more improvements on it if there was more time.
 
 Unfortunately i did not have time to add a search bar system.
+
+
+-----------------------------------------------------------
+<strong>Future additions to the site</strong>
+-
+
+as i ran out of time to work on this project i would like to make note here some features i wish to add in the future:
+
+- searchbar
+- better design
+- improved recipe page
+- comments for the recipes
+- the ability for users to like or dislike a recipe
+- the ability to edit a recipe and have the changes approved by the admin
+- improved subcategory list in the form
+- improve the form look and structure.
+- more color to the site including the use of a background images
+- better notifications
+- improve user accounts to allow them to be encrypt
+- a may also like section at the bottom of the recipe page
+- most liked section on home page
+- better way to add images for use in the recipes page as right now only ones on the internet can be used
+- video's showing how to make some of these recipes
+- links to sites were you can buy some of the ingredients that are not found in your normal shops
+
+The list above is most of what i would like to see added in the future and i have no doubt i would find more stuff to do with this site aswell
+
 
 
 
@@ -139,6 +166,10 @@ there is a bug in the category and subcategory drop-down menu's on desktop, this
 Drop-down menu a few times (usually just twice). another bug is were there is a big unused space at the bottom of the instructions section of each recipe. i have not figured out
 how to fix this yet but it does not effect the site.
 
+The add recipe form has been fixed so that the category and subcategory selectors nolonger send you to an error page if not filled in, but i was unable to get a working notification system to tell
+the user that they need to select stuff in those two sections to continue as i ran out of time for this project. When a flash message pops up the navbar changes. this does not effect the site at all as once the notification
+has been closed and page refreshed (gone to another page or reloaded the same page) the issue goes away.
+
 
 -----------------------------------------------------------
 
@@ -173,3 +204,7 @@ following what i found here i was able to make some changes to make it work for 
 This site was built to be used in my course work, it is in now was a real site and all content within it has not been used for commercial use. The recipes added by the author Admin belongs to
 the BBC  good food website. The images used for the categories cards in the recipes.html page were found on Google images, i found these by looking for images that shouldn't violate any copyrights.
 To prevent any copyright violations a notification was added to the add recipe form asking for only images that don't violate any copyrights to be added.
+
+The site name was something i thought up at the begining of the project and was not copied from anywhere, any connection to other sites or copyrighted content is a coincident
+
+I would also like to give credit to <a href="https://www.w3schools.com/default.asp">w3schools</a> as this has helped me out alot in getting some stuff to work, aswell as a good source of information on how to do stuff.
