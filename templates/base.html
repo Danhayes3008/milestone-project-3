@@ -8,11 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="">
+  <meta http-equiv="refresh" content="60">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Courgette|Lato:700i|Open+Sans:400i" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='scss/main/main.css' )}}" type="text/css" />
+
 
 
 
@@ -66,17 +68,17 @@
   {% block content %}{% endblock %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-  <script type="text/javascript">
+<script type="text/javascript">
     $(document).ready(function() {
-      $('.collapsible').collapsible();
-      $('select').material_select();
-      $(".button-collapse").sideNav();
+        $('.collapsible').collapsible();
+        $('select').material_select();
+        $(".button-collapse").sideNav();
     });
-    
+
     document.getElementById("matfix").addEventListener("click", function(e) {
-            e.stopPropagation();
-        });
-  </script>
+        e.stopPropagation();
+    });
+</script>
   <script type="text/javascript">
         var counter = 2;
         var limit = 25;
@@ -248,7 +250,7 @@
     </script>
   <script type="text/javascript">
         var instruction = 0;
-        var max = 6;
+        var max = 12;
 
         function addInstruction(instName) {
             if (instruction == 0) {
