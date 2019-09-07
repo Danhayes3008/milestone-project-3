@@ -3,7 +3,7 @@
 <div class="container container2 padding-l1">
     <div class="row">
         <!--displays the recipe name-->
-        <h1>{{ recipes.name }}</h1>
+        <h3>{{ recipes.name }}</h3>
     </div>
     <hr />
     <div class="background-color mrg2 margin2 row">
@@ -22,41 +22,41 @@
         </div>
         <div class="col-sm-12 col-lg-12 p4">
             <!--displays the ingredients. Only ingredients that are not empty will be visible-->
-            <h4>Ingredients:</h4>
+            <h4 class="col-sm-12 col-md-12 text-center">Ingredients:</h4>
             <ul>
-                <li>{{ recipes.ingredient }}</li>
-                <li>{{ recipes.ingredient1 }}</li>
-                <li>{{ recipes.ingredient2 }}</li>
-                <li>{{ recipes.ingredient3 }}</li>
-                <li>{{ recipes.ingredient4 }}</li>
-                <li>{{ recipes.ingredient5 }}</li>
-                <li>{{ recipes.ingredient6 }}</li>
-                <li>{{ recipes.ingredient7 }}</li>
-                <li>{{ recipes.ingredient8 }}</li>
-                <li>{{ recipes.ingredient9 }}</li>
-                <li>{{ recipes.ingredient10 }}</li>
-                <li>{{ recipes.ingredient11 }}</li>
-                <li>{{ recipes.ingredient12 }}</li>
-                <li>{{ recipes.ingredient13 }}</li>
-                <li>{{ recipes.ingredient14 }}</li>
-                <li>{{ recipes.ingredient15 }}</li>
-                <li>{{ recipes.ingredient16 }}</li>
-                <li>{{ recipes.ingredient17 }}</li>
-                <li>{{ recipes.ingredient18 }}</li>
-                <li>{{ recipes.ingredient19 }}</li>
-                <li>{{ recipes.ingredient20 }}</li>
-                <li>{{ recipes.ingredient21 }}</li>
-                <li>{{ recipes.ingredient22 }}</li>
-                <li>{{ recipes.ingredient23 }}</li>
-                <li>{{ recipes.ingredient24 }}</li>
+                <li class="text-center">{{ recipes.ingredient }}</li>
+                <li class="text-center">{{ recipes.ingredient1 }}</li>
+                <li class="text-center">{{ recipes.ingredient2 }}</li>
+                <li class="text-center">{{ recipes.ingredient3 }}</li>
+                <li class="text-center">{{ recipes.ingredient4 }}</li>
+                <li class="text-center">{{ recipes.ingredient5 }}</li>
+                <li class="text-center">{{ recipes.ingredient6 }}</li>
+                <li class="text-center">{{ recipes.ingredient7 }}</li>
+                <li class="text-center">{{ recipes.ingredient8 }}</li>
+                <li class="text-center">{{ recipes.ingredient9 }}</li>
+                <li class="text-center">{{ recipes.ingredient10 }}</li>
+                <li class="text-center">{{ recipes.ingredient11 }}</li>
+                <li class="text-center">{{ recipes.ingredient12 }}</li>
+                <li class="text-center">{{ recipes.ingredient13 }}</li>
+                <li class="text-center">{{ recipes.ingredient14 }}</li>
+                <li class="text-center">{{ recipes.ingredient15 }}</li>
+                <li class="text-center">{{ recipes.ingredient16 }}</li>
+                <li class="text-center">{{ recipes.ingredient17 }}</li>
+                <li class="text-center">{{ recipes.ingredient18 }}</li>
+                <li class="text-center">{{ recipes.ingredient19 }}</li>
+                <li class="text-center">{{ recipes.ingredient20 }}</li>
+                <li class="text-center">{{ recipes.ingredient21 }}</li>
+                <li class="text-center">{{ recipes.ingredient22 }}</li>
+                <li class="text-center">{{ recipes.ingredient23 }}</li>
+                <li class="text-center">{{ recipes.ingredient24 }}</li>
             </ul>
         </div>
     </div>
     <hr />
     <div class="row width2 background-color col-sm-12">
         <!--displays the nutritional values. If none were entered they display as unknown-->
-        <div class="row col-md-4">
-            <h4>Nutritional Value:</h4>
+        <div class="row col-md-12">
+            <h4 class="col-sm-12 col-md-12 text-center">Nutritional Value:</h4>
         </div>
         <div class="row col-md-12">
             <card class="padding-r1">
@@ -96,7 +96,7 @@
     <hr />
     <div class="row background-color p3">
         <!--displays the instructions for the recipes. instructions that are empty are not visible on the site-->
-        <h4>Instructions:</h4>
+        <h4 class="col-sm-12 text-center">Instructions:</h4>
         <ul>
             <li class="text-center"><p>{{ recipes.instruction }}</p></li><br />
             <li class="text-center"><p>{{ recipes.instruction1 }}</p></li><br />
@@ -112,7 +112,7 @@
             <li class="text-center"><p>{{ recipes.instruction11 }}</p></li><br />
             <li class="text-center"><p>{{ recipes.instruction12 }}</p></li><br />
             <li class="text-center"><p>{{ recipes.instruction13 }}</p></li><br />
-            <li class="text-center"><p>{{ recipes.instruction14 }}</p></li><br />
+            <li class="text-center"><p>{{ recipes.instruction14 }}</p></li>
         </ul>
     </div>
 </div>
