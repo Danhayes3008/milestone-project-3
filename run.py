@@ -235,6 +235,7 @@ def insert_recipe():
             'author': session['name'].title(), #See author now can be added
     		'approval': 'no', # And approval 
         })
+        flash('recipe is added to approval list.')
         return redirect(url_for('recipes'))
     flash('Sorry recipe already exists!')
     return redirect(url_for('add_recipe'))
