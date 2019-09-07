@@ -355,6 +355,9 @@ footer {
 @media (min-width: 992px) and (max-width: 1199px) {
   .padding-r1 {
     padding-right: 20px; } }
+@media (min-width: 1200px) {
+  .padding-r1 {
+    padding-right: 20px; } }
 
 @media (max-width: 730px) {
   .padding-l1 {
