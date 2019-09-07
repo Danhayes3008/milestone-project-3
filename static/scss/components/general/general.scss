@@ -13,7 +13,7 @@ html, body {
 .width1{
     @include mobile{
         width: 75% !important;
-        margin-left: 10% !important;
+        margin-left: 5% !important;
     }
     
     @include tab{
@@ -40,10 +40,38 @@ html, body {
 }
 
 .width3{
+    @include mobile{
+        width: 90% !important;
+        margin-left: 5% !important;
+        margin-bottom: 5% !important;
+    }
+    
     @include desktop{
         width: 90% !important;
         margin-left: 5% !important;
         
+    }
+}
+
+.width4{
+    @include mobile{
+        width: 75% !important;
+        margin-left: 10% !important;
+    }
+    
+    @include tab{
+        width: 100% !important;
+    }
+    
+    @include computer{
+        width: 90% !important;
+        margin-left: 5% !important;
+    }
+    
+    @include desktop{
+        width: 90% !important;
+        margin-left: 5% !important;
+        margin-bottom: 125px !important;
     }
 }
 
@@ -395,7 +423,6 @@ footer{
 }
 
 .padding-l1{
-    padd141ing-left: 40px;
     
     @include mobile{
         padding-left: 0%;
@@ -411,7 +438,6 @@ footer{
     }
     
     @include desktop{
-        padding-left: 20%;
         margin-top: 5%;
         margin-bottom: 5%;
     }
@@ -616,7 +642,7 @@ img{
 
 .row{
     @include mobile{
-        margin-bottom: 0px !important;
+        margin-bottom: 5% !important;
     }
     
     @include tab{
