@@ -176,6 +176,7 @@ def insert_recipe():
     if request.method == 'POST':
         tasks = mongo.db.recipes
         existing_recipe = tasks.find_one({'name' : request.form['name']})
+
     # This section is the manual dictionary for the add recipe form. I have added parts to each line so that if something is not entered into the form it adds the next one in the form.get
     if existing_recipe is None:
         tasks.insert_one({
