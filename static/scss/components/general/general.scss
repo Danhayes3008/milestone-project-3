@@ -475,6 +475,12 @@ footer{
     }
 }
 
+.padding-l4{
+    @include desktop{
+        padding-left: 30%;
+    }
+}
+
 p{
     @include tab{
         font-size: 20px;
