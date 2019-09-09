@@ -7,6 +7,13 @@ The purpose of this project is to create a public database full of recipes that 
 It is my hope that this site will provide all users with new recipes weekly depending on how often the
 members add new content.
 
+<strong>Note to the assessors</strong>
+-
+
+Unfortunately admin features will not be visible for the assessors as there is not a way to privatly provide the login details so instead i shall note all of it here.
+on the users page when Admin is logged into the site an extra button appears next to the add recipe button so the admin can access the admin features. In this admin page all that is capable of
+being done is to delete users with the delete button, and accept or regect button. the accept button just changes the approval section of the recipe to approved so that it becomes visible.
+
 -----------------------------------------------------------
 
 <strong>UX</strong>
@@ -164,6 +171,8 @@ To deploy through Heroku the following steps need to be followed:
 - When all this is done all that is needed is to push to git-hub as Heroku will automatically update.
 
 The website address is: <strong><a href="https://danhayes3008.github.io/Milestone-Project-2/" target="_blank">London dashboard</a></strong>
+
+The regect button works the same as the delete button for the users section.
 
 -----------------------------------------------------------
 
