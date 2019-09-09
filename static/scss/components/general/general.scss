@@ -311,46 +311,6 @@ footer{
     }
 }
 
-img{
-    @include mobile{
-        width: 240px;
-        height: 150px;
-    }
-    @include tab{
-        width: 300px;
-        height: 200px;
-    }
-    @include computer{
-        width: 250px;
-        height: 150px;
-    }
-    @include desktop{
-        width: 200px;
-        height: 150px;
-    }
-}
-
-.img1{
-    @include tab{
-        width: 400px;
-        height: 200px;
-    }
-    @include computer{
-        width: 300px;
-        height: 150px;
-    }
-    @include desktop{
-        width: 500px;
-        height: 300px;
-    }
-}
-
-.img2{
-    @include mobile{
-        margin-left: 7%;
-    }
-}
-
 .row{
     @include mobile{
         margin-bottom: 5% !important;
