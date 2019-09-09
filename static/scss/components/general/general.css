@@ -1,23 +1,23 @@
 /*
-Error: Undefined mixin 'mobile'.
-        on line 12 of static/scss/components/general/general.scss, in `mobile'
-        from line 12 of static/scss/components/general/general.scss
+Error: Undefined mixin 'tab'.
+        on line 18 of static/scss/components/general/general.scss, in `tab'
+        from line 18 of static/scss/components/general/general.scss
 
-7: .li{
-8:     font-size: 15px;
-9: }
-10: 
-11: .width1{
-12:     @include mobile{
-13:         width: 75% !important;
-14:         margin-left: 5% !important;
-15:     }
-16:     @include tab{
-17:         width: 100% !important;
+13:     padding: 1%;
+14:     border: 1px solid black;
+15: }
+16: 
+17: .admin1{
+18:     @include tab{
+19:         margin-left: 1% !important;
+20:     }
+21:     @include computer{
+22:         margin-left: 1% !important;
+23:     }
 
 Backtrace:
-static/scss/components/general/general.scss:12:in `mobile'
-static/scss/components/general/general.scss:12
+static/scss/components/general/general.scss:18:in `tab'
+static/scss/components/general/general.scss:18
 /usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
 /usr/lib/ruby/vendor_ruby/sass/stack.rb:98:in `block in with_mixin'
 /usr/lib/ruby/vendor_ruby/sass/stack.rb:115:in `with_frame'
@@ -73,4 +73,4 @@ static/scss/components/general/general.scss:12
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'mobile'.\A         on line 12 of static/scss/components/general/general.scss, in `mobile'\A         from line 12 of static/scss/components/general/general.scss\A \A 7: .li{\A 8:     font-size: 15px;\A 9: }\A 10: \A 11: .width1{\A 12:     @include mobile{\A 13:         width: 75% !important;\A 14:         margin-left: 5% !important;\A 15:     }\A 16:     @include tab{\A 17:         width: 100% !important;"; }
+  content: "Error: Undefined mixin 'tab'.\A         on line 18 of static/scss/components/general/general.scss, in `tab'\A         from line 18 of static/scss/components/general/general.scss\A \A 13:     padding: 1%;\A 14:     border: 1px solid black;\A 15: }\A 16: \A 17: .admin1{\A 18:     @include tab{\A 19:         margin-left: 1% !important;\A 20:     }\A 21:     @include computer{\A 22:         margin-left: 1% !important;\A 23:     }"; }
