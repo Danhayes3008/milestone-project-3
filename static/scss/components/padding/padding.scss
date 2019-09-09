@@ -1,0 +1,153 @@
+// This file is to store all the padding classes so that my scss is easier to read
+
+p{
+    @include tab{
+        font-size: 20px;
+    }
+    @include computer{
+        font-size: 15px;
+    }
+    @include desktop{
+        width: 100%;
+    }
+}
+
+.p1{
+    @include mobile{
+        width: 90%;
+        padding-left: 10%;
+    }
+    @include tab{
+        width: 90%;
+        font-size: 20px;
+        margin-bottom: 50px !important;
+    }
+    @include desktop {
+        font-weight: bold;
+        font-size: 16px;
+        word-wrap: break-word;
+        margin-left: 3%;
+    }
+}
+
+.p2{
+    padding-top: 5%;
+    @include mobile{
+        padding-top: 5%;
+    }
+    @include tab{
+        padding-top: 5%;
+    }
+}
+
+.p3{
+    
+    @include mobile{
+        width: 90%;
+    }
+    @include tab{
+        font-size: 20px;
+    }
+    @include desktop {
+        font-size: 16px;
+        word-wrap: break-word;
+        margin-left: 3%;
+    }
+}
+
+.p4{
+    padding-top: 5%;
+    @include mobile{
+        padding-top: 5%;
+    }
+    @include tab{
+        padding-top: 5%;
+    }
+    @include desktop{
+        padding-top: 0%;
+    }
+}
+
+.p5{
+     @include mobile{
+        width: 90%;
+    }
+    @include tab{
+        width: 90%;
+        font-size: 20px;
+    }
+    @include computer{
+        width: 50%;
+        margin-left: 25%;
+    }
+    @include desktop {
+        font-weight: bold;
+        font-size: 16px;
+        word-wrap: break-word;
+    }
+}
+
+// all the padding for on the left
+.padding1{
+    padding-left: 18%;
+    @include mobile{
+        padding-left: 0%;
+    }
+    @include tab{
+        padding-left: 25%;
+    }
+    @include computer{
+        padding-left: 27%;
+    }
+}
+
+.padding-l1{
+    @include mobile{
+        padding-left: 0%;
+        margin-top: 5%;
+    }
+    @include tab{
+        margin-top: 5%;
+    }
+    @include computer{
+        margin-top: 5%;
+    }
+    @include desktop{
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+}
+
+.padding-l2{
+    padding-left: 6%;
+}
+
+.padding-l3{
+    @include desktop{
+        padding-left: 20%;
+        padding-bottom: 1.6%;
+    }
+}
+
+.padding-l4{
+    @include desktop{
+        padding-left: 30%;
+    }
+}
+
+// all the classes for the padding on the right
+
+.padding-r1{
+    @include mobile{
+        padding-right: 10px;
+    }
+    @include tab{
+        padding-right: 20px;
+    }
+    @include computer{
+        padding-right: 20px;
+    }
+    @include desktop{
+        padding-right: 20px;
+    }
+}
