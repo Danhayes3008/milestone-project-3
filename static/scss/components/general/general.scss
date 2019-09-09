@@ -4,7 +4,44 @@ html, body {
     overflow-x: hidden;
 }
 
+.ul{
+    margin-left: 25%;
+    width: 15%;
+    @include mobile{
+        width: 100%;
+        margin-left: 0%;
+    }
+    @include tab{
+        width: 50%;
+        margin-left: 0px;
+    }
+    @include computer{
+        width: 50%;
+        margin-left: 0px;
+    }
+}
+
+.ul1{
+    @include mobile{
+        margin-top: 1rem !important;
+    }
+}
+
+.ul2{
+    list-style-type: square;
+}
+
+.ul3{
+    @include desktop{
+        width: 90%;
+    }
+}
+
 .li{
+    font-size: 15px;
+}
+
+li{
     font-size: 15px;
 }
 
@@ -37,8 +74,29 @@ html, body {
     }
 }
 
+.jumbo1{
+    margin-top: 2rem;
+    @include tab{
+       margin-top: 6rem;
+       margin-bottom: 8rem !important;
+    }
+    @include computer{
+        margin-bottom: 3rem !important;
+    }
+    @include desktop{
+        margin-top: 3rem;
+        margin-bottom: 5rem !important;
+    }
+}
+
 .input1{
     width: 75%;
+}
+
+.input{
+    @include desktop{
+        background-color: white !important;
+    }
 }
 
 .card{
@@ -47,6 +105,12 @@ html, body {
     margin: 10px;
     @include mobile{
         margin-left: 20%;
+    }
+}
+
+.card1{
+    @include desktop{
+        margin-bottom: 4%;
     }
 }
 
@@ -74,39 +138,6 @@ html, body {
     padding-left: 5%;
     @include mobile{
         padding-left: 20%;
-    }
-}
-
-.ul{
-    margin-left: 25%;
-    width: 15%;
-    @include mobile{
-        width: 100%;
-        margin-left: 0%;
-    }
-    @include tab{
-        width: 50%;
-        margin-left: 0px;
-    }
-    @include computer{
-        width: 50%;
-        margin-left: 0px;
-    }
-}
-
-.ul1{
-    @include mobile{
-        margin-top: 1rem !important;
-    }
-}
-
-.ul2{
-    list-style-type: square;
-}
-
-.ul3{
-    @include desktop{
-        width: 90%;
     }
 }
 
@@ -156,25 +187,6 @@ form{
     width: 100%;
 }
 
-.jumbo1{
-    margin-top: 2rem;
-    @include tab{
-       margin-top: 6rem;
-       margin-bottom: 8rem !important;
-    }
-    @include computer{
-        margin-bottom: 3rem !important;
-    }
-    @include desktop{
-        margin-top: 3rem;
-        margin-bottom: 5rem !important;
-    }
-}
-
-li{
-    font-size: 15px;
-}
-
 .footer {
     @include tab {
         margin-bottom: 27% !important;
@@ -186,18 +198,6 @@ li{
 
 footer{
     height: 100px;
-}
-
-.input{
-    @include desktop{
-        background-color: white !important;
-    }
-}
-
-.card1{
-    @include desktop{
-        margin-bottom: 4%;
-    }
 }
 
 .row{

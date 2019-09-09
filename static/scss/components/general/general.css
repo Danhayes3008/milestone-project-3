@@ -1,23 +1,23 @@
 /*
-Error: Undefined mixin 'tab'.
-        on line 18 of static/scss/components/general/general.scss, in `tab'
-        from line 18 of static/scss/components/general/general.scss
+Error: Undefined mixin 'mobile'.
+        on line 10 of static/scss/components/general/general.scss, in `mobile'
+        from line 10 of static/scss/components/general/general.scss
 
-13:     padding: 1%;
-14:     border: 1px solid black;
-15: }
-16: 
-17: .admin1{
-18:     @include tab{
-19:         margin-left: 1% !important;
-20:     }
-21:     @include computer{
-22:         margin-left: 1% !important;
-23:     }
+5: }
+6: 
+7: .ul{
+8:     margin-left: 25%;
+9:     width: 15%;
+10:     @include mobile{
+11:         width: 100%;
+12:         margin-left: 0%;
+13:     }
+14:     @include tab{
+15:         width: 50%;
 
 Backtrace:
-static/scss/components/general/general.scss:18:in `tab'
-static/scss/components/general/general.scss:18
+static/scss/components/general/general.scss:10:in `mobile'
+static/scss/components/general/general.scss:10
 /usr/lib/ruby/vendor_ruby/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
 /usr/lib/ruby/vendor_ruby/sass/stack.rb:98:in `block in with_mixin'
 /usr/lib/ruby/vendor_ruby/sass/stack.rb:115:in `with_frame'
@@ -73,4 +73,4 @@ static/scss/components/general/general.scss:18
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'tab'.\A         on line 18 of static/scss/components/general/general.scss, in `tab'\A         from line 18 of static/scss/components/general/general.scss\A \A 13:     padding: 1%;\A 14:     border: 1px solid black;\A 15: }\A 16: \A 17: .admin1{\A 18:     @include tab{\A 19:         margin-left: 1% !important;\A 20:     }\A 21:     @include computer{\A 22:         margin-left: 1% !important;\A 23:     }"; }
+  content: "Error: Undefined mixin 'mobile'.\A         on line 10 of static/scss/components/general/general.scss, in `mobile'\A         from line 10 of static/scss/components/general/general.scss\A \A 5: }\A 6: \A 7: .ul{\A 8:     margin-left: 25%;\A 9:     width: 15%;\A 10:     @include mobile{\A 11:         width: 100%;\A 12:         margin-left: 0%;\A 13:     }\A 14:     @include tab{\A 15:         width: 50%;"; }
