@@ -101,6 +101,14 @@ JavaScript was used to add more instructions and ingredients buttons to work, ma
 to work (it is a simple slide-show, would improve it if i had more time) and get the nav-bar to work correctly. All of these JavaScript
 are placed in the bottom of the base.html template.
 
+<a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank"><strong>Python</strong></a>
+-
+
+The backbone of this project was made with python flask. Using Python i learned how this programing language can be used to make sites as
+previously learned how to use Python to make simple desktop programs before starting this course. Other imports used in the project was render_template,
+url-for, request, session, redirect, send-from-directory. The use of this language has been interesting to me
+and i hope to use it more often as i consider it a must need language to learn for whatever you try to code.
+
 
 <a href=”https://getbootstrap.com” target="_blank"><strong>Bootstrap</strong></a>
 - 
@@ -181,7 +189,8 @@ the nav-bar, filtering the recipes (got around this problem with the use of page
 a number of typo's, simple mistakes such as missing brackets and semicolons. Other problems that was discovered during development were due to attempting to get all pages layout to work on all screen sizes.
 
 All testing was done whilst working on each part so that i could fix problems as they came up. Another reason was because sometimes the site would go down if there was a problem due to it being run through a python files
-that renders all the pages when in use.
+that renders all the pages when in use. During testing of my site on multiple browsers i discovered an error on microsoft edge were the add category and add subcategory sections of the add recipe form are unselectable,
+this was due to a materialize class that needed removing.
 
 -----------------------------------------------------------
 <h3>Contributions</h3>
