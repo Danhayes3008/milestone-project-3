@@ -191,68 +191,6 @@ form{
     }
 }
 
-.container {
-    @include mobile{
-        margin-bottom: 10px !important;
-    }
-    @include tab{
-        margin-bottom: 80px !important;
-        margin-top: 5%;
-    }
-    @include computer{
-        margin-bottom: 80px !important;
-    }
-}
-
-.container1{
-    margin: 0;
-    @include desktop{
-        max-width: 100% !important;
-        margin-top: 64px !important;
-    }
-}
-
-.container2{
-    @include mobile{
-        width: 50%;
-        height: 50%;
-        padding-left: 45px !important;
-        padding-right: 0px !important;
-    }
-    @include tab{
-        width: 50%;
-        height: 50%;
-    }
-    @include computer{
-        width: 50%;
-        height: 50%;
-    }
-    @include desktop{
-        margin-bottom: 70px !important;
-    }
-}
-
-.container3{
-    @include mobile{
-        width: 50%;
-        height: 50%;
-        padding-left: 45px !important;
-        padding-right: 0px !important;
-    }
-    @include tab{
-        width: 50%;
-        height: 50%;
-    }
-    @include computer{
-        width: 50%;
-        height: 50%;
-    }
-    @include desktop{
-        margin-bottom: 100px !important;
-        margin-top: 65px !important;
-    }
-}
-
 li{
     font-size: 15px;
 }
