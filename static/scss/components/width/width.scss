@@ -1,0 +1,65 @@
+// This file will contain all the width classes to keep my scss tidy
+
+.width1{
+    @include mobile{
+        width: 75% !important;
+        margin-left: 5% !important;
+    }
+    @include tab{
+        width: 100% !important;
+    }
+    @include computer{
+        width: 90% !important;
+        margin-left: 5% !important;
+    }
+    @include desktop{
+        width: 90% !important;
+        margin-left: 5% !important;
+        margin-bottom: 170px !important;
+    }
+}
+
+.width2{
+    @include mobile{
+        width: 90% !important;
+    }
+}
+
+.width3{
+    @include mobile{
+        width: 90% !important;
+        margin-left: 5% !important;
+        margin-bottom: 5% !important;
+    }
+    @include tab{
+        width: 95% !important;
+        margin-left: 5% !important;
+    }
+    @include computer{
+        width: 90% !important;
+        margin-left: 5% !important;
+    }
+    @include desktop{
+        width: 90% !important;
+        margin-left: 5% !important;
+    }
+}
+
+.width4{
+    @include mobile{
+        width: 75% !important;
+        margin-left: 10% !important;
+    }
+    @include tab{
+        width: 100% !important;
+    }
+    @include computer{
+        width: 90% !important;
+        margin-left: 5% !important;
+    }
+    @include desktop{
+        width: 90% !important;
+        margin-left: 5% !important;
+        margin-bottom: 125px !important;
+    }
+}
