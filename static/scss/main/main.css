@@ -289,40 +289,6 @@ footer {
     margin: 10px; } }
 
 @media (max-width: 730px) {
-  img {
-    width: 240px;
-    height: 150px; } }
-@media (min-width: 731px) and (max-width: 991px) {
-  img {
-    width: 300px;
-    height: 200px; } }
-@media (min-width: 992px) and (max-width: 1199px) {
-  img {
-    width: 250px;
-    height: 150px; } }
-@media (min-width: 1200px) {
-  img {
-    width: 200px;
-    height: 150px; } }
-
-@media (min-width: 731px) and (max-width: 991px) {
-  .img1 {
-    width: 400px;
-    height: 200px; } }
-@media (min-width: 992px) and (max-width: 1199px) {
-  .img1 {
-    width: 300px;
-    height: 150px; } }
-@media (min-width: 1200px) {
-  .img1 {
-    width: 500px;
-    height: 300px; } }
-
-@media (max-width: 730px) {
-  .img2 {
-    margin-left: 7%; } }
-
-@media (max-width: 730px) {
   .row {
     margin-bottom: 5% !important; } }
 @media (min-width: 731px) and (max-width: 991px) {
@@ -610,5 +576,39 @@ section {
     width: 90% !important;
     margin-left: 5% !important;
     margin-bottom: 125px !important; } }
+
+@media (max-width: 730px) {
+  img {
+    width: 240px;
+    height: 150px; } }
+@media (min-width: 731px) and (max-width: 991px) {
+  img {
+    width: 300px;
+    height: 200px; } }
+@media (min-width: 992px) and (max-width: 1199px) {
+  img {
+    width: 250px;
+    height: 150px; } }
+@media (min-width: 1200px) {
+  img {
+    width: 200px;
+    height: 150px; } }
+
+@media (min-width: 731px) and (max-width: 991px) {
+  .img1 {
+    width: 400px;
+    height: 200px; } }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .img1 {
+    width: 300px;
+    height: 150px; } }
+@media (min-width: 1200px) {
+  .img1 {
+    width: 500px;
+    height: 300px; } }
+
+@media (max-width: 730px) {
+  .img2 {
+    margin-left: 7%; } }
 
 /*# sourceMappingURL=main.css.map */
