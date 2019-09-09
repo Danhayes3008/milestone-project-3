@@ -13,16 +13,13 @@ html, body {
         width: 75% !important;
         margin-left: 5% !important;
     }
-    
     @include tab{
         width: 100% !important;
     }
-    
     @include computer{
         width: 90% !important;
         margin-left: 5% !important;
     }
-    
     @include desktop{
         width: 90% !important;
         margin-left: 5% !important;
@@ -33,7 +30,6 @@ html, body {
 .width2{
     @include mobile{
         width: 90% !important;
-        
     }
 }
 
@@ -43,21 +39,17 @@ html, body {
         margin-left: 5% !important;
         margin-bottom: 5% !important;
     }
-    
     @include tab{
         width: 95% !important;
         margin-left: 5% !important;
     }
-    
     @include computer{
         width: 90% !important;
         margin-left: 5% !important;
     }
-    
     @include desktop{
         width: 90% !important;
         margin-left: 5% !important;
-        
     }
 }
 
@@ -66,16 +58,13 @@ html, body {
         width: 75% !important;
         margin-left: 10% !important;
     }
-    
     @include tab{
         width: 100% !important;
     }
-    
     @include computer{
         width: 90% !important;
         margin-left: 5% !important;
     }
-    
     @include desktop{
         width: 90% !important;
         margin-left: 5% !important;
@@ -90,7 +79,6 @@ html, body {
 }
 
 .admin1{
-    
     @include tab{
         margin-left: 1% !important;
     }
@@ -102,12 +90,10 @@ html, body {
 .jumbotron{
     width: 45%;
     margin-left: 25%;
-    
     @include mobile{
         width: 75% !important;
         margin-left: 12% !important;
     }
-    
     @include tab{
         width: 65%;
         margin-left: 15%;
@@ -136,7 +122,6 @@ html, body {
     width: 200px;
     height: 200px;
     margin: 10px;
-    
     @include mobile{
         margin-left: 20%;
     }
@@ -146,18 +131,15 @@ html, body {
     display: inline;
     padding-left: 5%;
     width: 50%;
-    
     @include mobile{
         display: inline;
         padding-left: 5%;
         width: 10%;
     }
-    
     @include tab{
         display: inline;
         width: 20%;
     }
-    
     @include computer{
         display: inline;
         padding-left: 1%;
@@ -167,7 +149,6 @@ html, body {
 
 .copyright{
     padding-left: 5%;
-    
     @include mobile{
         padding-left: 20%;
     }
@@ -176,17 +157,14 @@ html, body {
 .ul{
     margin-left: 25%;
     width: 15%;
-    
     @include mobile{
         width: 100%;
         margin-left: 0%;
     }
-    
     @include tab{
         width: 50%;
         margin-left: 0px;
     }
-    
     @include computer{
         width: 50%;
         margin-left: 0px;
@@ -209,55 +187,26 @@ html, body {
     }
 }
 
-
-
 .scroll{
-    
     @include mobile{
         display: block;
         height: 430px;
         overflow:auto;
     }
-    
     @include tab{
         display: block;
         height: 740px;
         overflow: auto;
     }
-    
     @include computer{
         display: block;
         height: 470px;
         overflow: auto;
     }
-    
     @include desktop{
         display: block;
         height: 623px;
         overflow: auto;
-    }
-    
-}
-
-.padding-l2{
-    padding-left: 6%;
-}
-
-.background1 {
-    @include desktop {
-        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeQn8R6KAsUD23P2bHR5RdKYoeGCqYznAzZBFPt5KlD00pgZLq') no-repeat center;
-        background-size: cover;
-        background-size: 100%;
-        height: 200px;
-        position: relative;
-        padding-top: 110px;
-    }
-}
-
-.background2{
-    @include desktop{
-        background: url('https://image.shutterstock.com/image-photo/brown-scratched-wooden-cutting-board-260nw-582026461.jpg') center;
-        background-size: 100%;
     }
 }
 
@@ -267,26 +216,8 @@ html, body {
   color: white;
 }
 
-.padding1{
-    padding-left: 18%;
-    
-    @include mobile{
-        padding-left: 0%;
-    }
-    
-    @include tab{
-        padding-left: 25%;
-    }
-    
-    @include computer{
-        padding-left: 27%;
-    }
-    
-}
-
 .button1{
     width: 50%;
-    
     @include mobile{
         margin-left: 20%;
     }
@@ -299,7 +230,6 @@ html, body {
 
 .margin1{
     padding-left: 20%;
-    
     @include computer{
         padding-left: 10%;
     }
@@ -312,16 +242,13 @@ form{
 
 .jumbo1{
     margin-top: 2rem;
-    
     @include tab{
        margin-top: 6rem;
        margin-bottom: 8rem !important;
     }
-    
     @include computer{
         margin-bottom: 3rem !important;
     }
-    
     @include desktop{
         margin-top: 3rem;
         margin-bottom: 5rem !important;
@@ -329,33 +256,20 @@ form{
 }
 
 .container {
-    // margin: 0;
-    // margin-bottom: 110px !important;
-    
     @include mobile{
         margin-bottom: 10px !important;
     }
-    
     @include tab{
         margin-bottom: 80px !important;
         margin-top: 5%;
     }
-    
     @include computer{
         margin-bottom: 80px !important;
     }
-    
-    @include desktop{
-        // margin-bottom: 80px !important;
-    }
-    
-    
-    
 }
 
 .container1{
     margin: 0;
-    
     @include desktop{
         max-width: 100% !important;
         margin-top: 64px !important;
@@ -363,29 +277,23 @@ form{
 }
 
 .container2{
-    
     @include mobile{
         width: 50%;
         height: 50%;
         padding-left: 45px !important;
         padding-right: 0px !important;
     }
-    
     @include tab{
         width: 50%;
         height: 50%;
     }
-    
     @include computer{
         width: 50%;
         height: 50%;
     }
-    
     @include desktop{
         margin-bottom: 70px !important;
     }
-    
-    
 }
 
 .container3{
@@ -395,17 +303,14 @@ form{
         padding-left: 45px !important;
         padding-right: 0px !important;
     }
-    
     @include tab{
         width: 50%;
         height: 50%;
     }
-    
     @include computer{
         width: 50%;
         height: 50%;
     }
-    
     @include desktop{
         margin-bottom: 100px !important;
         margin-top: 65px !important;
@@ -420,7 +325,6 @@ li{
     @include tab {
         margin-bottom: 27% !important;
     }
-    
     @include computer{
         margin-bottom: 110px !important;
     }
@@ -428,112 +332,9 @@ li{
 
 footer{
     height: 100px;
-
 }
-.padding-r1{
-    @include mobile{
-        padding-right: 10px;
-    }
-    @include tab{
-        padding-right: 20px;
-    }
-    @include computer{
-        padding-right: 20px;
-    }
-    @include desktop{
-        padding-right: 20px;
-    }
-}
-
-.padding-l1{
-    
-    @include mobile{
-        padding-left: 0%;
-        margin-top: 5%;
-    }
-    
-    @include tab{
-        margin-top: 5%;
-    }
-    
-    @include computer{
-        margin-top: 5%;
-    }
-    
-    @include desktop{
-        margin-top: 5%;
-        margin-bottom: 5%;
-    }
-    
-    
-}
-
-.padding-l3{
-    @include desktop{
-        padding-left: 20%;
-        padding-bottom: 1.6%;
-    }
-}
-
-.padding-l4{
-    @include desktop{
-        padding-left: 30%;
-    }
-}
-
-p{
-    @include tab{
-        font-size: 20px;
-    }
-    
-    @include computer{
-        font-size: 15px;
-    }
-    
-    @include desktop{
-        width: 100%;
-    }
-}
-
-.p1{
-    
-    @include mobile{
-        width: 90%;
-        padding-left: 10%;
-    }
-    
-    @include tab{
-        width: 90%;
-        font-size: 20px;
-        margin-bottom: 50px !important;
-    }
-    
-    
-    @include desktop {
-        font-weight: bold;
-        font-size: 16px;
-        word-wrap: break-word;
-        margin-left: 3%;
-        
-    }
-    
-    
-}
-
-.p2{
-    padding-top: 5%;
-    @include mobile{
-        padding-top: 5%;
-    }
-    
-    @include tab{
-        padding-top: 5%;
-    }
-}
-
 
 .mrg1{
-    
     @include tab{
         margin-left: 0px !important;
     }
@@ -549,61 +350,6 @@ p{
     
     @include desktop{
         background-color: white !important;
-    }
-    
-}
-
-.p3{
-    
-    @include mobile{
-        width: 90%;
-    }
-    @include tab{
-        font-size: 20px;
-    }
-    @include desktop {
-        font-size: 16px;
-        word-wrap: break-word;
-        margin-left: 3%;
-        
-    }
-    
-    
-}
-
-.p4{
-    padding-top: 5%;
-    @include mobile{
-        padding-top: 5%;
-    }
-    @include tab{
-        padding-top: 5%;
-    }
-    
-    @include desktop{
-        padding-top: 0%;
-    }
-}
-
-.p5{
-     @include mobile{
-        width: 90%;
-    }
-    
-    @include tab{
-        width: 90%;
-        font-size: 20px;
-    }
-    
-    @include computer{
-        width: 50%;
-        margin-left: 25%;
-    }
-    @include desktop {
-        font-weight: bold;
-        font-size: 16px;
-        word-wrap: break-word;
-        
     }
     
 }
@@ -624,29 +370,24 @@ p{
     @include mobile{
         margin: 10px;
     }
-    
     @include computer {
         margin: 10px;
     }
 }
 
 img{
-    
     @include mobile{
         width: 240px;
         height: 150px;
     }
-    
     @include tab{
         width: 300px;
         height: 200px;
     }
-    
     @include computer{
         width: 250px;
         height: 150px;
     }
-    
     @include desktop{
         width: 200px;
         height: 150px;
@@ -658,12 +399,10 @@ img{
         width: 400px;
         height: 200px;
     }
-    
     @include computer{
         width: 300px;
         height: 150px;
     }
-    
     @include desktop{
         width: 500px;
         height: 300px;
@@ -680,11 +419,9 @@ img{
     @include mobile{
         margin-bottom: 5% !important;
     }
-    
     @include tab{
         margin-top: 0px !important;
     }
-    
     @include computer{
         margin-bottom: 0px !important;
     }

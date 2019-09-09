@@ -12,8 +12,8 @@ Error: Undefined mixin 'mobile'.
 13:         width: 75% !important;
 14:         margin-left: 5% !important;
 15:     }
-16:     
-17:     @include tab{
+16:     @include tab{
+17:         width: 100% !important;
 
 Backtrace:
 static/scss/components/general/general.scss:12:in `mobile'
@@ -73,4 +73,4 @@ static/scss/components/general/general.scss:12
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'mobile'.\A         on line 12 of static/scss/components/general/general.scss, in `mobile'\A         from line 12 of static/scss/components/general/general.scss\A \A 7: .li{\A 8:     font-size: 15px;\A 9: }\A 10: \A 11: .width1{\A 12:     @include mobile{\A 13:         width: 75% !important;\A 14:         margin-left: 5% !important;\A 15:     }\A 16:     \A 17:     @include tab{"; }
+  content: "Error: Undefined mixin 'mobile'.\A         on line 12 of static/scss/components/general/general.scss, in `mobile'\A         from line 12 of static/scss/components/general/general.scss\A \A 7: .li{\A 8:     font-size: 15px;\A 9: }\A 10: \A 11: .width1{\A 12:     @include mobile{\A 13:         width: 75% !important;\A 14:         margin-left: 5% !important;\A 15:     }\A 16:     @include tab{\A 17:         width: 100% !important;"; }
